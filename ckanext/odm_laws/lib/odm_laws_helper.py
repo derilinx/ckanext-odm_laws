@@ -14,7 +14,7 @@ document_types = [
   ('reports_journal_articles_and_research_papers','Reports, journal articles, and research papers (including theses and dissertations)')
 ]
 
-library_fields = [
+laws_fields = [
   ('document_type','Document type',False),
   ('marc21_020','ISBN',False),
   ('marc21_022','ISSN',False),

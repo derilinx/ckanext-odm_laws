@@ -1,4 +1,4 @@
-{% extends "library/read_base.html" %}
+{% extends "laws/read_base.html" %}
 
 {% set pkg = c.pkg_dict %}
 
@@ -45,8 +45,8 @@
     {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
   {% endblock %}
 
-  {% block package_additional_info_library %}
-    {% snippet "library/snippets/additional_info_library.html", pkg_dict=pkg %}
+  {% block package_additional_info_laws %}
+    {% snippet "laws/snippets/additional_info_laws.html", pkg_dict=pkg %}
   {% endblock %}
 
 {% endblock %}

@@ -1,4 +1,4 @@
-{% extends 'library/base.html' %}
+{% extends 'laws/base.html' %}
 
 {% set pkg = c.pkg_dict %}
 {% set pkg_dict = c.pkg_dict %}
@@ -8,12 +8,12 @@
 {% block breadcrumb_content %}
   {{ super() }}
   {% if pkg %}
-    <li class="active">{% link_for _('Edit'), controller='ckanext.odm_library.controller:LibraryController', type='library_record', action='edit', id=pkg.name %}</li>
+    <li class="active">{% link_for _('Edit'), controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='edit', id=pkg.name %}</li>
   {% endif %}
 {% endblock %}
 
 {% block content_action %}
-  {% link_for _('View library record'), controller='ckanext.odm_library.controller:LibraryController', type='library_record', action='read', id=pkg.name, class_='btn', icon='eye-open' %}
+  {% link_for _('View laws record'), controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='read', id=pkg.name, class_='btn', icon='eye-open' %}
 {% endblock %}
 
 {% block content_primary_nav %}

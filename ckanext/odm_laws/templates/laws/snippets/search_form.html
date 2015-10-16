@@ -1,0 +1,5 @@
+{% extends 'snippets/search_form.html' %}
+
+{% set placeholder = placeholder if placeholder else _('Search laws records...') %}
+
+{{super()}}

@@ -1,0 +1,18 @@
+{% ckan_extends %}
+
+{% block header_site_navigation_tabs %}
+ {% if c.userobj %}
+  {{ h.build_nav_main(
+   ('search', _('All records')),
+   ('organizations_index', _('Organizations')),
+   ('group_index', _('Records by type')),
+   ('odm_library_index', _('Library'))
+   ) }}
+ {% else %}
+  {{ h.build_nav_main(
+   ('search', _('All records')),
+   ('group_index', _('Records by type')),
+   ('odm_library_index', _('Library'))
+   ) }}
+ {% endif %}
+{% endblock %}

@@ -1,6 +1,6 @@
-ckanext-odm_library
+ckanext-odm_laws
 =================
-
+** TO BE REWRITTEN **
 [![Build Status](https://travis-ci.org/OpenDevelopmentMekong/ckanext-odm_library.svg?branch=master)](https://travis-ci.org/OpenDevelopmentMekong/odm_library)
 
 A CKAN extension which provides with template files and logic to implement OD Mekong's library

@@ -1,4 +1,0 @@
-
-        [ckan.plugins]
-        odm_library=ckanext.odm_library.plugin:OdmLibraryPlugin
-    

@@ -30,6 +30,7 @@ laws_fields = [
   ('marc21_500','General Note',False),
   ('marc21_700','Co-Author',False),
   ('marc21_710','Co-Author (Corporate)',False)
+  ('odm_laws_short_title','Short Title',True)
 ]
 
 odc_fields = [

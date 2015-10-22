@@ -24,6 +24,6 @@ setup(
     ],
     entry_points='''
         [ckan.plugins]
-        odm_library=ckanext.odm_laws.plugin:OdmLawsPlugin
+        odm_laws=ckanext.odm_laws.plugin:OdmLawsPlugin
     ''',
 )

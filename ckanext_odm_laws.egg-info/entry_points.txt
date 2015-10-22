@@ -1,3 +1,4 @@
 
         [ckan.plugins]
         odm_laws=ckanext.odm_laws.plugin:OdmLawsPlugin
+    

@@ -15,8 +15,14 @@
       {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
     </div>
   </div>
+
+
  {% endblock %}
 
+ {%block package_laws_odm_laws_short_title%}
+   {{ form.input('short_title', is_required=true, label=_('Short title'), id='field-short-title', placeholder=_('commonly used label, e.g. Cambodia Labor Law'), value=data.shortTitle, error=errors.shortTitle, classes=['control-full']) }}
+ {% endblock %}
+ 
  {% block package_metadata_fields_marc21_020 %}
   <div class="control-group">
     <label for="field-marc21_020" class="control-label">{{ _('ISBN') }}</label>

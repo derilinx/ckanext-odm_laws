@@ -1,4 +1,4 @@
-{% extends 'library/snippets/package_form.html' %}
+{% extends 'laws/snippets/package_form.html' %}
 
 {% set form_style = c.form_style or c.action %}
 
@@ -12,7 +12,7 @@
   {% if form_style != 'edit' %}
     {{ super() }}
   {% else %}
-    {{ _('Update library record') }}
+    {{ _('Update laws record') }}
   {% endif %}
 {% endblock %}
 

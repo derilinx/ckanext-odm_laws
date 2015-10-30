@@ -1,5 +1,14 @@
 {% extends "package/snippets/package_basic_fields.html" %}
 
+{% block package_basic_fields_title %}
+  {{ form.input('title', id='field-title', label=_('Title'), placeholder=_('Formal title of the law or policy'), value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
+{% endblock %}
+
+
+
+
+
+
 {% block package_basic_fields_url %}
   {% set prefix = h.url_for(controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='read', id='') %}
   {% set domain = h.url_for(controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='read', id='', qualified=true) %}

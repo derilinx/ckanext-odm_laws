@@ -15,22 +15,10 @@ document_types = [
 ]
 
 laws_fields = [
-  ('document_type','Document type',False),
-  ('marc21_020','ISBN',False),
-  ('marc21_022','ISSN',False),
-  ('marc21_100','Author',False),
-  ('marc21_110','Corporate Author',False),
-  ('marc21_245','Title',False),
-  ('marc21_246','Varying Form of Title',False),
-  ('marc21_250','Edition',False),
-  ('marc21_260a','Publication Place',False),
-  ('marc21_260b','Publication Name',False),
-  ('marc21_260c','Publication Date',False),
-  ('marc21_300','Pagination',False),
-  ('marc21_500','General Note',False),
-  ('marc21_700','Co-Author',False),
-  ('marc21_710','Co-Author (Corporate)',False)
-  ('odm_laws_short_title','Short Title',True)
+  ('document_type','Document type',False),  
+  ('odm_laws_short_title','Alternative/Short Title',True),
+  ('odm_laws_number','Legal document ',False)
+
 ]
 
 odc_fields = [

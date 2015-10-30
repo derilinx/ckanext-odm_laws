@@ -19,72 +19,19 @@
 
  {% endblock %}
 
- {%block package_laws_odm_laws_short_title%}
-   {{ form.input('short_title', is_required=true, label=_('Short title'), id='field-short-title', placeholder=_('commonly used label, e.g. Cambodia Labor Law'), value=data.shortTitle, error=errors.shortTitle, classes=['control-full']) }}
+ 
+
+ {%block package_metadata_fields_odm_laws_short_title%}
+   {{ form.input('odm_laws_short_title', is_required=true, label=_('Alternative/Short Title'), id='field-short-title', placeholder=_('commonly used label, e.g. Cambodia Labor Law'), value=data.odm_laws_short_title, error=errors.shortTitle, classes=['control-full']) }}
  {% endblock %}
  
- {% block package_metadata_fields_marc21_020 %}
-  <div class="control-group">
-    <label for="field-marc21_020" class="control-label">{{ _('ISBN') }}</label>
-    <div id="field-marc21_020-container" class="controls">
-      <input id="field-marc21_020" name="marc21_020" type='number'></input>
-      <span id="field-marc21_020-disclaimer" class="info-block info-inline">
-        <i class="icon-info-sign"></i>
-        {% trans %}
-        A 13-digit number that uniquely identifies  most books and book-like products please enter if ISBN appears on publication.
-        {% endtrans %}
-      </span>
-    </div>
-  </div>
- {% endblock %}
+ {%block package_metadata_fields_odm_laws_number%}
+  {{ form.input('odm_laws_number', is_required=false, label=_('Legal document#'), id='field-odm_laws_number', placeholder=_(''), value=data.odm_laws_number, error=errors.lawsNumber, classes=['control-full']) }}
+ {%endblock%}
 
- {% block package_metadata_fields_marc21_022 %}
- <div class="control-group control-full">
-   <label for="field-marc21_022" class="control-label">{{ _('ISSN') }}</label>
-   <div id="field-marc21_022-container" class="controls">
-     <input id="field-marc21_022" name="marc21_022" type='number'></input>
-   </div>
- </div>
- {% endblock %}
 
- {% block package_metadata_fields_marc21_100 %}
-   {{ form.input('marc21_100', label=_('Author'), id='field-marc21_100', placeholder=_('Main Entry-Personal Name (author).'), value=data.marc21_100, error=errors.marc21_100, classes=['control-full']) }}
- {% endblock %}
 
- {% block package_metadata_fields_marc21_110 %}
-   {{ form.input('marc21_110', label=_('Corporate Author'), id='field-marc21_110', placeholder=_('Main Entry-Corporate Name (corporate author) or title of journal'), value=data.marc21_110, error=errors.marc21_110, classes=['control-full']) }}
- {% endblock %}
 
- {% block package_metadata_fields_marc21_700 %}
-   {{ form.input('marc21_700', label=_('Co-Author'), id='field-marc21_700', placeholder=_('Personal Name (co-author), more than one author.'), value=data.marc21_700, error=errors.marc21_700, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_710 %}
-   {{ form.input('marc21_710', label=_('Co-Author (Corporate)'), id='field-marc21_710', placeholder=_('Corporate Name, more than one Corporate.'), value=data.marc21_710, error=errors.marc21_710, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_246 %}
-   {{ form.input('marc21_246', label=_('Varying Form of Title'), id='field-marc21_246', placeholder=_('Parallel title or translation.'), value=data.marc21_246, error=errors.marc21_246, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_260a %}
-   {{ form.input('marc21_260a', label=_('Publication Place'), id='field-marc21_260a', placeholder=_('Place of publisher'), value=data.marc21_260a, error=errors.marc21_260a, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_260b %}
-   {{ form.input('marc21_260b', label=_('Publisher'), id='field-marc21_260b', placeholder=_('Name of publishing organization'), value=data.marc21_260b, error=errors.marc21_260b, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_260c %}
-   {{ form.input('marc21_260c', label=_('Publication Date'), id='field-marc21_260c', type='number', placeholder=_('Date published (YYYY)'), value=data.marc21_260c, error=errors.marc21_260c, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_300 %}
-   {{ form.input('marc21_300', label=_('Pagination'), id='field-marc21_300', placeholder=_('Physical Description (pagination).'), value=data.marc21_300, error=errors.marc21_300, classes=['control-full']) }}
- {% endblock %}
-
- {% block package_metadata_fields_marc21_500 %}
-   {{ form.input('marc21_500', label=_('General Note'), id='field-marc21_500', placeholder=_('General Note.'), value=data.marc21_500, error=errors.marc21_500, classes=['control-full'], attrs={'data-module': 'autocomplete', 'data-module-tags': ''}) }}
- {% endblock %}
+   
 
  </div>

@@ -4,8 +4,9 @@
   {{ form.input('title', id='field-title', label=_('Title'), placeholder=_('Formal title of the law or policy'), value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
 {% endblock %}
 
-
-
+  {% block package_basic_fields_description %}
+  {{ form.markdown('description', id='field-description', is_required=true, label=_('Short summary of content'), placeholder=_('Describe general purpose and scope'), value=data.description, error=errors.description) }}
+{% endblock %}
 
 
 
@@ -20,9 +21,7 @@
 
 
 
-{% block package_basic_fields_description %}
-  {{ form.markdown('notes', id='field-notes', label=_('Summary'), placeholder=_('Abstract or Summary of book or article'), value=data.notes, error=errors.notes) }}
-{% endblock %}
+
 
 {% block package_metadata_fields_version %}
   {{ form.input('version', is_required=true, label=_('Version / Edition'), id='field-version', placeholder=_('1.0'), value=data.version, error=errors.version, classes=['control-full']) }}

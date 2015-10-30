@@ -17,7 +17,14 @@ document_types = [
 laws_fields = [
   ('document_type','Document type',False),  
   ('odm_laws_short_title','Alternative/Short Title',True),
-  ('odm_laws_number','Legal document ',False)
+  ('odm_laws_number','Legal document #',False),
+  ('odm_laws_drafting_agency','Known Drafting Agency', False),
+  ('odm_laws_draft_assistance','Technical assistance for drafting',False),
+  ('odm_laws_technical_assistance','Agency providing technical assistance',False),
+  ('odm_laws_implementing_agency','Implementing Agency',False),
+  ('odm_laws_primary_policy_reference_point','Primary policy reference point',False),
+  ('odm_laws_status','Status',True)
+
 
 ]
 

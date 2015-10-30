@@ -24,14 +24,64 @@
  {%block package_metadata_fields_odm_laws_short_title%}
    {{ form.input('odm_laws_short_title', is_required=true, label=_('Alternative/Short Title'), id='field-short-title', placeholder=_('commonly used label, e.g. Cambodia Labor Law'), value=data.odm_laws_short_title, error=errors.shortTitle, classes=['control-full']) }}
  {% endblock %}
+
  
  {%block package_metadata_fields_odm_laws_number%}
-  {{ form.input('odm_laws_number', is_required=false, label=_('Legal document#'), id='field-odm_laws_number', placeholder=_(''), value=data.odm_laws_number, error=errors.lawsNumber, classes=['control-full']) }}
+  {{ form.input('odm_laws_number', is_required=false, label=_('Legal document #'), id='field-odm_laws_number', placeholder=_(''), value=data.odm_laws_number, error=errors.lawsNumber, classes=['control-full']) }}
+ {%endblock%}
+
+
+ {%block package_metadata_fields_odm_laws_drafting_agency%}
+  {{ form.input('odm_laws_drafting_agency', is_required=false, label=_('Known drafting Agency'), id='field-odm_laws_drafting_agency', placeholder=_(''), value=data.odm_laws_drafting_agency, error=errors.draftingAgency, classes=['control-full']) }}
  {%endblock%}
 
 
 
+{% block package_metadata_fields_odm_laws_draft_assistance %}
+  <div class="control-group">
+    <label for="field-odm_laws_draft_assistance" class="control-label">{{ _('Technical assistance for drafting') }}</label>
+    <div class="controls">
+      <div class="form-radios">
+        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Yes" {% if data.odm_laws_draft_assistance == "Yes"%}checked{% endif %}> {% trans %}Yes{% endtrans %}</br>
+        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="No" {% if data.odm_laws_draft_assistance == "No"%}checked{% endif %}> {% trans %}No{% endtrans %}</br>
+        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Unknown" {% if data.odm_laws_draft_assistance == "Unknown"%}checked{% endif %}> {% trans %}Unknown{% endtrans %}
+      </div>
+      {# <span id="field-odm_laws_draft_assistance-disclaimer" class="info-block info-inline">
+        <i class="icon-info-sign"></i>
+        {% trans %}
+          Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints.
+        {% endtrans %}
+      </span> #}
+    </div>
+  </div>
+{% endblock %}
 
-   
+
+ {%block package_metadata_fields_odm_laws_technical_assistance%}
+  {{ form.input('odm_laws_technical_assistance', is_required=false, label=_('Agency providing technical assistance'), id='field-odm_laws_technical_assistance', placeholder=_('###SHORT EXPLANATION OF FIELD###'), value=data.odm_laws_technical_assistance, error=errors.technicalAssistance, classes=['control-full']) }}
+ {%endblock%}
+
+  {%block package_metadata_fields_odm_laws_implementing_agency%}
+  {{ form.input('odm_laws_implementing_agency', is_required=false, label=_('Implementing Agency'), id='field-odm_laws_implementing_agency', placeholder=_(''), value=data.odm_laws_implementing_agency, error=errors.implementingAgency, classes=['control-full']) }}
+ {%endblock%}
+
+
+  {%block package_metadata_fields_odm_laws_primary_policy_reference_point%}
+  {{ form.input('odm_laws_primary_policy_reference_point', is_required=false, label=_('Primary Policy Reference Point'), id='field-odm_laws_primary_policy_reference_point', placeholder=_(''), value=data.odm_laws_primary_policy_reference_point, error=errors.policyReferencePoint, classes=['control-full']) }}
+ {%endblock%}
+
+{% block package_metadata_fields_odm_laws_status %}
+      <div class="control-group">
+        <label for="field-odm_laws_status" class="control-label">{{ _('Status') }}</label>
+        <div class="controls">
+          <select id="field-odm_laws_status" name="private">
+            {% for option in [('True', _('Enacted')), ('False', _('Draft'))] %}
+            <option value="{{ option[0] }}" {% if option[0] == data.odm_laws_status|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+{% endblock %}
+
 
  </div>

@@ -1,23 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# document_types = [
-#   ('advocacy_and_promotional_materials','Advocacy and promotional materials'),
-#   ('analysis_discussion_papers_and_blogs','Analysis, discussion papers, and blogs'),
-#   ('books_and_book_chapters','Books and book chapters'),
-#   ('case_studies','Case studies'),
-#   ('issue_and_policy_briefs','Issue and policy briefs'),
-#   ('profiles_people','Profiles - People'),
-#   ('profiles_organizations_and_projects','Profiles - Organizations  and projects'),
-#   ('profiles_geographical_areas_and_sites','Profiles - Geographical areas and sites'),
-#   ('conference_workshops_proceedings_and_presentations','Conference/workshop proceedings and presentations'),
-#   ('reports_journal_articles_and_research_papers','Reports, journal articles, and research papers (including theses and dissertations)')
-# ]
+document_types = [
+  ('advocacy_and_promotional_materials','Advocacy and promotional materials'),
+  ('analysis_discussion_papers_and_blogs','Analysis, discussion papers, and blogs'),
+  ('books_and_book_chapters','Books and book chapters'),
+  ('case_studies','Case studies'),
+  ('issue_and_policy_briefs','Issue and policy briefs'),
+  ('profiles_people','Profiles - People'),
+  ('profiles_organizations_and_projects','Profiles - Organizations  and projects'),
+  ('profiles_geographical_areas_and_sites','Profiles - Geographical areas and sites'),
+  ('conference_workshops_proceedings_and_presentations','Conference/workshop proceedings and presentations'),
+  ('reports_journal_articles_and_research_papers','Reports, journal articles, and research papers (including theses and dissertations)')
+]
 
 laws_fields = [
-  # ('document_type','Document type',False),
-  
-  ('odm_laws_short_title','Short Title',True)
+  ('document_type','Document type',False),  
+  ('odm_laws_short_title','Alternative/Short Title',True),
+  ('odm_laws_number','Legal document ',False)
+
 ]
 
 odc_fields = [

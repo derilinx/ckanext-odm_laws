@@ -8,7 +8,25 @@
   {{ form.markdown('description', id='field-description', is_required=true, label=_('Short summary of content'), placeholder=_('Describe general purpose and scope'), value=data.description, error=errors.description) }}
 {% endblock %}
 
-
+{% block package_basic_fields_taxonomy %}
+{% set taxonomy_tags = h.odm_theme_taxonomy_dictionary() %}
+{% if taxonomy_tags|length > 0 %}
+<div class="control-group">
+  <label class="control-label" for="field-taxonomy">{{ _("Topics") }}</label>
+  <div class="controls control-full">
+    <select multiple id="field-taxonomy" name="taxonomy" data-module="autocomplete" placeholder="{{ _("eg. economy, mental health, government") }}">
+      {% for tag in taxonomy_tags %}
+      {% if tag not in data.tag_string %}
+        <option value="{{ tag }}">{{ h.odm_theme_get_localized_tag(tag) }}</option>
+      {% else %}
+        <option selected="selected" value="{{ tag }}">{{ h.odm_theme_get_localized_tag(tag) }}</option>
+      {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+</div>
+{% endif %}
+{% endblock%}
 
 {% block package_basic_fields_url %}
   {% set prefix = h.url_for(controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='read', id='') %}

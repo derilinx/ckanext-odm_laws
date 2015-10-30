@@ -74,7 +74,7 @@
       <div class="control-group">
         <label for="field-odm_laws_status" class="control-label">{{ _('Status') }}</label>
         <div class="controls">
-          <select id="field-odm_laws_status" name="private">
+          <select id="field-odm_laws_status" name="odm_laws_status">
             {% for option in [('True', _('Enacted')), ('False', _('Draft'))] %}
             <option value="{{ option[0] }}" {% if option[0] == data.odm_laws_status|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
             {% endfor %}

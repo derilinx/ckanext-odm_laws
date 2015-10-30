@@ -33,3 +33,4 @@ This material is copyright (c) 2014-2015 East-West Management Institute, Inc. (E
 It is open and licensed under the GNU Affero General Public License (AGPL) v3.0 whose full text may be found at:
 
 http://www.fsf.org/licensing/licenses/agpl-3.0.html
+HAHAdd

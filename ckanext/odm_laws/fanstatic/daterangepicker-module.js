@@ -16,6 +16,26 @@ this.ckan.module('datepicker-module', function($, _) {
           singleDatePicker: true,
           showDropdowns: true
         });
+
+      $('#field-odm_laws_version_date').daterangepicker({
+          singleDatePicker: true,
+          showDropdowns: true
+        });
+
+      $('#field-odm_laws_date_of_enactment').daterangepicker({
+          singleDatePicker:true,
+          showDropdowns:true
+      });
+
+      $('#field-odm_laws_final_action').daterangepicker({
+        singleDatePicker:true,
+        showDropdowns:true
+      });
+
+      $('#field-odm_laws_efective_date').daterangepicker({
+        singleDatePicker:true,
+        showDropdowns:true
+      });
     }
   }
 });

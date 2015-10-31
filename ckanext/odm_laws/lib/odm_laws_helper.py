@@ -15,7 +15,7 @@ document_types = [
 ]
 
 laws_fields = [
-  ('document_type','Document type',False),  
+  ('document_type','Document type',False),
   ('odm_laws_short_title','Alternative/Short Title',True),
   ('odm_laws_number','Legal document #',False),
   ('odm_laws_drafting_agency','Known Drafting Agency', False),
@@ -23,9 +23,16 @@ laws_fields = [
   ('odm_laws_technical_assistance','Agency providing technical assistance',False),
   ('odm_laws_implementing_agency','Implementing Agency',False),
   ('odm_laws_primary_policy_reference_point','Primary policy reference point',False),
-  ('odm_laws_status','Status',True)
-
-
+  ('odm_laws_status','Status',True),
+  ('odm_laws_version_date','Version date',False),
+  ('odm_laws_date_of_enactment','Date of enactment', False),
+  ('odm_laws_final_action','Date final action neccecary to formalize Policy',False),
+  ('odm_laws_efective_date','Effective Date (if adopted)',False),
+  ('odm_laws_action_previous_law','Does this law replace, amend or supplement previous law',False),
+  ('odm_laws_action_previous_law_description','Describe what changed',False),
+  ('odm_laws_official_publication_reference','Official publication reference (if exists)',False),
+  ('odm_laws_source','Official Link to Source',False),
+  ('odm_laws_notes','Notes',False)
 ]
 
 odc_fields = [
@@ -44,7 +51,8 @@ metadata_fields = [
   ('odm_contact','Contact',False),
   ('odm_language','Language',True),
   ('odm_date_uploaded','Date Uploaded',True),
-  ('odm_spatial_range','Geographic area (Spatial Range)',True)
+  ('odm_spatial_range','Geographic area (Spatial Range)',True),
+  ('odm_version', 'Draft Version', True)
 ]
 
 ckan_fields= [

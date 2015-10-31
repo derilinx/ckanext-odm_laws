@@ -42,5 +42,5 @@
 
 
 {% block package_metadata_fields_version %}
-  {{ form.input('version', is_required=true, label=_('Version / Edition'), id='field-version', placeholder=_('1.0'), value=data.version, error=errors.version, classes=['control-full']) }}
+  {{ form.input('version', is_required=true, label=_('Draft Version'), id='field-version', placeholder=_('1.0'), value=data.version, error=errors.version, classes=['control-full']) }}
 {% endblock %}

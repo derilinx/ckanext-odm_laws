@@ -1,5 +1,9 @@
 {% import 'macros/form.html' as form %}
 
+{% resource 'odm_laws/moment.js' %}
+{% resource 'odm_laws/daterangepicker.js' %}
+{% resource 'odm_laws/daterangepicker-bs3.css' %}
+{% resource 'odm_laws/daterangepicker-module.js' %}
 <div class="control-group">
 
  {% block package_basic_fields_document_type %}
@@ -19,13 +23,13 @@
 
  {% endblock %}
 
- 
+
 
  {%block package_metadata_fields_odm_laws_short_title%}
    {{ form.input('odm_laws_short_title', is_required=true, label=_('Alternative/Short Title'), id='field-short-title', placeholder=_('commonly used label, e.g. Cambodia Labor Law'), value=data.odm_laws_short_title, error=errors.shortTitle, classes=['control-full']) }}
  {% endblock %}
 
- 
+
  {%block package_metadata_fields_odm_laws_number%}
   {{ form.input('odm_laws_number', is_required=false, label=_('Legal document #'), id='field-odm_laws_number', placeholder=_(''), value=data.odm_laws_number, error=errors.lawsNumber, classes=['control-full']) }}
  {%endblock%}
@@ -37,51 +41,98 @@
 
 
 
-{% block package_metadata_fields_odm_laws_draft_assistance %}
-  <div class="control-group">
-    <label for="field-odm_laws_draft_assistance" class="control-label">{{ _('Technical assistance for drafting') }}</label>
-    <div class="controls">
-      <div class="form-radios">
-        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Yes" {% if data.odm_laws_draft_assistance == "Yes"%}checked{% endif %}> {% trans %}Yes{% endtrans %}</br>
-        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="No" {% if data.odm_laws_draft_assistance == "No"%}checked{% endif %}> {% trans %}No{% endtrans %}</br>
-        <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Unknown" {% if data.odm_laws_draft_assistance == "Unknown"%}checked{% endif %}> {% trans %}Unknown{% endtrans %}
+  {% block package_metadata_fields_odm_laws_draft_assistance %}
+    <div class="control-group">
+      <label for="field-odm_laws_draft_assistance" class="control-label">{{ _('Technical assistance for drafting') }}</label>
+      <div class="controls">
+        <div class="form-radios">
+          <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Yes" {% if data.odm_laws_draft_assistance == "Yes"%}checked{% endif %}> {% trans %}Yes{% endtrans %}</br>
+          <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="No" {% if data.odm_laws_draft_assistance == "No"%}checked{% endif %}> {% trans %}No{% endtrans %}</br>
+          <input id="field-odm_laws_draft_assistance" name="odm_laws_draft_assistance" type="radio" value="Unknown" {% if data.odm_laws_draft_assistance == "Unknown"%}checked{% endif %}> {% trans %}Unknown{% endtrans %}
+        </div>
+        {# <span id="field-odm_laws_draft_assistance-disclaimer" class="info-block info-inline">
+          <i class="icon-info-sign"></i>
+          {% trans %}
+            Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints.
+          {% endtrans %}
+        </span> #}
       </div>
-      {# <span id="field-odm_laws_draft_assistance-disclaimer" class="info-block info-inline">
-        <i class="icon-info-sign"></i>
-        {% trans %}
-          Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints.
-        {% endtrans %}
-      </span> #}
     </div>
-  </div>
-{% endblock %}
+  {% endblock %}
 
 
- {%block package_metadata_fields_odm_laws_technical_assistance%}
-  {{ form.input('odm_laws_technical_assistance', is_required=false, label=_('Agency providing technical assistance'), id='field-odm_laws_technical_assistance', placeholder=_('###SHORT EXPLANATION OF FIELD###'), value=data.odm_laws_technical_assistance, error=errors.technicalAssistance, classes=['control-full']) }}
- {%endblock%}
+  {%block package_metadata_fields_odm_laws_technical_assistance%}
+    {{ form.input('odm_laws_technical_assistance', is_required=false, label=_('Agency providing technical assistance'), id='field-odm_laws_technical_assistance', placeholder=_('###SHORT EXPLANATION OF FIELD###'), value=data.odm_laws_technical_assistance, error=errors.technicalAssistance, classes=['control-full']) }}
+  {%endblock%}
 
   {%block package_metadata_fields_odm_laws_implementing_agency%}
-  {{ form.input('odm_laws_implementing_agency', is_required=false, label=_('Implementing Agency'), id='field-odm_laws_implementing_agency', placeholder=_(''), value=data.odm_laws_implementing_agency, error=errors.implementingAgency, classes=['control-full']) }}
- {%endblock%}
+    {{ form.input('odm_laws_implementing_agency', is_required=false, label=_('Implementing Agency'), id='field-odm_laws_implementing_agency', placeholder=_(''), value=data.odm_laws_implementing_agency, error=errors.implementingAgency, classes=['control-full']) }}
+  {%endblock%}
 
 
   {%block package_metadata_fields_odm_laws_primary_policy_reference_point%}
-  {{ form.input('odm_laws_primary_policy_reference_point', is_required=false, label=_('Primary Policy Reference Point'), id='field-odm_laws_primary_policy_reference_point', placeholder=_(''), value=data.odm_laws_primary_policy_reference_point, error=errors.policyReferencePoint, classes=['control-full']) }}
- {%endblock%}
+    {{ form.input('odm_laws_primary_policy_reference_point', is_required=false, label=_('Primary Policy Reference Point'), id='field-odm_laws_primary_policy_reference_point', placeholder=_(''), value=data.odm_laws_primary_policy_reference_point, error=errors.policyReferencePoint, classes=['control-full']) }}
+  {%endblock%}
 
-{% block package_metadata_fields_odm_laws_status %}
-      <div class="control-group">
-        <label for="field-odm_laws_status" class="control-label">{{ _('Status') }}</label>
-        <div class="controls">
-          <select id="field-odm_laws_status" name="odm_laws_status">
-            {% for option in [('True', _('Enacted')), ('False', _('Draft'))] %}
-            <option value="{{ option[0] }}" {% if option[0] == data.odm_laws_status|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
-            {% endfor %}
-          </select>
+  {% block package_metadata_fields_odm_laws_status %}
+        <div class="control-group">
+          <label for="field-odm_laws_status" class="control-label">{{ _('Status') }}</label>
+          <div class="controls">
+            <select id="field-odm_laws_status" name="odm_laws_status">
+              {% for option in [('True', _('Enacted')), ('False', _('Draft'))] %}
+              <option value="{{ option[0] }}" {% if option[0] == data.odm_laws_status|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
+              {% endfor %}
+            </select>
+          </div>
         </div>
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_version_date %}
+    {{ form.input_readonly('odm_laws_version_date', is_required=false, label=_('Version date'), id='field-odm_laws_version_date', placeholder=_(''), value=data.odm_laws_version_date, error=errors.odm_laws_version_date, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_date_of_enactment %}
+    {{ form.input_readonly('odm_laws_date_of_enactment', is_required=false, label=_('Date of enactment'), id='field-odm_laws_date_of_enactment', placeholder=_('Date agreement or law adopted (if adopted)'), value=data.odm_laws_date_of_enactment, error=errors.odm_laws_date_of_enactment, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_final_action %}
+    {{ form.input_readonly('odm_laws_final_action', is_required=false, label=_('Date final action neccecary to formalize Policy'), id='field-odm_laws_final_action', placeholder=_('In Cambodian statute, this would be the signature of the King'), value=data.odm_laws_final_action, error=errors.odm_laws_final_action, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_efective_date %}
+    {{ form.input_readonly('odm_laws_efective_date', is_required=false, label=_('Effective Date (if adopted)'), id='field-odm_laws_efective_date', placeholder=_('Date policy document is to take effect'), value=data.odm_laws_efective_date, error=errors.odm_laws_efective_date, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_action_previous_law %}
+    <div class="control-group">
+      <label for="field-odm_laws_action_previous_law" class="control-label">{{ _('Previous law') }}</label>
+      <div class="controls">
+        <select id="field-oodm_laws_action_previous_law" name="odm_laws_status">
+          <option value="Replacement" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Replacement</option>
+          <option value="Amendment" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Amendment</option>
+          <option value="Supplement" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Supplement</option>
+          <option value="No/Unknown" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>No/Unknown</option>
+
+        </select>
       </div>
-{% endblock %}
+    </div>
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_action_previous_law_description %}
+    {{ form.markdown('odm_laws_action_previous_law_description', id='field-odm_laws_action_previous_law_description', is_required=false, label=_('Describe what changed'), placeholder=_(''), value=data.odm_laws_action_previous_law_description, error=errors.odm_laws_action_previous_law_description) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_official_publication_reference %}
+    {{ form.input_readonly('odm_laws_official_publication_reference', is_required=false, label=_('Official publication reference (if exists)'), id='field-odm_laws_official_publication_reference', placeholder=_('The official gazette or other official promulgation of policy, referencing issue #, date and page'), value=data.odm_laws_official_publication_reference, error=errors.odm_laws_official_publication_reference, classes=['control-full']) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_source %}
+    {{ form.input_readonly('odm_laws_source', is_required=false, label=_('Official Link to Source'), id='field-odm_laws_source', placeholder=_('Official URL where policy doc is made available'), value=data.odm_laws_source, error=errors.odm_laws_source, classes=['control-full']) }}
+  {% endblock %}
+
+  {% block package_metadata_fields_odm_laws_notes %}
+    {{ form.markdown('odm_laws_notes', id='field-odm_laws_notes', is_required=false, label=_('Notes'), placeholder=_('Add any notes to this document'), value=data.odm_laws_notes, error=errors.odm_laws_notes) }}
+  {% endblock %}
 
 
  </div>

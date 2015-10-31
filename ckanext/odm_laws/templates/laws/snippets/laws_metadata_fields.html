@@ -79,9 +79,8 @@
           <label for="field-odm_laws_status" class="control-label">{{ _('Status') }}</label>
           <div class="controls">
             <select id="field-odm_laws_status" name="odm_laws_status">
-              {% for option in [('True', _('Enacted')), ('False', _('Draft'))] %}
-              <option value="{{ option[0] }}" {% if option[0] == data.odm_laws_status|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
-              {% endfor %}
+              <option value="Enacted" {% if option == data.odm_laws_status %}selected="selected"{% endif %}>Enacted</option>
+              <option value="Draft" {% if option == data.odm_laws_status %}selected="selected"{% endif %}>Draft</option>
             </select>
           </div>
         </div>
@@ -90,10 +89,14 @@
   {% block package_metadata_fields_odm_laws_version_date %}
     {{ form.input_readonly('odm_laws_version_date', is_required=false, label=_('Version date'), id='field-odm_laws_version_date', placeholder=_(''), value=data.odm_laws_version_date, error=errors.odm_laws_version_date, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
   {% endblock %}
-
+  <!-- new -->
   {% block package_metadata_fields_odm_laws_date_of_enactment %}
-    {{ form.input_readonly('odm_laws_date_of_enactment', is_required=false, label=_('Date of enactment'), id='field-odm_laws_date_of_enactment', placeholder=_('Date agreement or law adopted (if adopted)'), value=data.odm_laws_date_of_enactment, error=errors.odm_laws_date_of_enactment, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+    {{ form.input_readonly('odm_laws_date_of_enactment', is_required=false, label=_('Date of enactment'), id='field-odm_laws_date_of_enactment', placeholder=_(''), value=data.odm_laws_date_of_enactment, error=errors.odm_laws_date_of_enactment, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
   {% endblock %}
+  <!-- old -->
+  {#% block package_metadata_fields_odm_laws_date_of_enactment %}
+    {{ form.input_readonly('odm_laws_date_of_enactment', is_required=false, label=_('Date of enactment'), id='field-odm_laws_date_of_enactment', placeholder=_('Date agreement or law adopted (if adopted)'), value=data.odm_laws_date_of_enactment, error=errors.odm_laws_date_of_enactment, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+  {% endblock %#}
 
   {% block package_metadata_fields_odm_laws_final_action %}
     {{ form.input_readonly('odm_laws_final_action', is_required=false, label=_('Date final action neccecary to formalize Policy'), id='field-odm_laws_final_action', placeholder=_('In Cambodian statute, this would be the signature of the King'), value=data.odm_laws_final_action, error=errors.odm_laws_final_action, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
@@ -107,7 +110,7 @@
     <div class="control-group">
       <label for="field-odm_laws_action_previous_law" class="control-label">{{ _('Previous law') }}</label>
       <div class="controls">
-        <select id="field-oodm_laws_action_previous_law" name="odm_laws_status">
+        <select id="field-odm_laws_action_previous_law" name="odm_laws_action_previous_law">
           <option value="Replacement" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Replacement</option>
           <option value="Amendment" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Amendment</option>
           <option value="Supplement" {% if option == data.odm_laws_action_previous_law %}selected="selected"{% endif %}>Supplement</option>
@@ -123,11 +126,11 @@
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_official_publication_reference %}
-    {{ form.input_readonly('odm_laws_official_publication_reference', is_required=false, label=_('Official publication reference (if exists)'), id='field-odm_laws_official_publication_reference', placeholder=_('The official gazette or other official promulgation of policy, referencing issue #, date and page'), value=data.odm_laws_official_publication_reference, error=errors.odm_laws_official_publication_reference, classes=['control-full']) }}
+    {{ form.input('odm_laws_official_publication_reference', is_required=false, label=_('Official publication reference (if exists)'), id='field-odm_laws_official_publication_reference', placeholder=_('The official gazette or other official promulgation of policy, referencing issue #, date and page'), value=data.odm_laws_official_publication_reference, error=errors.odm_laws_official_publication_reference, classes=['control-full']) }}
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_source %}
-    {{ form.input_readonly('odm_laws_source', is_required=false, label=_('Official Link to Source'), id='field-odm_laws_source', placeholder=_('Official URL where policy doc is made available'), value=data.odm_laws_source, error=errors.odm_laws_source, classes=['control-full']) }}
+    {{ form.input('odm_laws_source', is_required=false, label=_('Official Link to Source'), id='field-odm_laws_source', placeholder=_('Official URL where policy doc is made available'), value=data.odm_laws_source, error=errors.odm_laws_source, classes=['control-full']) }}
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_notes %}

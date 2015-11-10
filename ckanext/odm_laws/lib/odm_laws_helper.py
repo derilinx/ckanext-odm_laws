@@ -30,9 +30,12 @@ laws_fields = [
   ('odm_laws_efective_date','Effective Date (if adopted)',False),
   ('odm_laws_action_previous_law','Does this law replace, amend or supplement previous law',False),
   ('odm_laws_action_previous_law_description','Describe what changed',False),
+  ('odm_laws_relationship_type','Relationship to other Document', False),
+  ('odm_laws_relationship_target','Target Document', False),
   ('odm_laws_official_publication_reference','Official publication reference (if exists)',False),
   ('odm_laws_source','Official Link to Source',False),
   ('odm_laws_notes','Notes',False)
+
 ]
 
 odc_fields = [

@@ -14,6 +14,7 @@ import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
 
+
 log = logging.getLogger(__name__)
 
 DATASET_TYPE_NAME = 'laws_record'
@@ -24,6 +25,8 @@ def get_document_types():
   log.debug('get_document_types')
 
   return odm_laws_helper.document_types
+
+
 
 def last_dataset():
   ''' Returns the last dataset info stored in session'''
@@ -68,6 +71,33 @@ def validate_not_empty(value,context):
   if not value or len(value) is None:
     raise toolkit.Invalid('Missing value')
   return value
+
+# def lookup_relationship_target(dataset):
+# def lookup_relationship_target():
+#     ''' Get Dataset as relationship target '''
+#
+#     # dataset_target = toolkit.get_action('package_autocomplete')(data_dict={'q': dataset})
+#     dataset_target = toolkit.get_action('package_list')
+#     log.debug('looking up dataset')
+#
+#     # log.debug('looking up dataset', key)
+#     # result=list(dataset_target.result)
+#     # "this is a tuple: %s" % (thetuple,)
+#
+#     return dataset_target
+
+def lookup_relationship_target():
+
+
+  # Get a list of all the site's groups from CKAN, sorted by number of
+  # datasets.
+  datasets = toolkit.get_action('package_list')(
+      data_dict={'all_fields': True})
+
+  # Truncate the list to the 10 most popular groups only.
+  # groups = groups[:10]
+
+  return datasets
 
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
@@ -125,6 +155,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return organization_facets
 
+
+
   def before_map(self, m):
 
     m.connect('odm_laws_index','/laws',
@@ -154,6 +186,11 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     toolkit.add_resource('fanstatic', 'odm_laws')
     toolkit.add_public_directory(config, 'public')
 
+
+
+
+
+
   def get_helpers(self):
     '''Register the plugin's functions above as a template helper function.'''
 
@@ -163,7 +200,9 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_metadata_fields': metadata_fields,
       'odm_laws_last_dataset': last_dataset,
       'odm_laws_get_dataset_type': get_dataset_type,
-      'odm_laws_laws_fields': laws_fields
+      'odm_laws_laws_fields': laws_fields,
+      'odm_laws_lookup_relationship_target': lookup_relationship_target
+
     }
 
   def _modify_package_schema_write(self, schema):

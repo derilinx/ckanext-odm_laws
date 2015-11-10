@@ -125,6 +125,36 @@
     {{ form.markdown('odm_laws_action_previous_law_description', id='field-odm_laws_action_previous_law_description', is_required=false, label=_('Describe what changed'), placeholder=_(''), value=data.odm_laws_action_previous_law_description, error=errors.odm_laws_action_previous_law_description) }}
   {% endblock %}
 
+
+  {% block package_metadata_fields_odm_laws_relationship_type %}
+        <div class="control-group">
+          <label for="field-odm_laws_relationship_type" class="control-label">{{ _('Relationship to other Document') }}</label>
+          <div class="controls">
+            <select id="field-odm_laws_relationship_type" name="odm_laws_relationship_type">
+              <option value="child_of" {% if option == data.odm_laws_relationship_type %}selected="selected"{% endif %}>Child of</option>
+              <option value="parent_of" {% if option == data.odm_laws_relationship_type %}selected="selected"{% endif %}>Parent of</option>
+            </select>
+          </div>
+        </div>
+  {% endblock %}
+
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  {% block package_metadata_fields_odm_laws_relationship_target %}
+
+    
+    {% for dataset in h.odm_laws_lookup_relationship_target() %}
+            <li>{{ dataset }}</li>
+    {% endfor %}
+
+
+
+
+
+  {% endblock %}
+
   {% block package_metadata_fields_odm_laws_official_publication_reference %}
     {{ form.input('odm_laws_official_publication_reference', is_required=false, label=_('Official publication reference (if exists)'), id='field-odm_laws_official_publication_reference', placeholder=_('The official gazette or other official promulgation of policy, referencing issue #, date and page'), value=data.odm_laws_official_publication_reference, error=errors.odm_laws_official_publication_reference, classes=['control-full']) }}
   {% endblock %}

@@ -72,30 +72,13 @@ def validate_not_empty(value,context):
     raise toolkit.Invalid('Missing value')
   return value
 
-# def lookup_relationship_target(dataset):
-# def lookup_relationship_target():
-#     ''' Get Dataset as relationship target '''
-#
-#     # dataset_target = toolkit.get_action('package_autocomplete')(data_dict={'q': dataset})
-#     dataset_target = toolkit.get_action('package_list')
-#     log.debug('looking up dataset')
-#
-#     # log.debug('looking up dataset', key)
-#     # result=list(dataset_target.result)
-#     # "this is a tuple: %s" % (thetuple,)
-#
-#     return dataset_target
 
 def lookup_relationship_target():
 
 
-  # Get a list of all the site's groups from CKAN, sorted by number of
-  # datasets.
-  datasets = toolkit.get_action('package_list')(
-      data_dict={'all_fields': True})
+  # Get a list of all the site's datasets from CKAN,
+  datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
 
-  # Truncate the list to the 10 most popular groups only.
-  # groups = groups[:10]
 
   return datasets
 

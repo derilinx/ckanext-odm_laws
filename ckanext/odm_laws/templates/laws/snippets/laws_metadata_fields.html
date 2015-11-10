@@ -143,16 +143,18 @@
   <!--  -->
 
   {% block package_metadata_fields_odm_laws_relationship_target %}
+      <div class="control-group">
+        <label class="control-label" for="field-taxonomy">{{ _("Relationship Target") }}</label>
+        <div class="controls control-full">
+          <select multiple id="field-taxonomy" name="taxonomy" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
+            {% for dataset in h.odm_laws_lookup_relationship_target() %}
 
-    
-    {% for dataset in h.odm_laws_lookup_relationship_target() %}
-            <li>{{ dataset }}</li>
-    {% endfor %}
+              <option value="{{ dataset }}">{{ dataset }}</option>
 
-
-
-
-
+            {% endfor %}
+          </select>
+        </div>
+      </div>
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_official_publication_reference %}

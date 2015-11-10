@@ -26,7 +26,7 @@ laws_fields = [
   ('odm_laws_status','Status',True),
   ('odm_laws_version_date','Version date',False),
   ('odm_laws_date_of_enactment','Date of enactment', False),
-  ('odm_laws_final_action','Date final action neccecary to formalize Policy',False),
+  ('odm_laws_final_action','Date final action necessary to formalize Policy',False),
   ('odm_laws_efective_date','Effective Date (if adopted)',False),
   ('odm_laws_action_previous_law','Does this law replace, amend or supplement previous law',False),
   ('odm_laws_action_previous_law_description','Describe what changed',False),

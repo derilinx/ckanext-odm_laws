@@ -99,7 +99,7 @@
   {% endblock %#}
 
   {% block package_metadata_fields_odm_laws_final_action %}
-    {{ form.input_readonly('odm_laws_final_action', is_required=false, label=_('Date final action neccecary to formalize Policy'), id='field-odm_laws_final_action', placeholder=_('In Cambodian statute, this would be the signature of the King'), value=data.odm_laws_final_action, error=errors.odm_laws_final_action, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
+    {{ form.input_readonly('odm_laws_final_action', is_required=false, label=_('Date final action necessary to formalize Policy'), id='field-odm_laws_final_action', placeholder=_('In Cambodian statute, this would be the signature of the King'), value=data.odm_laws_final_action, error=errors.odm_laws_final_action, classes=['control-full'], attrs={'data-module': 'datepicker-module'}) }}
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_efective_date %}
@@ -143,16 +143,18 @@
   <!--  -->
 
   {% block package_metadata_fields_odm_laws_relationship_target %}
+      <div class="control-group">
+        <label class="control-label" for="field-taxonomy">{{ _("Relationship Target") }}</label>
+        <div class="controls control-full">
+          <select multiple id="field-odm_laws_relationship_target" name="odm_laws_relationship_target" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
+            {% for dataset in h.odm_laws_lookup_relationship_target() %}
 
-    
-    {% for dataset in h.odm_laws_lookup_relationship_target() %}
-            <li>{{ dataset }}</li>
-    {% endfor %}
+              <option value="{{ dataset }}">{{ dataset }}</option>
 
-
-
-
-
+            {% endfor %}
+          </select>
+        </div>
+      </div>
   {% endblock %}
 
   {% block package_metadata_fields_odm_laws_official_publication_reference %}

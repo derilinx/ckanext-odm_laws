@@ -144,9 +144,15 @@
 
   {% block package_metadata_fields_odm_laws_relationship_target %}
       <div class="control-group">
+<<<<<<< HEAD
         <label class="control-label" for="field-odm_laws_relationship_target">{{ _("Relationship Target") }}</label>
         <div class="controls control-full">
           <select multiple id="field-odm_laws_relationship_target" name="odm_laws_relationship_target" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
+=======
+        <label class="control-label" for="field-taxonomy">{{ _("Relationship Target") }}</label>
+        <div class="controls control-full">
+          <select multiple id="field-taxonomy" name="taxonomy" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
+>>>>>>> 873360888692c6ea71fa114e625e86dda94c19a2
             {% for dataset in h.odm_laws_lookup_relationship_target() %}
 
               <option value="{{ dataset }}">{{ dataset }}</option>

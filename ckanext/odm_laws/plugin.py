@@ -190,6 +190,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def _modify_package_schema_write(self, schema):
 
+
     for metadata_field in odm_laws_helper.metadata_fields:
       validators_and_converters = [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_extras'), ]
       if metadata_field[2]:
@@ -301,6 +302,19 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def after_update(self, context, pkg_dict):
     log.debug('after_update: %s', pkg_dict['name'])
+
+    #  Create relationship if target is set
+    if 'odm_laws_relationship_target' in pkg_dict:
+        # current dataset
+        rel_subj=pkg_dict['name']
+        # is child of/parent of
+        rel_type=pkg_dict['odm_laws_relationship_type']
+        # relationship target
+        rel_target=pkg_dict['odm_laws_relationship_target']
+
+        log.debug("Creating relationship %s %s",rel_type,rel_target)
+        toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
+
 
     odm_laws_helper.session['last_dataset'] = pkg_dict
     odm_laws_helper.session.save()

@@ -1,1 +1,3 @@
+.gitignore
 odm_laws.sublime-workspace
+*.pyc

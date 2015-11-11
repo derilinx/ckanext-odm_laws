@@ -128,7 +128,7 @@
 
   {% block package_metadata_fields_odm_laws_relationship_type %}
         <div class="control-group">
-          <label for="field-odm_laws_relationship_type" class="control-label">{{ _('Relationship to other Document') }}</label>
+          <label for="field-odm_laws_relationship_type" class="control-label">{{ _('Add Relationship to other Document') }}</label>
           <div class="controls">
             <select id="field-odm_laws_relationship_type" name="odm_laws_relationship_type">
               <option value="child_of" {% if option == data.odm_laws_relationship_type %}selected="selected"{% endif %}>Child of</option>
@@ -144,7 +144,7 @@
 
   {% block package_metadata_fields_odm_laws_relationship_target %}
       <div class="control-group">
-        <label class="control-label" for="field-taxonomy">{{ _("Relationship Target") }}</label>
+        <label class="control-label" for="field-odm_laws_relationship_target">{{ _("Relationship Target") }}</label>
         <div class="controls control-full">
           <select multiple id="field-odm_laws_relationship_target" name="odm_laws_relationship_target" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
             {% for dataset in h.odm_laws_lookup_relationship_target() %}

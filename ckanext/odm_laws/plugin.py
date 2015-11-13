@@ -76,8 +76,13 @@ def validate_not_empty(value,context):
 def get_dataset_name(dataset_id):
     # get dataset dict
     dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
+    resource_dict= dataset_dict['resources']
     # return name for the id
-    return dataset_dict['name']
+    # return resource_dict[0]['name']
+    return resource_dict
+
+    
+
 
 def lookup_relationship_target():
   # Get a list of all the site's datasets from CKAN,

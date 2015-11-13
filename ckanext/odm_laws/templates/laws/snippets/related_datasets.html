@@ -1,0 +1,37 @@
+{% block odm_laws_semre_of_database_relationships %}
+  <h2>Parent documents</h2>
+  <p>
+    <!-- get all parents with the current dataset as the subject  -->
+
+    {% for entry in h.odm_laws_semre_of_database_relationships(c=c,viewpoint='subject') %}
+      {%set dataset_id=entry.__extras.object_package_id%}
+        <ul>
+          <!-- display related document -->
+          <li>
+            <a href="{{h.url_for(controller='package',action='read',id=dataset_id)}}" target="_blank">
+              {{h.odm_laws_get_dataset_name(entry.__extras.object_package_id)[0]['name']}}
+
+            </a>
+
+          </li>
+        </ul>
+    {% endfor %}
+  </p>
+
+  <h2>Child documents</h2>
+  <p>
+
+    {% for entry in h.odm_laws_semre_of_database_relationships(c=c,viewpoint='object') %}
+      {%set dataset_id=entry.__extras.subject_package_id%}
+        <ul>
+          <li>
+            <a href="{{h.url_for(controller='package',action='read',id=dataset_id)}}" target="_blank">
+              {{h.odm_laws_get_dataset_name(entry.__extras.subject_package_id)[0]['name']}}
+            </a>
+          </li>
+        </ul>
+    {% endfor %}
+  </p>
+
+  <hr>
+{% endblock %}

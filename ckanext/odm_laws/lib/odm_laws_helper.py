@@ -31,7 +31,7 @@ laws_fields = [
   ('odm_laws_action_previous_law','Does this law replace, amend or supplement previous law',False),
   ('odm_laws_action_previous_law_description','Describe what changed',False),
   ('odm_laws_relationship_type','Add Relationship to other Document', False),
-  ('odm_laws_relationship_target','Target Document', False),
+  ('odm_laws_relationship_target','Associated Document', False),
   ('odm_laws_official_publication_reference','Official publication reference (if exists)',False),
   ('odm_laws_source','Official Link to Source',False),
   ('odm_laws_notes','Notes',False)

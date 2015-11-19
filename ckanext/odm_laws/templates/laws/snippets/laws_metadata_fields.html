@@ -129,7 +129,7 @@
 
   {% block package_metadata_fields_odm_laws_relationship_type %}
         <!-- View relationships -->
-        
+
 
         <!-- Add new relationship -->
         <div class="control-group">
@@ -149,10 +149,10 @@
 
   {% block package_metadata_fields_odm_laws_relationship_target %}
       <div class="control-group">
-        <label class="control-label" for="field-odm_laws_relationship_target">{{ _("Relationship Target") }}</label>
+        <label class="control-label" for="field-odm_laws_relationship_target">{{ _("Associated Document") }}</label>
         <div class="controls control-full">
           <select id="field-odm_laws_relationship_target" name="odm_laws_relationship_target" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
-            <option disabled selected> {{ _("-- select a new relationship target --") }} </option>
+            <option disabled selected> {{ _("-- select an associated document --") }} </option>
             {% for dataset in h.odm_laws_lookup_relationship_target() %}
 
               <option value="{{ dataset }}">{{ dataset }}</option>

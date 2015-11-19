@@ -5,22 +5,10 @@
     <ul class="nav nav-pills">
 
       {% block header_site_navigation_tabs %}
-        {% if c.userobj %}
-         {{ h.build_nav_main(
-          ('search', _('All records')),
-          ('organizations_index', _('Organizations')),
-          ('group_index', _('Records by type')),
-          ('odm_library_index', _('Library')),
-          ('odm_laws_index', _('Laws'))
-          ) }}
-        {% else %}
-         {{ h.build_nav_main(
-          ('search', _('All records')),
-          ('group_index', _('Records by type')),
-          ('odm_library_index', _('Library')),
-          ('odm_laws_index', _('Laws'))
-          ) }}
-        {% endif %}
+        <h1>TEST</h1>
+          {{super()}}
+
+          <li><a href="/laws">Laws</a></li>
       {% endblock %}
 
      </ul>

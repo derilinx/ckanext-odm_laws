@@ -85,13 +85,7 @@ def get_dataset_name(dataset_id):
 
 def get_dataset_notes(dataset_id, truncate):
     dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-
-    # try:
-    #   notes
-    # except NameError:
-    #   print "well, it WASN'T defined after all!"
-    # else:
-    #   print "sure, it was defined."
+    
     if 'notes' in dataset_dict :
         notes = dataset_dict['notes']
 
@@ -363,6 +357,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
         log.debug("Creating relationship %s %s",rel_type,rel_target)
         toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
+
 
 
     odm_laws_helper.session['last_dataset'] = pkg_dict

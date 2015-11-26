@@ -74,6 +74,7 @@ def validate_not_empty(value,context):
 
 
 def get_dataset_name(dataset_id):
+    log.debug("dataset_idxs %s",dataset_id)
     # get dataset dict
     dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
     resource_dict= dataset_dict['resources']
@@ -81,9 +82,29 @@ def get_dataset_name(dataset_id):
     # return resource_dict[0]['name']
     return resource_dict
 
-    
 
+def get_dataset_notes(dataset_id, truncate):
+    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
 
+    # try:
+    #   notes
+    # except NameError:
+    #   print "well, it WASN'T defined after all!"
+    # else:
+    #   print "sure, it was defined."
+    if 'notes' in dataset_dict :
+        notes = dataset_dict['notes']
+
+    # show only first 100 characters of the notes field
+
+        if dataset_dict['notes'] !='none' and truncate == 'true':
+
+            notes_trunc = notes[0:100]
+            return notes_trunc
+        else:
+            return notes
+    else:
+        return ''
 def lookup_relationship_target():
   # Get a list of all the site's datasets from CKAN,
   datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
@@ -211,7 +232,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_laws_fields': laws_fields,
       'odm_laws_lookup_relationship_target': lookup_relationship_target,
       'odm_laws_semre_of_database_relationships': semre_of_database_relationships,
-      'odm_laws_get_dataset_name': get_dataset_name
+      'odm_laws_get_dataset_name': get_dataset_name,
+      'odm_laws_get_dataset_notes' : get_dataset_notes
 
     }
 

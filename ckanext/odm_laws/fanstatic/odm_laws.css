@@ -1,0 +1,27 @@
+.semre_of_relationships *{
+  -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   font-family: Helvetica;
+}
+
+.semre_of_relationships ul{margin:0;}
+  .semre_of_relationships ul li{
+    list-style: none;
+    line-height: 20px;
+  }
+.semre_of_relationships span{
+  float: left;
+}
+    span.notes{
+      font-size:10px;
+      display: none;
+    }
+.semre_of_relationships .separator{
+  font-size: 36px;
+}
+.clearfix{clear: both;}
+.cell{
+  display:table-cell;
+  vertical-align: middle;
+}

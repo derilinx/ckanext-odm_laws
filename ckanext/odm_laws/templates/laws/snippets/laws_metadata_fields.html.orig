@@ -62,7 +62,7 @@
 
 
   {%block package_metadata_fields_odm_laws_technical_assistance%}
-    {{ form.input('odm_laws_technical_assistance', is_required=false, label=_('Agency providing technical assistance'), id='field-odm_laws_technical_assistance', placeholder=_(''), value=data.odm_laws_technical_assistance, error=errors.technicalAssistance, classes=['control-full']) }}
+    {{ form.input('odm_laws_technical_assistance', is_required=false, label=_('Agency providing technical assistance'), id='field-odm_laws_technical_assistance', placeholder=_('###SHORT EXPLANATION OF FIELD###'), value=data.odm_laws_technical_assistance, error=errors.technicalAssistance, classes=['control-full']) }}
   {%endblock%}
 
   {%block package_metadata_fields_odm_laws_implementing_agency%}
@@ -152,8 +152,11 @@
         <label class="control-label" for="field-odm_laws_relationship_target">{{ _("Associated Document") }}</label>
         <div class="controls control-full">
           <select id="field-odm_laws_relationship_target" name="odm_laws_relationship_target" data-module="autocomplete" placeholder="{{ _("e.g. Law on ....") }}">
+<<<<<<< HEAD
+            <option disabled selected> {{ _("-- select a new relationship target --") }} </option>
+=======
             <option disabled selected> {{ _("-- select an associated document --") }} </option>
-
+>>>>>>> master
             {% for dataset in h.odm_laws_lookup_relationship_target() %}
 
               <option value="{{ dataset }}">{{ dataset }}</option>

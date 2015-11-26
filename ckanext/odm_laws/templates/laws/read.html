@@ -22,6 +22,7 @@
         {% endif %}
       {% endblock %}
     </h1>
+    {% snippet 'laws/snippets/related_datasets.html'%}
     {% block package_notes %}
       {% if c.pkg_notes_formatted %}
         <div class="notes embedded-content">
@@ -48,5 +49,6 @@
   {% block package_additional_info_laws %}
     {% snippet "laws/snippets/additional_info_laws.html", pkg_dict=pkg %}
   {% endblock %}
+
 
 {% endblock %}

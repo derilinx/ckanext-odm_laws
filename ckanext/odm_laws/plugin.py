@@ -73,14 +73,54 @@ def validate_not_empty(value,context):
   return value
 
 
+def get_dataset_name(dataset_id):
+    log.debug("dataset_idxs %s",dataset_id)
+    # get dataset dict
+    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
+    resource_dict= dataset_dict['resources']
+    # return name for the id
+    # return resource_dict[0]['name']
+    return resource_dict
+
+
+def get_dataset_notes(dataset_id, truncate):
+    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
+    
+    if 'notes' in dataset_dict :
+        notes = dataset_dict['notes']
+
+    # show only first 100 characters of the notes field
+
+        if dataset_dict['notes'] !='none' and truncate == 'true':
+
+            notes_trunc = notes[0:100]
+            return notes_trunc
+        else:
+            return notes
+    else:
+        return ''
 def lookup_relationship_target():
-
-
   # Get a list of all the site's datasets from CKAN,
   datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
-
-
   return datasets
+
+# semantic representation of relationships
+def semre_of_database_relationships(c,viewpoint):
+    #get the id of current editing dataset
+    id=c.id
+    # get dataset info
+    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':id})
+    if viewpoint == 'object':
+        result=dataset_dict['relationships_as_object']
+    elif viewpoint == 'subject':
+        result=dataset_dict['relationships_as_subject']
+    else:
+        log.error('Relationship Viewpoint not specified')
+        return false
+    return result
+
+
+# ////////////////////////////////////////////////////////////////////////
 
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
@@ -184,7 +224,10 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_last_dataset': last_dataset,
       'odm_laws_get_dataset_type': get_dataset_type,
       'odm_laws_laws_fields': laws_fields,
-      'odm_laws_lookup_relationship_target': lookup_relationship_target
+      'odm_laws_lookup_relationship_target': lookup_relationship_target,
+      'odm_laws_semre_of_database_relationships': semre_of_database_relationships,
+      'odm_laws_get_dataset_name': get_dataset_name,
+      'odm_laws_get_dataset_notes' : get_dataset_notes
 
     }
 
@@ -314,6 +357,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
         log.debug("Creating relationship %s %s",rel_type,rel_target)
         toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
+
 
 
     odm_laws_helper.session['last_dataset'] = pkg_dict

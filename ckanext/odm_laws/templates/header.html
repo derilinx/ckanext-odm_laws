@@ -1,16 +1,6 @@
 {% ckan_extends %}
 
-{% block header_site_navigation %}
-   <nav class="section navigation">
-    <ul class="nav nav-pills">
-
-      {% block header_site_navigation_tabs %}
-        <h1>TEST</h1>
-          {{super()}}
-
-          <li><a href="/laws">Laws</a></li>
-      {% endblock %}
-
-     </ul>
-    </nav>
-    {% endblock %}
+{% block header_site_navigation_tabs %}
+ {{ super() }}
+ <li><a href="/laws">Laws</a></li>
+{% endblock %}

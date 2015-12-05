@@ -26,8 +26,6 @@ def get_document_types():
 
   return odm_laws_helper.document_types
 
-
-
 def last_dataset():
   ''' Returns the last dataset info stored in session'''
   if 'last_dataset' in odm_laws_helper.session:
@@ -85,7 +83,7 @@ def get_dataset_name(dataset_id):
 
 def get_dataset_notes(dataset_id, truncate):
     dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-    
+
     if 'notes' in dataset_dict :
         notes = dataset_dict['notes']
 

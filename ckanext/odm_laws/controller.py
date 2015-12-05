@@ -16,9 +16,7 @@ class LawsController(PackageController):
 
     log.debug('LawsController new')
 
-
     return super(LawsController, self).new(data=data, errors=errors,error_summary=error_summary)
-
 
   def search(self):
 
@@ -41,7 +39,6 @@ class LawsController(PackageController):
   def edit(self, id, data=None, errors=None, error_summary=None):
 
     log.debug('LawsController edit')
-    log.debug('LawsController NBEW')
     log.debug(LawsController)
 
     return super(LawsController, self).edit(id, data=data, errors=errors,error_summary=error_summary)

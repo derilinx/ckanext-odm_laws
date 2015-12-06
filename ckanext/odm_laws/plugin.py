@@ -356,7 +356,5 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         log.debug("Creating relationship %s %s",rel_type,rel_target)
         toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
 
-
-
     odm_laws_helper.session['last_dataset'] = pkg_dict
     odm_laws_helper.session.save()

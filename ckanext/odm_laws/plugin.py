@@ -14,116 +14,13 @@ import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
 
-
 log = logging.getLogger(__name__)
-
-DATASET_TYPE_NAME = 'laws_record'
-
-def get_document_types():
-  '''Return a list of document types'''
-
-  log.debug('get_document_types')
-
-  return odm_laws_helper.document_types
-
-def last_dataset():
-  ''' Returns the last dataset info stored in session'''
-  if 'last_dataset' in odm_laws_helper.session:
-    return odm_laws_helper.session['last_dataset']
-
-  return None
-
-def get_dataset_type():
-  '''Return the dataset type'''
-
-  log.debug('get_dataset_type')
-
-  return DATASET_TYPE_NAME
-
-def odc_fields():
-  '''Return a list of odc fields'''
-
-  log.debug('odc_fields')
-
-  return odm_laws_helper.odc_fields
-
-def metadata_fields():
-  '''Return a list of metadata fields'''
-
-  log.debug('metadata_fields')
-
-  return odm_laws_helper.metadata_fields
-
-def laws_fields():
-  '''Return a list of laws fields'''
-
-  log.debug('laws_fields')
-
-  return odm_laws_helper.laws_fields
-
-def validate_not_empty(value,context):
-  '''Returns if a string is empty or not'''
-
-  log.debug('validate_not_empty: %s', value)
-
-  if not value or len(value) is None:
-    raise toolkit.Invalid('Missing value')
-  return value
-
-
-def get_dataset_name(dataset_id):
-    log.debug("dataset_idxs %s",dataset_id)
-    # get dataset dict
-    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-    resource_dict= dataset_dict['resources']
-    # return name for the id
-    # return resource_dict[0]['name']
-    return resource_dict
-
-
-def get_dataset_notes(dataset_id, truncate):
-    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-
-    if 'notes' in dataset_dict :
-        notes = dataset_dict['notes']
-
-    # show only first 100 characters of the notes field
-
-        if dataset_dict['notes'] !='none' and truncate == 'true':
-
-            notes_trunc = notes[0:100]
-            return notes_trunc
-        else:
-            return notes
-    else:
-        return ''
-def lookup_relationship_target():
-  # Get a list of all the site's datasets from CKAN,
-  datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
-  return datasets
-
-# semantic representation of relationships
-def semre_of_database_relationships(c,viewpoint):
-    #get the id of current editing dataset
-    id=c.id
-    # get dataset info
-    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':id})
-    if viewpoint == 'object':
-        result=dataset_dict['relationships_as_object']
-    elif viewpoint == 'subject':
-        result=dataset_dict['relationships_as_subject']
-    else:
-        log.error('Relationship Viewpoint not specified')
-        return false
-    return result
-
 
 # ////////////////////////////////////////////////////////////////////////
 
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
-  plugins.implements(plugins.IDatasetForm)
   plugins.implements(plugins.IConfigurer)
   plugins.implements(plugins.ITemplateHelpers)
   plugins.implements(plugins.IRoutes, inherit=True)
@@ -176,8 +73,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return organization_facets
 
-
-
   def before_map(self, m):
 
     m.connect('odm_laws_index','/laws',
@@ -207,103 +102,17 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     toolkit.add_resource('fanstatic', 'odm_laws')
     toolkit.add_public_directory(config, 'public')
 
-
-
-
-
-
   def get_helpers(self):
     '''Register the plugin's functions above as a template helper function.'''
 
     return {
-      'odm_laws_document_types': get_document_types,
-      'odm_laws_odc_fields': odc_fields,
-      'odm_laws_metadata_fields': metadata_fields,
-      'odm_laws_last_dataset': last_dataset,
-      'odm_laws_get_dataset_type': get_dataset_type,
-      'odm_laws_laws_fields': laws_fields,
-      'odm_laws_lookup_relationship_target': lookup_relationship_target,
-      'odm_laws_semre_of_database_relationships': semre_of_database_relationships,
-      'odm_laws_get_dataset_name': get_dataset_name,
-      'odm_laws_get_dataset_notes' : get_dataset_notes
-
+      'odm_laws_last_dataset': odm_laws_helper.last_dataset,
+      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type
+      'odm_laws_lookup_relationship_target': odm_laws_helper.lookup_relationship_target,
+      'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
+      'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
+      'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes
     }
-
-  def _modify_package_schema_write(self, schema):
-
-
-    for metadata_field in odm_laws_helper.metadata_fields:
-      validators_and_converters = [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_extras'), ]
-      if metadata_field[2]:
-        validators_and_converters.insert(1,validate_not_empty)
-      schema.update({metadata_field[0]: validators_and_converters})
-
-    for odc_field in odm_laws_helper.odc_fields:
-      validators_and_converters = [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_extras'), ]
-      if odc_field[2]:
-        validators_and_converters.insert(1,validate_not_empty)
-      schema.update({odc_field[0]: validators_and_converters})
-
-    for laws_field in odm_laws_helper.laws_fields:
-      validators_and_converters = [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_extras'), ]
-      if laws_field[2]:
-        validators_and_converters.insert(1,validate_not_empty)
-      schema.update({laws_field[0]: validators_and_converters})
-
-    for ckan_field in odm_laws_helper.ckan_fields:
-      validators_and_converters = [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_extras'), ]
-      if ckan_field[2]:
-        validators_and_converters.insert(1,validate_not_empty)
-      schema.update({ckan_field[0]: validators_and_converters})
-
-    schema.update({odm_laws_helper.taxonomy_dictionary: [toolkit.get_validator('ignore_missing'),toolkit.get_converter('convert_to_tags')(odm_laws_helper.taxonomy_dictionary)]})
-
-    return schema
-
-  def _modify_package_schema_read(self, schema):
-
-    for metadata_field in odm_laws_helper.metadata_fields:
-      validators_and_converters = [toolkit.get_converter('convert_from_extras'),toolkit.get_validator('ignore_missing')]
-      if metadata_field[2]:
-        validators_and_converters.append(validate_not_empty)
-      schema.update({metadata_field[0]: validators_and_converters})
-
-    for odc_field in odm_laws_helper.odc_fields:
-      validators_and_converters = [toolkit.get_converter('convert_from_extras'),toolkit.get_validator('ignore_missing')]
-      if odc_field[2]:
-        validators_and_converters.append(validate_not_empty)
-      schema.update({odc_field[0]: validators_and_converters})
-
-    for laws_field in odm_laws_helper.laws_fields:
-      validators_and_converters = [toolkit.get_converter('convert_from_extras'),toolkit.get_validator('ignore_missing')]
-      if laws_field[2]:
-        validators_and_converters.append(validate_not_empty)
-      schema.update({laws_field[0]: validators_and_converters})
-
-    for ckan_field in odm_laws_helper.ckan_fields:
-      validators_and_converters = [toolkit.get_converter('convert_from_extras'),toolkit.get_validator('ignore_missing')]
-      if ckan_field[2]:
-        validators_and_converters.append(validate_not_empty)
-      schema.update({ckan_field[0]: validators_and_converters})
-
-    schema.update({odm_laws_helper.taxonomy_dictionary: [toolkit.get_converter('convert_from_tags')(odm_laws_helper.taxonomy_dictionary),toolkit.get_validator('ignore_missing')]})
-
-    return schema
-
-  def create_package_schema(self):
-    schema = super(OdmLawsPlugin, self).create_package_schema()
-    schema = self._modify_package_schema_write(schema)
-    return schema
-
-  def update_package_schema(self):
-    schema = super(OdmLawsPlugin, self).update_package_schema()
-    schema = self._modify_package_schema_write(schema)
-    return schema
-
-  def show_package_schema(self):
-    schema = super(OdmLawsPlugin, self).show_package_schema()
-    schema = self._modify_package_schema_read(schema)
-    return schema
 
   def is_fallback(self):
     return False

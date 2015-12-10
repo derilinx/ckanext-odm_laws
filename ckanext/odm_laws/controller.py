@@ -1,12 +1,15 @@
 import ckan.plugins as p
 import logging
+import sys
+import os
 import ckan.lib.helpers as h
 import plugin as odm_laws
 from ckan.lib.base import BaseController, render
 import ckan.model as model
 from ckan.common import c, request
 from ckan.controllers.package import PackageController
-from ckanext.odm_laws.plugin import DATASET_TYPE_NAME
+sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
+from odm_laws_helper import DATASET_TYPE_NAME
 
 log = logging.getLogger(__name__)
 

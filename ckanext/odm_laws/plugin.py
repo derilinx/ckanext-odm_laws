@@ -16,8 +16,6 @@ import ckan.lib.helpers as h
 
 log = logging.getLogger(__name__)
 
-# ////////////////////////////////////////////////////////////////////////
-
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
@@ -107,7 +105,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return {
       'odm_laws_last_dataset': odm_laws_helper.last_dataset,
-      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type
+      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
       'odm_laws_lookup_relationship_target': odm_laws_helper.lookup_relationship_target,
       'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
       'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
@@ -155,15 +153,15 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     #  Create relationship if target is set
     if 'odm_laws_relationship_target' in pkg_dict:
-        # current dataset
-        rel_subj=pkg_dict['name']
-        # is child of/parent of
-        rel_type=pkg_dict['odm_laws_relationship_type']
-        # relationship target
-        rel_target=pkg_dict['odm_laws_relationship_target']
+      # current dataset
+      rel_subj=pkg_dict['name']
+      # is child of/parent of
+      rel_type=pkg_dict['odm_laws_relationship_type']
+      # relationship target
+      rel_target=pkg_dict['odm_laws_relationship_target']
 
-        log.debug("Creating relationship %s %s",rel_type,rel_target)
-        toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
+      log.debug("Creating relationship %s %s",rel_type,rel_target)
+      toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
 
     odm_laws_helper.session['last_dataset'] = pkg_dict
     odm_laws_helper.session.save()

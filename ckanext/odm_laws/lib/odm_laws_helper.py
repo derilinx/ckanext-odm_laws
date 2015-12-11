@@ -10,6 +10,8 @@ import ckan.plugins.toolkit as toolkit
 
 log = logging.getLogger(__name__)
 
+DATASET_TYPE_NAME = 'laws_record'
+
 def last_dataset():
   ''' Returns the last dataset info stored in session'''
 
@@ -65,8 +67,6 @@ def semre_of_database_relationships(c,viewpoint):
         log.error('Relationship Viewpoint not specified')
         return false
     return result
-
-DATASET_TYPE_NAME = 'laws_record'
 
 def get_dataset_type():
   '''Return the dataset type'''

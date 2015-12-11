@@ -116,7 +116,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     return False
 
   def package_types(self):
-    return ['laws_record']
+    return [odm_laws_helper.get_dataset_type()]
 
   def new_template(self):
     return 'laws/new.html'

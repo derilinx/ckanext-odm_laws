@@ -10,6 +10,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import odm_laws_helper
 from urlparse import urlparse
 import json
+from pylons import config
 import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
@@ -141,6 +142,12 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     odm_laws_helper.session['last_dataset'] = pkg_dict
     odm_laws_helper.session.save()
+
+    # Create default Issue
+    review_system = h.asbool(config.get("ckanext.issues.review_system", False))
+    if review_system:
+      if pkg_dict['type'] == 'laws_record':
+        odm_laws_helper.create_default_issue_laws_record(pkg_dict)
 
   def after_update(self, context, pkg_dict):
     log.debug('after_update: %s', pkg_dict['name'])

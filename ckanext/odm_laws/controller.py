@@ -21,10 +21,6 @@ class LawsController(PackageController):
 
   def search(self):
     log.debug('LawsController search')
-    def remove_field(key, value=None, replace=None):
-      return h.remove_url_param(key, value=value, replace=replace,controller='ckanext.odm_laws.controller:LawsController', type='laws_record', action='search')
-
-    c.remove_field = remove_field
     return super(LawsController, self).search()
 
   def read(self, id, format='html'):

@@ -10,35 +10,32 @@
 		"form_placeholder": "eg. A descriptive title"
 	}, {
 		"field_name": "title_translated",
-		"preset": "fluent_core_translated",
+		"preset": "fluent_core_translated_single",
 		"label": {
-			"en": "Title",
-			"th": "หัวข้อ",
-			"km": "ចំណងជើង",
-			"vi": "Tiêu đề"
-		}
+			"en": "Title (en)",
+			"th": "หัวข้อ (th)",
+			"km": "ចំណងជើង (km)",
+			"vi": "Tiêu đề (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"]
 	}, {
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset"
 	}, {
-		"field_name": "notes",
-		"label": "Description",
-		"form_snippet": "markdown.html",
-		"form_placeholder": "eg. Some useful notes about the data"
-	}, {
 		"field_name": "notes_translated",
-		"preset": "fluent_core_translated_markdown",
+		"preset": "fluent_core_translated_markdown_single",
 		"label": {
-			"en": "Short summary of content",
-			"th": "Short summary of content",
-			"km": "Short summary of content",
-			"vi": "Short summary of content"
-		}
+			"en": "Description",
+			"th": "รายละเอียด",
+			"km": "ការពិពណ៌នា",
+			"vi": "Mô tả"
+		},
+		"form_languages": ["en", "th", "km", "vi"]
 	}, {
 		"field_name": "taxonomy",
-		"label": "Subject of law or policy",
+		"label": "Topics",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
@@ -53,8 +50,14 @@
 		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
 	}, {
 		"field_name": "odm_access_and_use_constraint",
-		"label": "Access and Use Constraints",
-		"form_snippet": "markdown.html",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Access and Use Constraints",
+			"th": "การเข้าถึงและข้อจำกัด",
+			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
+			"vi": "Hạn chế truy cập và sử dụng"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "owner_org",
@@ -62,14 +65,21 @@
 		"preset": "odm_organization"
 	}, {
 		"field_name": "version",
-		"label": "Draft Version",
+		"label": "Version",
 		"validators": "ignore_missing unicode package_version_validator",
 		"form_placeholder": "1.0",
 		"required": "true"
 	}, {
 		"field_name": "odm_contact",
 		"label": "Contact",
-		"form_snippet": "markdown.html",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Contact",
+			"th": "ข้อมูลติดต่อ",
+			"km": "ទំនាក់ទំនង",
+			"vi": "Liên hệ"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the dataset. This could be the author of a report, the contact information for the relevant department of an organization that produced a report, or the data analyst, mapper or researcher that produced a dataset or report."
 	}, {
 		"field_name": "odm_language",
@@ -197,20 +207,27 @@
 		}]
 	}, {
 		"field_name": "odm_laws_short_title",
-		"label": "Alternative/Short Title",
-		"form_snippet": "text.html",
+		"label": {
+			"en": "Alternative/Short Title",
+			"th": "Alternative/Short Title",
+			"km": "Alternative/Short Title",
+			"vi": "Alternative/Short Title"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"preset": "fluent_text_single",
 		"required": "true",
 		"form_placeholder": "Commonly used label, e.g. Cambodia Labor Law"
 	}, {
 		"field_name": "odm_laws_number",
 		"label": "Legal document #",
-    "preset": "fluent_text",
+		"preset": "fluent_text_single",
 		"label": {
 			"en": "Legal document #",
 			"th": "Legal document #",
 			"km": "Legal document #",
 			"vi": "Legal document #"
 		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_drafting_agency",
@@ -335,7 +352,14 @@
 		"form_placeholder": "Official URL where policy doc is made available"
 	}, {
 		"field_name": "odm_laws_notes",
-		"label": "Notes",
+		"preset": "fluent_text_single",
+		"label": {
+			"en": "Notes",
+			"th": "Notes",
+			"km": "Notes",
+			"vi": "Notes"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_snippet": "markdown.html",
 		"form_placeholder": "Add any notes to this document"
 	}],

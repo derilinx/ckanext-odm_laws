@@ -112,12 +112,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes
     }
 
-  def is_fallback(self):
-    return False
-
-  def package_types(self):
-    return [odm_laws_helper.get_dataset_type()]
-
   def new_template(self):
     return 'laws/new.html'
 

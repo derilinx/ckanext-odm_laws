@@ -7,7 +7,7 @@
 		"field_name": "title",
 		"label": "Title",
 		"preset": "title",
-		"form_placeholder": "eg. A descriptive title"
+		"form_placeholder": "Formal title of the law or policy"
 	}, {
 		"field_name": "title_translated",
 		"preset": "fluent_core_translated_single",
@@ -27,15 +27,16 @@
 		"field_name": "notes_translated",
 		"preset": "fluent_core_translated_markdown_single",
 		"label": {
-			"en": "Description",
+			"en": "Short summary of content",
 			"th": "รายละเอียด",
 			"km": "ការពិពណ៌នា",
 			"vi": "Mô tả"
 		},
-		"form_languages": ["en", "th", "km", "vi"]
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "eg. my-datasetDescribe general purpose and scope"
 	}, {
 		"field_name": "taxonomy",
-		"label": "Topics",
+		"label": "Subject of law or policy",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
@@ -65,7 +66,7 @@
 		"preset": "odm_organization"
 	}, {
 		"field_name": "version",
-		"label": "Version",
+		"label": "Draft version",
 		"validators": "ignore_missing unicode package_version_validator",
 		"form_placeholder": "1.0",
 		"required": "true"
@@ -128,9 +129,9 @@
 	}, {
 		"field_name": "odm_date_uploaded",
 		"label": "Date uploaded",
-		"form_placeholder": "Date a new version or update of the dataset was uploaded.",
+		"form_placeholder": "Date the dataset was first uploaded to the OD CKAN database.",
 		"required": "true",
-		"preset": "date"
+		"preset": "text"
 	}, {
 		"field_name": "odm_spatial_range",
 		"label": "Geographic area (Spatial Range)",
@@ -207,14 +208,8 @@
 		}]
 	}, {
 		"field_name": "odm_laws_short_title",
-		"label": {
-			"en": "Alternative/Short Title",
-			"th": "Alternative/Short Title",
-			"km": "Alternative/Short Title",
-			"vi": "Alternative/Short Title"
-		},
-		"form_languages": ["en", "th", "km", "vi"],
-		"preset": "fluent_text_single",
+		"label": "Alternative/Short Title",
+		"form_snippet": "text.html",
 		"required": "true",
 		"form_placeholder": "Commonly used label, e.g. Cambodia Labor Law"
 	}, {
@@ -278,32 +273,32 @@
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date",
-		"preset": "date",
+		"form_snippet": "text.html",
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_date_of_enactment",
 		"label": "Date of enactment",
-		"preset": "date",
+		"form_snippet": "text.html",
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_date_of_enactment",
 		"label": "Date of enactment",
-		"preset": "date",
+		"form_snippet": "text.html",
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_final_action",
 		"label": "Date final action necessary to formalize Policy",
-		"preset": "date",
+		"form_snippet": "text.html",
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_efective_date",
 		"label": "Effective Date (if adopted)",
-		"preset": "date",
+		"preset": "text",
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_action_previous_law",
 		"label": "Previous law",
-		"preset": "select",
+		"form_snippet": "text.html",
 		"choices": [{
 			"value": "Replacement",
 			"label": "Replacement"
@@ -352,7 +347,7 @@
 		"form_placeholder": "Official URL where policy doc is made available"
 	}, {
 		"field_name": "odm_laws_notes",
-		"preset": "fluent_text_single",
+		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Notes",
 			"th": "Notes",
@@ -360,7 +355,6 @@
 			"vi": "Notes"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_snippet": "markdown.html",
 		"form_placeholder": "Add any notes to this document"
 	}],
 	"resource_fields": [{

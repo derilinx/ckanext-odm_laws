@@ -33,7 +33,7 @@
 			"vi": "Mô tả"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "eg. my-datasetDescribe general purpose and scope"
+		"form_placeholder": "Describe general purpose and scope"
 	}, {
 		"field_name": "taxonomy",
 		"label": "Subject of law or policy",

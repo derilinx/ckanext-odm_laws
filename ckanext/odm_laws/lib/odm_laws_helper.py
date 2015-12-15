@@ -12,7 +12,12 @@ from ckan.lib.base import render
 
 log = logging.getLogger(__name__)
 
-DATASET_TYPE_NAME = 'laws_record'
+def get_dataset_type():
+  '''Return the dataset type'''
+
+  log.debug('get_dataset_type')
+
+  return 'laws_record'
 
 def create_default_issue_laws_record(pkg_info):
   ''' Uses CKAN API to add a default Issue as part of the vetting workflow for library records'''
@@ -51,7 +56,7 @@ def create_default_issue_laws_record(pkg_info):
 
     issue_message = render('messages/default_issue_laws_record.txt',extra_vars=extra_vars,loader_class=NewTextTemplate)
 
-    params = {'title':'User Library record Upload Checklist','description':issue_message,'dataset_id':pkg_info['id']}
+    params = {'title':'User Laws record Upload Checklist','description':issue_message,'dataset_id':pkg_info['id']}
     toolkit.get_action('issue_create')(data_dict=params)
 
   except KeyError:
@@ -105,12 +110,5 @@ def semre_of_database_relationships(c,viewpoint):
         log.error('Relationship Viewpoint not specified')
         return false
     return result
-
-def get_dataset_type():
-  '''Return the dataset type'''
-
-  log.debug('get_dataset_type')
-
-  return DATASET_TYPE_NAME
 
 session = {}

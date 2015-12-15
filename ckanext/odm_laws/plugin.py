@@ -21,9 +21,10 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
   plugins.implements(plugins.IConfigurer, inherit=True)
-  plugins.implements(plugins.ITemplateHelpers)
+  plugins.implements(plugins.ITemplateHelpers, inherit=True)
   plugins.implements(plugins.IRoutes, inherit=True)
-  plugins.implements(plugins.IFacets)
+  plugins.implements(plugins.IFacets, inherit=True)
+  plugins.implements(plugins.IPackageController, inherit=True)
 
   def __init__(self, *args, **kwargs):
 

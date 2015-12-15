@@ -3,6 +3,8 @@
 {% block subtitle %}
 	{% if dataset_type == 'laws_record' %}
 		{{ _("Laws") }}
+	{% else %}
+		{{super()}}
 	{% endif %}
 {% endblock %}
 

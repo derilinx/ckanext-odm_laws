@@ -131,7 +131,7 @@
 		"label": "Date uploaded",
 		"form_placeholder": "Date the dataset was first uploaded to the OD CKAN database.",
 		"required": "true",
-		"preset": "text"
+		"preset": "odm_date"
 	}, {
 		"field_name": "odm_spatial_range",
 		"label": "Geographic area (Spatial Range)",
@@ -273,23 +273,23 @@
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date",
-		"form_snippet": "text.html",
-		"form_placeholder": ""
+		"form_placeholder": "",
+    "preset": "odm_date"
 	}, {
 		"field_name": "odm_laws_date_of_enactment",
 		"label": "Date of enactment",
-		"form_snippet": "text.html",
-		"form_placeholder": ""
+		"form_placeholder": "",
+    "preset": "odm_date"
 	}, {
 		"field_name": "odm_laws_final_action",
 		"label": "Date final action necessary to formalize Policy",
-		"form_snippet": "text.html",
-		"form_placeholder": ""
+		"form_placeholder": "",
+    "preset": "odm_date"
 	}, {
 		"field_name": "odm_laws_efective_date",
 		"label": "Effective Date (if adopted)",
-		"preset": "text",
-		"form_placeholder": ""
+		"form_placeholder": "",
+    "preset": "odm_date"
 	}, {
 		"field_name": "odm_laws_action_previous_law",
 		"label": "Previous law",

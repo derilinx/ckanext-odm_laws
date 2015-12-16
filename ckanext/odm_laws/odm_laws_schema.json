@@ -371,7 +371,46 @@
 		"label": "Format",
 		"preset": "resource_format_autocomplete"
 	}, {
-		"field_name": "odm_spatial_range",
-		"preset": "odm_resource_spatial_range"
+		"field_name": "odm_language",
+    "label": "Resource's languages",
+    "preset": "multiple_select",
+		"select_size": 4,
+		"choices": [{
+			"value": "my",
+			"label": "Burmese"
+		}, {
+			"value": "en",
+			"label": "English"
+		}, {
+			"value": "kh",
+			"label": "Khmer"
+		}, {
+			"value": "lo",
+			"label": "Lao"
+		}, {
+			"value": "th",
+			"label": "Thai"
+		}, {
+			"value": "vi",
+			"label": "Vietnamese"
+		}, {
+			"value": "zh",
+			"label": "Chinese"
+		}, {
+			"value": "fr",
+			"label": "French"
+		}, {
+			"value": "de",
+			"label": "German"
+		}, {
+			"value": "jp",
+			"label": "Japanese"
+		}, {
+			"value": "ko",
+			"label": "Korean"
+		}, {
+			"value": "other",
+			"label": "Other"
+		}]
 	}]
 }

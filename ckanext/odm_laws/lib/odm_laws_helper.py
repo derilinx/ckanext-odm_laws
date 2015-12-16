@@ -73,10 +73,10 @@ def get_dataset_notes(dataset_id, truncate):
   notes = None
   dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
 
-  if 'notes' in dataset_dict :
-    notes = dataset_dict['notes']
-    if truncate:
-      notes = notes[0:100]
+  if 'notes_translated' in dataset_dict :
+    notes = dataset_dict['notes_translated'][pylons.request.environ['CKAN_LANG']]
+    if truncate == True and notes:
+      notes = notes[0:99]
 
   return notes
 
@@ -87,12 +87,11 @@ def lookup_relationship_target():
 def semre_of_database_relationships(dataset_id,viewpoint):
   ''' semantic representation of relationships '''
 
-  relationships = []
-
   if not dataset_id:
     return []
 
   dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
+  relationships = []
 
   if viewpoint == 'object':
     relationships = dataset_dict['relationships_as_object']

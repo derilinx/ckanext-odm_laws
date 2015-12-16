@@ -1,0 +1,14 @@
+{
+  "scheming_presets_version": 1,
+  "about": "ODM Laws scheming field presets",
+  "about_url": "http://github.com/open-data/ckanext-scheming#preset",
+  "presets": [
+    {
+      "preset_name": "odm_laws_relationship_target",
+      "values": {
+        "form_snippet": "odm_laws_relationship_target.html",
+        "validators": "scheming_required"
+      }
+    }
+  ]
+}

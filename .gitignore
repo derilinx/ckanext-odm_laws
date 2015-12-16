@@ -1,3 +1,4 @@
 .gitignore
 odm_laws.sublime-workspace
+.remote-sync.json
 *.pyc

@@ -1,0 +1,20 @@
+{% ckan_extends %}
+
+{% block breadcrumb_content %}
+  {{ super() }}
+  {% if pkg %}
+		{% if dataset_type == 'laws_record' %}
+			<li class="active">{% link_for _('Edit'), controller='package', type='laws_record', action='edit', id=pkg.name %}</li>
+		{% else %}
+			{{super()}}
+		{% endif%}
+  {% endif %}
+{% endblock %}
+
+{% block content_action %}
+	{% if dataset_type == 'laws_record' %}
+		{% link_for _('View Law'), controller='package', type='laws_record', action='read', id=pkg.name, class_='btn', icon='eye-open' %}
+	{% else %}
+		{{super()}}
+	{% endif%}
+{% endblock %}

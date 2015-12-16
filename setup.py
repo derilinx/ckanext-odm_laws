@@ -16,7 +16,7 @@ setup(
     url='http://www.aeviaor.cc',
     license='AGPL3',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    namespace_packages=['ckanext', 'ckanext.odm_laws'],
+    namespace_packages=['ckanext'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[

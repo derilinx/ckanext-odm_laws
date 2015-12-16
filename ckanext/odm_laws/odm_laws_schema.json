@@ -281,11 +281,6 @@
 		"form_snippet": "text.html",
 		"form_placeholder": ""
 	}, {
-		"field_name": "odm_laws_date_of_enactment",
-		"label": "Date of enactment",
-		"form_snippet": "text.html",
-		"form_placeholder": ""
-	}, {
 		"field_name": "odm_laws_final_action",
 		"label": "Date final action necessary to formalize Policy",
 		"form_snippet": "text.html",

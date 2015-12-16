@@ -54,7 +54,7 @@
               {% for entry in h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='object') %}
               <li>
                 {% set related_dataset_id = entry.__extras.subject_package_id%}
-                {% set related_dataset_name = h.odm_laws_get_dataset_title(related_dataset_id) %}
+                {% set related_dataset_name = h.odm_laws_get_dataset_name(related_dataset_id) %}
                 {% if related_dataset_name %}
                   <a href="{{h.url_for(controller='package', type='laws_record' , action='read', id=related_dataset_id)}}" target="_blank">
                     {{ related_dataset_name }}

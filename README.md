@@ -1,4 +1,4 @@
-ckanext-odm_theme
+ckanext-odm_laws
 =================
 
 [![Build Status](https://travis-ci.org/OpenDevelopmentMekong/ckanext-odm_laws.svg?branch=master)](https://travis-ci.org/OpenDevelopmentMekong/ckanext-odm_laws)

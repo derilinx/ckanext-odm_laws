@@ -65,50 +65,40 @@ def create_default_issue_laws_record(pkg_info):
 
 def get_dataset_name(dataset_id):
 
-  log.debug("dataset_idxs %s",dataset_id)
-  # get dataset dict
   dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-  resource_dict= dataset_dict['resources']
-  # return name for the id
-  # return resource_dict[0]['name']
-  return resource_dict
+  return dataset_dict['name']
 
 def get_dataset_notes(dataset_id, truncate):
+
+  notes = None
   dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
 
   if 'notes' in dataset_dict :
-      notes = dataset_dict['notes']
+    notes = dataset_dict['notes']
+    if truncate:
+      notes = notes[0:100]
 
-  # show only first 100 characters of the notes field
-
-      if dataset_dict['notes'] !='none' and truncate == 'true':
-
-          notes_trunc = notes[0:100]
-          return notes_trunc
-      else:
-          return notes
-  else:
-      return ''
+  return notes
 
 def lookup_relationship_target():
-
-  # Get a list of all the site's datasets from CKAN,
   datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
   return datasets
 
-# semantic representation of relationships
-def semre_of_database_relationships(c,viewpoint):
-    #get the id of current editing dataset
-    id=c.id
-    # get dataset info
-    dataset_dict = toolkit.get_action('package_show')(data_dict={'id':id})
-    if viewpoint == 'object':
-        result=dataset_dict['relationships_as_object']
-    elif viewpoint == 'subject':
-        result=dataset_dict['relationships_as_subject']
-    else:
-        log.error('Relationship Viewpoint not specified')
-        return false
-    return result
+def semre_of_database_relationships(dataset_id,viewpoint):
+  ''' semantic representation of relationships '''
+
+  relationships = []
+
+  if not dataset_id:
+    return []
+
+  dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
+
+  if viewpoint == 'object':
+    relationships = dataset_dict['relationships_as_object']
+  elif viewpoint == 'subject':
+    relationships = dataset_dict['relationships_as_subject']
+
+  return relationships
 
 session = {}

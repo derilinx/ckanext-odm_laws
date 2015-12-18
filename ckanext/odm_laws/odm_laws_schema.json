@@ -147,7 +147,6 @@
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
-    "required": "true",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
@@ -256,8 +255,7 @@
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
-    "preset": "odm_date",
-		"required": "true"
+    "preset": "odm_date"
 	}, {
 		"field_name": "odm_promulgation_date",
 		"label": "Adoption date/Promulgation date/Signing",

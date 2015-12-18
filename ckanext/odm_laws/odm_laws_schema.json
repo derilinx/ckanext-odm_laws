@@ -15,8 +15,11 @@
 			"value": "chbablawkram",
 			"label": "Chbab/Law/Kram"
 		}, {
-			"value": "international-treatiesagreements",
+			"value": "constitution-of-cambodia",
 			"label": "Constitution of Cambodia"
+		}, {
+			"value": "international-treatiesagreements",
+			"label": "International Treaties/Agreements"
 		}, {
 			"value": "kech-sonyacontractagreement",
 			"label": "Kech Sonya/Contract/Agreement"

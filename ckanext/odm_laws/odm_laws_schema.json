@@ -4,7 +4,7 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
-		"field_name": "document_type",
+		"field_name": "odm_document_type",
 		"label": "Document type",
 		"preset": "select",
 		"required": "true",
@@ -256,7 +256,7 @@
     "preset": "odm_date",
 		"required": "true"
 	}, {
-		"field_name": "odm_promulgated",
+		"field_name": "odm_promulgation_date",
 		"label": "Adoption date/Promulgation date/Signing",
     "preset": "odm_date"
 	}, {

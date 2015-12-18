@@ -4,78 +4,69 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
-		"field_name": "title",
-		"label": "Title",
-		"preset": "title",
-		"form_placeholder": "Formal title of the law or policy"
+		"field_name": "document_type",
+		"label": "Document type",
+		"preset": "select",
+		"required": "true",
+		"choices": [{
+			"value": "anukretsub-decree",
+			"label": "Anukret/Sub-Decree"
+		}, {
+			"value": "chbablawkram",
+			"label": "Chbab/Law/Kram"
+		}, {
+			"value": "international-treatiesagreements",
+			"label": "Constitution of Cambodia"
+		}, {
+			"value": "kech-sonyacontractagreement",
+			"label": "Kech Sonya/Contract/Agreement"
+		}, {
+			"value": "kolkar-nenomguidelines",
+			"label": "Kolkar Nenom/Guidelines"
+		}, {
+			"value": "kolnyobaypolicy",
+			"label": "Kolnyobay/Policy"
+		}, {
+			"value": "likhetletter",
+			"label": "Likhet/Letter"
+		}, {
+			"value": "prakasjoint-prakasproclamation",
+			"label": "Prakas/Joint-Prakas/Proclamation"
+		}, {
+			"value": "preah-reach-kramroyal-kram",
+			"label": "Preah Reach Kram/Royal Kram"
+		}, {
+			"value": "sarachorcircular",
+			"label": "Sarachor/Circular"
+		}, {
+			"value": "sechkdei-chhun-damneoungnoticeannouncement",
+			"label": "Sechkdei Chhun  Damneoung/Notice/Announcement"
+		}, {
+			"value": "sechkdei-nenuminstruction",
+			"label": "Sechkdei Nenum/Instruction"
+		}, {
+			"value": "sechkdei-preang-chbabdraft-laws-amp-regulations",
+			"label": "Sechkdei Preang Chbab/Draft Laws & Regulations"
+		}, {
+			"value": "sechkdei-samrechdecision",
+			"label": "Sechkdei Samrech/Decision"
+		}, {
+			"value": "others",
+			"label": "Others"
+		}]
 	}, {
-		"field_name": "title_translated",
-		"preset": "fluent_core_translated_single",
+		"field_name": "odm_document_number",
+		"label": "Document reference #",
+		"preset": "fluent_text_single",
 		"label": {
-			"en": "Title (en)",
-			"th": "หัวข้อ (th)",
-			"km": "ចំណងជើង (km)",
-			"vi": "Tiêu đề (vi)"
-		},
-		"form_languages": ["en", "th", "km", "vi"]
-	}, {
-		"field_name": "name",
-		"label": "URL",
-		"preset": "dataset_slug",
-		"form_placeholder": "eg. my-dataset"
-	}, {
-		"field_name": "notes_translated",
-		"preset": "fluent_core_translated_markdown_single",
-		"label": {
-			"en": "Short summary of content",
-			"th": "รายละเอียด",
-			"km": "ការពិពណ៌នា",
-			"vi": "Mô tả"
+			"en": "Document reference #",
+			"th": "Document reference #",
+			"km": "Document reference #",
+			"vi": "Document reference #"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "Describe general purpose and scope"
-	}, {
-		"field_name": "taxonomy",
-		"label": "Subject of law or policy",
-		"preset": "odm_taxonomy",
-		"form_placeholder": "eg. economy, mental health, government"
-	}, {
-		"field_name": "license_id",
-		"label": "License",
-		"preset": "odm_license",
-		"help_text": "License definitions and additional information can be found at http://opendefinition.org/"
-	}, {
-		"field_name": "odm_copyright",
-		"label": "Copyright",
-		"preset": "odm_copyright",
-		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
-	}, {
-		"field_name": "odm_access_and_use_constraint",
-		"preset": "fluent_markdown_single",
-		"label": {
-			"en": "Access and Use Constraints",
-			"th": "การเข้าถึงและข้อจำกัด",
-			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
-			"vi": "Hạn chế truy cập và sử dụng"
-		},
-		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
-	}, {
-		"field_name": "owner_org",
-		"label": "Organization",
-		"preset": "dataset_organization"
-	}, {
-		"field_name": "version",
-		"label": "Draft version",
-		"validators": "ignore_missing unicode package_version_validator",
-		"form_placeholder": "1.0",
-		"required": "true"
-	}, {
-		"field_name": "odm_contact",
-		"label": "Contact",
-		"form_snippet": "markdown.html",
-		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the dataset. This could be the author of a report, the contact information for the relevant department of an organization that produced a report, or the data analyst, mapper or researcher that produced a dataset or report."
-	}, {
+		"form_placeholder": ""
+	},{
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
@@ -119,12 +110,64 @@
 			"value": "other",
 			"label": "Other"
 		}]
+	},{
+		"field_name": "title",
+		"label": "Formal full title",
+		"preset": "title",
+		"form_placeholder": "Formal title of the law or policy"
 	}, {
-		"field_name": "odm_date_uploaded",
-		"label": "Date uploaded",
-		"form_placeholder": "Date the dataset was first uploaded to the OD CKAN database.",
-		"required": "true",
-		"preset": "odm_date"
+		"field_name": "title_translated",
+		"preset": "fluent_core_translated_single",
+		"label": {
+			"en": "Formal full title (en)",
+			"th": "Formal full title (th)",
+			"km": "Formal full title (km)",
+			"vi": "Formal full title (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"]
+	}, {
+		"field_name": "name",
+		"label": "URL",
+		"preset": "dataset_slug",
+		"form_placeholder": "eg. my-dataset"
+	},{
+		"field_name": "odm_short_title",
+		"preset": "fluent_text_single",
+		"label": {
+			"en": "Alternative/short title (en)",
+			"th": "Alternative/short title (th)",
+			"km": "Alternative/short title (km)",
+			"vi": "Alternative/short title (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"]
+	}, {
+		"field_name": "taxonomy",
+		"label": "Topics",
+    "required": "true",
+		"preset": "odm_taxonomy",
+		"form_placeholder": "eg. economy, mental health, government"
+	}, {
+		"field_name": "notes_translated",
+		"preset": "fluent_core_translated_markdown_single",
+		"label": {
+			"en": "Short summary",
+			"th": "รายละเอียด",
+			"km": "ការពិពណ៌នា",
+			"vi": "Mô tả"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Describe general purpose and scope"
+	},{
+		"field_name": "odm_laws_primary_policy_reference_point",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Primary policy reference point",
+			"th": "Primary policy reference point",
+			"km": "Primary policy reference point",
+			"vi": "Primary policy reference point"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Details about the information content of the dataset."
 	}, {
 		"field_name": "odm_spatial_range",
 		"label": "Geographic area (Spatial Range)",
@@ -164,63 +207,126 @@
 			"label": "Myanmar"
 		}]
 	}, {
-		"field_name": "document_type",
-		"label": "Document type",
-		"preset": "select",
-		"required": "true",
-		"choices": [{
-			"value": "advocacy_and_promotional_materials",
-			"label": "Advocacy and promotional materials"
-		}, {
-			"value": "analysis_discussion_papers_and_blogs",
-			"label": "Analysis, discussion papers, and blogs"
-		}, {
-			"value": "books_and_book_chapters",
-			"label": "Books and book chapters"
-		}, {
-			"value": "case_studies",
-			"label": "Case studies"
-		}, {
-			"value": "issue_and_policy_briefs",
-			"label": "Issue and policy briefs"
-		}, {
-			"value": "profiles_people",
-			"label": "Profiles - People"
-		}, {
-			"value": "profiles_organizations_and_projects",
-			"label": "Profiles - Organizations  and projects"
-		}, {
-			"value": "profiles_geographical_areas_and_sites",
-			"label": "Profiles - Geographical areas and sites"
-		}, {
-			"value": "conference_workshops_proceedings_and_presentations",
-			"label": "Conference/workshop proceedings and presentations"
-		}, {
-			"value": "reports_journal_articles_and_research_papers",
-			"label": "Reports, journal articles, and research papers (including theses and dissertations"
-		}]
+		"field_name": "owner_org",
+		"label": "Organization",
+		"preset": "dataset_organization"
 	}, {
-		"field_name": "odm_laws_short_title",
-		"label": "Alternative/Short Title",
-		"form_snippet": "text.html",
-		"required": "true",
-		"form_placeholder": "Commonly used label, e.g. Cambodia Labor Law"
+		"field_name": "license_id",
+		"label": "License",
+		"preset": "odm_license",
+		"help_text": "License definitions and additional information can be found at http://opendefinition.org/"
 	}, {
-		"field_name": "odm_laws_number",
-		"label": "Legal document #",
-		"preset": "fluent_text_single",
+		"field_name": "odm_copyright",
+		"label": "Copyright",
+		"preset": "odm_copyright",
+		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
+	}, {
+		"field_name": "odm_access_and_use_constraint",
+		"preset": "fluent_markdown_single",
 		"label": {
-			"en": "Legal document #",
-			"th": "Legal document #",
-			"km": "Legal document #",
-			"vi": "Legal document #"
+			"en": "Access and Use Constraints",
+			"th": "การเข้าถึงและข้อจำกัด",
+			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
+			"vi": "Hạn chế truy cập và sử dụng"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
+	}, {
+		"field_name": "odm_laws_status",
+		"label": "Status",
+    "required": "true",
+		"preset": "select",
+		"choices": [{
+			"value": "draft",
+			"label": "Draft"
+		}, {
+			"value": "adopted",
+			"label": "Adopted"
+		}, {
+			"value": "signed",
+			"label": "Signed"
+		}]
+	}, {
+		"field_name": "odm_laws_version_date",
+		"label": "Version date (of draft)",
+    "preset": "odm_date",
+		"required": "true"
+	}, {
+		"field_name": "odm_promulgated",
+		"label": "Adoption date/Promulgation date/Signing",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_effective_date",
+		"label": "Effective date",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_application_date",
+		"label": "Application date",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_laws_previous_legal_document",
+		"label": "Previous legal document",
+		"preset": "odm_laws_previous_legal_document",
 		"form_placeholder": ""
 	}, {
-		"field_name": "odm_laws_drafting_agency",
-		"label": "Known Drafting Agency",
+		"field_name": "odm_laws_previous_changes_notes",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Short notes of change",
+			"th": "Short notes of change",
+			"km": "Short notes of change",
+			"vi": "Short notes of change"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Describe what changed"
+	}, {
+		"field_name": "odm_laws_relationship_type",
+		"label": "Relationship to other legal docs",
+		"preset": "select",
+		"choices": [{
+			"value": "child_of",
+			"label": "Child of"
+		}, {
+			"value": "parent_of",
+			"label": "Parent of"
+		}],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_relationship_target",
+		"label": "Associated Document",
+		"preset": "odm_laws_relationship_target",
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_official_publication_reference",
+		"label": "Publication reference",
 		"form_snippet": "text.html",
+		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
+	}, {
+		"field_name": "odm_laws_source",
+		"label": "Links to source",
+		"form_snippet": "text.html",
+		"form_placeholder": "Official URLs where policy doc is made available"
+	}, {
+		"field_name": "odm_contact",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Contact",
+			"th": "ข้อมูลติดต่อ",
+			"km": "ទំនាក់ទំនង",
+			"vi": "Liên hệ"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the dataset. This could be the author of a report, the contact information for the relevant department of an organization that produced a report, or the data analyst, mapper or researcher that produced a dataset or report."
+	}, {
+		"field_name": "odm_laws_drafting_agency",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Drafting agency (en)",
+			"th": "Drafting agency (th)",
+			"km": "Drafting agency (km)",
+			"vi": "Drafting agency (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_draft_assistance",
@@ -238,102 +344,50 @@
 		}],
 		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
 	}, {
-		"field_name": "odm_laws_technical_assistance",
-		"label": "Agency providing technical assistance",
-		"form_snippet": "text.html",
+		"field_name": "odm_laws_agency_technical_assistance",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Agency providing technical assistance (en)",
+			"th": "Agency providing technical assistance (th)",
+			"km": "Agency providing technical assistance (km)",
+			"vi": "Agency providing technical assistance (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
 	}, {
-		"field_name": "odm_laws_implementing_agency",
-		"label": "Implementing Agency",
-		"form_snippet": "text.html",
-		"form_placeholder": "Information about how up-to-date the metadata is and who is responsible for maintaining it."
-	}, {
-		"field_name": "odm_laws_primary_policy_reference_point",
-		"label": "Primary policy reference point",
-		"form_snippet": "text.html",
-		"form_placeholder": "Details about the information content of the dataset."
-	}, {
-		"field_name": "odm_laws_status",
-		"label": "Status",
-		"preset": "select",
-		"choices": [{
-			"value": "Enacted",
-			"label": "Enacted"
-		}, {
-			"value": "Draft",
-			"label": "Draft"
-		}]
-	}, {
-		"field_name": "odm_laws_version_date",
-		"label": "Version date",
-		"form_placeholder": "",
-    "preset": "odm_date"
-	}, {
-		"field_name": "odm_laws_date_of_enactment",
-		"label": "Date of enactment",
-		"form_placeholder": "",
-    "preset": "odm_date"
-	}, {
-		"field_name": "odm_laws_final_action",
-		"label": "Date final action necessary to formalize Policy",
-		"form_placeholder": "",
-    "preset": "odm_date"
-	}, {
-		"field_name": "odm_laws_efective_date",
-		"label": "Effective Date (if adopted)",
-		"form_placeholder": "",
-    "preset": "odm_date"
-	}, {
-		"field_name": "odm_laws_action_previous_law",
-		"label": "Previous law",
-		"form_snippet": "text.html",
-		"choices": [{
-			"value": "Replacement",
-			"label": "Replacement"
-		}, {
-			"value": "Amendment",
-			"label": "Amendment"
-		}, {
-			"value": "Supplement",
-			"label": "Supplement"
-		}, {
-			"value": "No/Unknown",
-			"label": "No/Unknown"
-		}],
+		"field_name": "odm_laws_technical_assistance_funding_agency",
+    "preset": "fluent_text_single",
+		"label": {
+			"en": "Technical assistance funding agency (en)",
+			"th": "Technical assistance funding agency (th)",
+			"km": "Technical assistance funding agency (km)",
+			"vi": "Technical assistance funding agency (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
 	}, {
-		"field_name": "odm_laws_action_previous_law_description",
-		"label": "Describe what changed",
-		"form_snippet": "markdown.html",
+		"field_name": "odm_laws_issuing_agency_parties",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Issuing agency/parties (en)",
+			"th": "Issuing agency/parties (th)",
+			"km": "Issuing agency/parties (km)",
+			"vi": "Issuing agency/parties (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
 	}, {
-		"field_name": "odm_laws_relationship_type",
-		"label": "Add Relationship to other Document",
-		"preset": "select",
-		"choices": [{
-			"value": "child_of",
-			"label": "Child of"
-		}, {
-			"value": "parent_of",
-			"label": "Parent of"
-		}],
+		"field_name": "odm_laws_implementing_agencies",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Implementing agencies (en)",
+			"th": "Implementing agencies (th)",
+			"km": "Implementing agencies (km)",
+			"vi": "Implementing agencies (vi)"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_relationship_target",
-		"label": "Associated Document",
-		"preset": "odm_laws_relationship_target",
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_official_publication_reference",
-		"label": "Official publication reference (if exists)",
-		"form_snippet": "text.html",
-		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
-	}, {
-		"field_name": "odm_laws_source",
-		"label": "Official Link to Source",
-		"form_snippet": "text.html",
-		"form_placeholder": "Official URL where policy doc is made available"
-	}, {
+	},{
 		"field_name": "odm_laws_notes",
 		"preset": "fluent_markdown_single",
 		"label": {

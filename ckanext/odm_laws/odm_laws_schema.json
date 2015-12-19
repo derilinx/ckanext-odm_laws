@@ -123,10 +123,10 @@
 		"field_name": "title_translated",
 		"preset": "fluent_core_translated_single",
 		"label": {
-			"en": "Formal full title (en)",
-			"th": "Formal full title (th)",
-			"km": "Formal full title (km)",
-			"vi": "Formal full title (vi)"
+			"en": "Formal full title",
+			"th": "Formal full title",
+			"km": "Formal full title",
+			"vi": "Formal full title"
 		},
 		"form_languages": ["en", "th", "km", "vi"]
 	}, {
@@ -138,10 +138,10 @@
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",
 		"label": {
-			"en": "Alternative/short title (en)",
-			"th": "Alternative/short title (th)",
-			"km": "Alternative/short title (km)",
-			"vi": "Alternative/short title (vi)"
+			"en": "Alternative/short title",
+			"th": "Alternative/short title",
+			"km": "Alternative/short title",
+			"vi": "Alternative/short title"
 		},
 		"form_languages": ["en", "th", "km", "vi"]
 	}, {
@@ -326,10 +326,10 @@
 		"field_name": "odm_laws_drafting_agency",
     "preset": "fluent_markdown_single",
 		"label": {
-			"en": "Drafting agency (en)",
-			"th": "Drafting agency (th)",
-			"km": "Drafting agency (km)",
-			"vi": "Drafting agency (vi)"
+			"en": "Drafting agency",
+			"th": "Drafting agency",
+			"km": "Drafting agency",
+			"vi": "Drafting agency"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -352,10 +352,10 @@
 		"field_name": "odm_laws_agency_technical_assistance",
     "preset": "fluent_markdown_single",
 		"label": {
-			"en": "Agency providing technical assistance (en)",
-			"th": "Agency providing technical assistance (th)",
-			"km": "Agency providing technical assistance (km)",
-			"vi": "Agency providing technical assistance (vi)"
+			"en": "Agency providing technical assistance",
+			"th": "Agency providing technical assistance",
+			"km": "Agency providing technical assistance",
+			"vi": "Agency providing technical assistance"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -363,10 +363,10 @@
 		"field_name": "odm_laws_technical_assistance_funding_agency",
     "preset": "fluent_text_single",
 		"label": {
-			"en": "Technical assistance funding agency (en)",
-			"th": "Technical assistance funding agency (th)",
-			"km": "Technical assistance funding agency (km)",
-			"vi": "Technical assistance funding agency (vi)"
+			"en": "Technical assistance funding agency",
+			"th": "Technical assistance funding agency",
+			"km": "Technical assistance funding agency",
+			"vi": "Technical assistance funding agency"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -374,10 +374,10 @@
 		"field_name": "odm_laws_issuing_agency_parties",
     "preset": "fluent_markdown_single",
 		"label": {
-			"en": "Issuing agency/parties (en)",
-			"th": "Issuing agency/parties (th)",
-			"km": "Issuing agency/parties (km)",
-			"vi": "Issuing agency/parties (vi)"
+			"en": "Issuing agency/parties",
+			"th": "Issuing agency/parties",
+			"km": "Issuing agency/parties",
+			"vi": "Issuing agency/parties"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -385,10 +385,10 @@
 		"field_name": "odm_laws_implementing_agencies",
     "preset": "fluent_markdown_single",
 		"label": {
-			"en": "Implementing agencies (en)",
-			"th": "Implementing agencies (th)",
-			"km": "Implementing agencies (km)",
-			"vi": "Implementing agencies (vi)"
+			"en": "Implementing agencies",
+			"th": "Implementing agencies",
+			"km": "Implementing agencies",
+			"vi": "Implementing agencies"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""

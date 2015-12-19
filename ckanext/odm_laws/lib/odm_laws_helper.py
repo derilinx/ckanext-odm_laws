@@ -74,10 +74,12 @@ def get_dataset_notes(dataset_id, truncate):
   dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
 
   if 'notes_translated' in dataset_dict :
-    notes = dataset_dict['notes_translated'][pylons.request.environ['CKAN_LANG']]
-    if truncate == True and notes:
-      notes = notes[0:99]
-
+    lang = pylons.request.environ['CKAN_LANG']
+    if lang in dataset_dict['notes_translated']:
+      notes = dataset_dict['notes_translated'][lang]
+      if truncate == True and notes:
+        notes = notes[0:99]
+    
   return notes
 
 def lookup_relationship_target():

@@ -8,73 +8,76 @@
 
     {% block odm_laws_semre_of_database_relationships %}
      {% set pkg_dict = c.pkg_dict %}
+		 {% set dataset_id = pkg_dict.id %}
+		 {% set relations_as_subject = h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='subject') %}
+		 {% set relations_as_object = h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='object') %}
+		 {% if relations_as_subject or relations_as_object %}
+		 		<h3>{{ _('Related laws')}}</h3>
+	      <div class="semre_of_relationships">
+					<div class="cell">
+	          <span class="parents">
+	            <ul>
+	              {% for entry in relations_as_subject %}
+	                <li>
+	                  {% set related_dataset_id = entry.__extras.object_package_id%}
+	                  {% set related_dataset_name = h.odm_laws_get_dataset_name(related_dataset_id) %}
+	                  {% if related_dataset_name %}
+	                    <a href="{{h.url_for(controller='package', type='laws_record', action='read', id=related_dataset_id)}}" target="_blank">
+	                      {{ related_dataset_name }}
+	                    </a>
+	                    {% set related_dataset_notes = h.odm_laws_get_dataset_notes(related_dataset_id, True) %}
+	                    {% if related_dataset_notes %}
+	                      <span class="notes">{{ related_dataset_notes }}</span>
+	                    {% endif %}
+	                  {% else %}
+	                    &nbsp;
+	                  {% endif %}
+	                </li>
+	              {% endfor %}
+	            </ul>
+	          </span>
+	        </div>
 
-      <div class="semre_of_relationships">
-				<div class="cell">
-          <span class="parents">
-            <ul>
-              {% set dataset_id = pkg_dict.id %}
-              {% for entry in h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='subject') %}
-                <li>
-                  {% set related_dataset_id = entry.__extras.object_package_id%}
-                  {% set related_dataset_name = h.odm_laws_get_dataset_name(related_dataset_id) %}
-                  {% if related_dataset_name %}
-                    <a href="{{h.url_for(controller='package', type='laws_record', action='read', id=related_dataset_id)}}" target="_blank">
-                      {{ related_dataset_name }}
-                    </a>
-                    {% set related_dataset_notes = h.odm_laws_get_dataset_notes(related_dataset_id, True) %}
-                    {% if related_dataset_notes %}
-                      <span class="notes">{{ related_dataset_notes }}</span>
-                    {% endif %}
-                  {% else %}
-                    &nbsp;
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </span>
-        </div>
+	        <div class="cell">
+	          <span class="separator">}</span>
+	        </div>
 
-        <div class="cell">
-          <span class="separator">}</span>
-        </div>
-
-        <div class="cell">
-          <span class="this">
-            {{ pkg.title or pkg.name }}
-          </span>
-        </div>
-        <div class="cell">
-          <span class="separator">}</span>
-        </div>
-        <div class="cell">
-          <span class="children">
-            <ul>
-              {%set dataset_id = pkg.id %}
-              {% for entry in h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='object') %}
-              <li>
-                {% set related_dataset_id = entry.__extras.subject_package_id%}
-                {% set related_dataset_name = h.odm_laws_get_dataset_name(related_dataset_id) %}
-                {% if related_dataset_name %}
-                  <a href="{{h.url_for(controller='package', type='laws_record' , action='read', id=related_dataset_id)}}" target="_blank">
-                    {{ related_dataset_name }}
-                  </a>
-                  {% set related_dataset_notes = h.odm_laws_get_dataset_notes(related_dataset_id, True) %}
-                  {% if related_dataset_notes %}
-                    <span class="notes">{{ related_dataset_notes }}</span>
-                  {% endif %}
-                {% else %}
-                  &nbsp;
-                {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </span>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-      <hr>
-    {% endblock %}
+	        <div class="cell">
+	          <span class="this">
+	            {{ pkg.title or pkg.name }}
+	          </span>
+	        </div>
+	        <div class="cell">
+	          <span class="separator">}</span>
+	        </div>
+	        <div class="cell">
+	          <span class="children">
+	            <ul>
+	              {% for entry in relations_as_object %}
+	              <li>
+	                {% set related_dataset_id = entry.__extras.subject_package_id%}
+	                {% set related_dataset_name = h.odm_laws_get_dataset_name(related_dataset_id) %}
+	                {% if related_dataset_name %}
+	                  <a href="{{h.url_for(controller='package', type='laws_record' , action='read', id=related_dataset_id)}}" target="_blank">
+	                    {{ related_dataset_name }}
+	                  </a>
+	                  {% set related_dataset_notes = h.odm_laws_get_dataset_notes(related_dataset_id, True) %}
+	                  {% if related_dataset_notes %}
+	                    <span class="notes">{{ related_dataset_notes }}</span>
+	                  {% endif %}
+	                {% else %}
+	                  &nbsp;
+	                {% endif %}
+	              </li>
+	              {% endfor %}
+	            </ul>
+	          </span>
+	        </div>
+	      </div>
+	    	<div class="clearfix"></div>
+	    	<hr>
+			{% endif%}
+  	{% endblock %}
 
   {% endif%}
 

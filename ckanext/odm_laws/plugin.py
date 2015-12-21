@@ -23,7 +23,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   plugins.implements(plugins.IConfigurer)
   plugins.implements(plugins.ITemplateHelpers)
   plugins.implements(plugins.IRoutes, inherit=True)
-  plugins.implements(plugins.IFacets)
   plugins.implements(plugins.IPackageController, inherit=True)
 
   def __init__(self, *args, **kwargs):
@@ -31,40 +30,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     log.debug('OdmLawsPlugin init')
     wsgi_app = SessionMiddleware(None, None)
     odm_laws_helper.session = wsgi_app.session
-
-  def dataset_facets(self, facets_dict, package_type):
-
-    return {
-            'license_id': toolkit._('License'),
-            'vocab_taxonomy': toolkit._('Topics'),
-            'organization': toolkit._('Organizations'),
-            'groups': toolkit._('Groups'),
-            'res_format': toolkit._('Formats'),
-            'odm_language': toolkit._('Language'),
-            'odm_spatial_range': toolkit._('Country')
-            }
-
-  def group_facets(self, facets_dict, group_type, package_type):
-
-    return {
-            'license_id': toolkit._('License'),
-            'vocab_taxonomy': toolkit._('Topics'),
-            'organization': toolkit._('Organizations'),
-            'res_format': toolkit._('Formats'),
-            'odm_language': toolkit._('Language'),
-            'odm_spatial_range': toolkit._('Country')
-            }
-
-  def organization_facets(self, facets_dict, organization_type, package_type):
-
-    return {
-            'license_id': toolkit._('License'),
-            'vocab_taxonomy': toolkit._('Topics'),
-            'groups': toolkit._('Groups'),
-            'res_format': toolkit._('Formats'),
-            'odm_language': toolkit._('Language'),
-            'odm_spatial_range': toolkit._('Country')
-            }
 
   def before_map(self, m):
 

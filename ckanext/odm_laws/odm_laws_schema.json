@@ -149,6 +149,7 @@
 		"label": "Topics",
     "required": "true",
 		"preset": "odm_taxonomy",
+    "required": "true",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
 		"field_name": "notes_translated",

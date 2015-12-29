@@ -122,7 +122,10 @@
 			"km": "Formal full title",
 			"vi": "Formal full title"
 		},
-		"form_languages": ["en", "th", "km", "vi"]
+		"form_languages": ["en", "th", "km", "vi"],
+    "form_attrs": {
+      "data-module": "slug-preview-target"
+    }
 	}, {
 		"field_name": "name",
 		"label": "URL",

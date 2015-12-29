@@ -113,12 +113,6 @@
 			"value": "other",
 			"label": "Other"
 		}]
-	},{
-		"field_name": "title",
-		"label": "Formal full title",
-		"preset": "title",
-    "required": "true",
-		"form_placeholder": "Formal title of the law or policy"
 	}, {
 		"field_name": "title_translated",
 		"preset": "fluent_core_translated_single",

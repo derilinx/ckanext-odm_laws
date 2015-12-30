@@ -24,6 +24,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   plugins.implements(plugins.ITemplateHelpers)
   plugins.implements(plugins.IRoutes, inherit=True)
   plugins.implements(plugins.IPackageController, inherit=True)
+  plugins.implements(plugins.IResourceController, inherit=True)
+
 
   def __init__(self, *args, **kwargs):
 
@@ -67,15 +69,18 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def before_create(self, context, resource):
     log.info('before_create')
+    log.debug("resize:")
 
   def after_create(self, context, pkg_dict):
+
     log.debug('after_create: %s', pkg_dict['name'])
 
     # Create default Issue
     review_system = h.asbool(config.get("ckanext.issues.review_system", False))
     if review_system:
-      if pkg_dict['type'] == 'laws_record':
-        odm_laws_helper.create_default_issue_laws_record(pkg_dict)
+      if 'type' in pkg_dict:
+        if pkg_dict['type'] == 'laws_record':
+          odm_laws_helper.create_default_issue_laws_record(pkg_dict)
 
   def after_update(self, context, pkg_dict):
     log.debug('after_update: %s', pkg_dict['name'])
@@ -91,3 +96,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
       log.debug("Creating relationship %s %s",rel_type,rel_target)
       toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
+
+
+  def after_update(self,context, resource):
+    log.debug('after_update (resource): %s', resource['name'])
+    # imagemagick here

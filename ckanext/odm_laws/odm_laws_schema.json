@@ -1,0 +1,464 @@
+{
+	"scheming_version": 1,
+	"dataset_type": "laws_record",
+	"about": "ODM Laws metadata schema",
+	"about_url": "http://github.com/open-data/ckanext-scheming",
+	"dataset_fields": [{
+		"field_name": "odm_document_type",
+		"label": "Document type",
+		"preset": "select",
+		"choices": [{
+			"value": "anukretsub-decree",
+			"label": "Anukret/Sub-Decree"
+		}, {
+			"value": "chbablawkram",
+			"label": "Chbab/Law/Kram"
+		}, {
+			"value": "constitution-of-cambodia",
+			"label": "Constitution of Cambodia"
+		}, {
+			"value": "international-treatiesagreements",
+			"label": "International Treaties/Agreements"
+		}, {
+			"value": "kech-sonyacontractagreement",
+			"label": "Kech Sonya/Contract/Agreement"
+		}, {
+			"value": "kolkar-nenomguidelines",
+			"label": "Kolkar Nenom/Guidelines"
+		}, {
+			"value": "kolnyobaypolicy",
+			"label": "Kolnyobay/Policy"
+		}, {
+			"value": "likhetletter",
+			"label": "Likhet/Letter"
+		}, {
+			"value": "prakasjoint-prakasproclamation",
+			"label": "Prakas/Joint-Prakas/Proclamation"
+		}, {
+			"value": "preah-reach-kramroyal-kram",
+			"label": "Preah Reach Kram/Royal Kram"
+		}, {
+			"value": "sarachorcircular",
+			"label": "Sarachor/Circular"
+		}, {
+			"value": "sechkdei-chhun-damneoungnoticeannouncement",
+			"label": "Sechkdei Chhun  Damneoung/Notice/Announcement"
+		}, {
+			"value": "sechkdei-nenuminstruction",
+			"label": "Sechkdei Nenum/Instruction"
+		}, {
+			"value": "sechkdei-preang-chbabdraft-laws-amp-regulations",
+			"label": "Sechkdei Preang Chbab/Draft Laws & Regulations"
+		}, {
+			"value": "sechkdei-samrechdecision",
+			"label": "Sechkdei Samrech/Decision"
+		}, {
+			"value": "others",
+			"label": "Others"
+		}]
+	}, {
+		"field_name": "odm_document_number",
+		"label": "Document reference #",
+		"preset": "fluent_text_single",
+		"label": {
+			"en": "Document reference #",
+			"th": "Document reference #",
+			"km": "Document reference #",
+			"vi": "Document reference #"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	},{
+		"field_name": "odm_language",
+		"label": "Language",
+		"required": "true",
+		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
+		"preset": "multiple_select",
+		"select_size": 4,
+		"choices": [{
+			"value": "my",
+			"label": "Burmese"
+		}, {
+			"value": "en",
+			"label": "English"
+		}, {
+			"value": "km",
+			"label": "Khmer"
+		}, {
+			"value": "lo",
+			"label": "Lao"
+		}, {
+			"value": "th",
+			"label": "Thai"
+		}, {
+			"value": "vi",
+			"label": "Vietnamese"
+		}, {
+			"value": "zh",
+			"label": "Chinese"
+		}, {
+			"value": "fr",
+			"label": "French"
+		}, {
+			"value": "de",
+			"label": "German"
+		}, {
+			"value": "jp",
+			"label": "Japanese"
+		}, {
+			"value": "ko",
+			"label": "Korean"
+		}, {
+			"value": "other",
+			"label": "Other"
+		}]
+	}, {
+		"field_name": "title_translated",
+		"preset": "fluent_core_translated_single",
+		"label": {
+			"en": "Formal full title",
+			"th": "Formal full title",
+			"km": "Formal full title",
+			"vi": "Formal full title"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+    "form_attrs": {
+      "data-module": "slug-preview-target"
+    }
+	}, {
+		"field_name": "name",
+		"label": "URL",
+		"preset": "dataset_slug",
+		"form_placeholder": "eg. my-dataset"
+	},{
+		"field_name": "odm_short_title",
+		"preset": "fluent_text_single",
+		"label": {
+			"en": "Alternative/short title",
+			"th": "Alternative/short title",
+			"km": "Alternative/short title",
+			"vi": "Alternative/short title"
+		},
+		"form_languages": ["en", "th", "km", "vi"]
+	}, {
+		"field_name": "taxonomy",
+		"label": "Topics",
+		"preset": "odm_taxonomy",
+		"form_placeholder": "eg. economy, mental health, government"
+	}, {
+		"field_name": "notes_translated",
+		"preset": "fluent_core_translated_markdown_single",
+		"label": {
+			"en": "Short summary",
+			"th": "รายละเอียด",
+			"km": "ការពិពណ៌នា",
+			"vi": "Mô tả"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Describe general purpose and scope"
+	},{
+		"field_name": "odm_laws_primary_policy_reference_point",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Primary policy reference point",
+			"th": "Primary policy reference point",
+			"km": "Primary policy reference point",
+			"vi": "Primary policy reference point"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Details about the information content of the dataset."
+	}, {
+		"field_name": "odm_spatial_range",
+		"label": "Geographic area (Spatial Range)",
+		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
+		"preset": "multiple_select",
+		"required": "true",
+		"select_size": 4,
+		"choices": [{
+			"value": "global",
+			"label": "Global"
+		}, {
+			"value": "asean",
+			"label": "ASEAN"
+		}, {
+			"value": "gms",
+			"label": "Greater Mekong Subregion (GMS)"
+		}, {
+			"value": "lmb",
+			"label": "Lower Mekong Basin"
+		}, {
+			"value": "lmc",
+			"label": "Lower Mekong countries"
+		}, {
+			"value": "kh",
+			"label": "Cambodia"
+		}, {
+			"value": "vn",
+			"label": "Vietnam"
+		}, {
+			"value": "la",
+			"label": "Laos"
+		}, {
+			"value": "th",
+			"label": "Thailand"
+		}, {
+			"value": "mm",
+			"label": "Myanmar"
+		}]
+	}, {
+		"field_name": "owner_org",
+		"label": "Organization",
+		"preset": "dataset_organization"
+	}, {
+		"field_name": "license_id",
+		"label": "License",
+		"preset": "odm_license",
+		"help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+	}, {
+		"field_name": "odm_copyright",
+		"label": "Copyright",
+		"preset": "odm_copyright",
+		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
+	}, {
+		"field_name": "odm_access_and_use_constraint",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Access and Use Constraints",
+			"th": "การเข้าถึงและข้อจำกัด",
+			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
+			"vi": "Hạn chế truy cập và sử dụng"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
+	}, {
+		"field_name": "odm_laws_status",
+		"label": "Status",
+    "required": "true",
+		"preset": "select",
+		"choices": [{
+			"value": "unspecified",
+			"label": "Unspecified"
+		},{
+			"value": "draft",
+			"label": "Draft"
+		}, {
+			"value": "adopted",
+			"label": "Adopted"
+		}, {
+			"value": "signed",
+			"label": "Signed"
+		}]
+	}, {
+		"field_name": "odm_laws_version_date",
+		"label": "Version date (of draft)",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_promulgation_date",
+		"label": "Adoption date/Promulgation date/Signing",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_effective_date",
+		"label": "Effective date",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_application_date",
+		"label": "Application date",
+    "preset": "odm_date"
+	}, {
+		"field_name": "odm_laws_previous_legal_document",
+		"label": "Previous legal document",
+		"preset": "odm_laws_previous_legal_document",
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_previous_changes_notes",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Short notes of change",
+			"th": "Short notes of change",
+			"km": "Short notes of change",
+			"vi": "Short notes of change"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Describe what changed"
+	}, {
+		"field_name": "odm_laws_relationship_type",
+		"label": "Relationship to other legal docs",
+		"preset": "select",
+		"choices": [{
+			"value": "child_of",
+			"label": "Child of"
+		}, {
+			"value": "parent_of",
+			"label": "Parent of"
+		}],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_relationship_target",
+		"label": "Associated Document",
+		"preset": "odm_laws_relationship_target",
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_official_publication_reference",
+		"label": "Publication reference",
+		"form_snippet": "text.html",
+		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
+	}, {
+		"field_name": "odm_laws_source",
+		"label": "Links to source",
+		"form_snippet": "text.html",
+		"form_placeholder": "Official URLs where policy doc is made available"
+	}, {
+		"field_name": "odm_contact",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Contact",
+			"th": "ข้อมูลติดต่อ",
+			"km": "ទំនាក់ទំនង",
+			"vi": "Liên hệ"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the dataset. This could be the author of a report, the contact information for the relevant department of an organization that produced a report, or the data analyst, mapper or researcher that produced a dataset or report."
+	}, {
+		"field_name": "odm_laws_drafting_agency",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Drafting agency",
+			"th": "Drafting agency",
+			"km": "Drafting agency",
+			"vi": "Drafting agency"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_draft_assistance",
+		"label": "Technical assistance for drafting",
+		"preset": "select",
+		"choices": [{
+			"value": "yes",
+			"label": "Yes"
+		}, {
+			"value": "no",
+			"label": "No"
+		}, {
+			"value": "unknown",
+			"label": "Unknown"
+		}],
+		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
+	}, {
+		"field_name": "odm_laws_agency_technical_assistance",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Agency providing technical assistance",
+			"th": "Agency providing technical assistance",
+			"km": "Agency providing technical assistance",
+			"vi": "Agency providing technical assistance"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_technical_assistance_funding_agency",
+    "preset": "fluent_text_single",
+		"label": {
+			"en": "Technical assistance funding agency",
+			"th": "Technical assistance funding agency",
+			"km": "Technical assistance funding agency",
+			"vi": "Technical assistance funding agency"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_issuing_agency_parties",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Issuing agency/parties",
+			"th": "Issuing agency/parties",
+			"km": "Issuing agency/parties",
+			"vi": "Issuing agency/parties"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	}, {
+		"field_name": "odm_laws_implementing_agencies",
+    "preset": "fluent_markdown_single",
+		"label": {
+			"en": "Implementing agencies",
+			"th": "Implementing agencies",
+			"km": "Implementing agencies",
+			"vi": "Implementing agencies"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": ""
+	},{
+		"field_name": "odm_laws_notes",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Notes",
+			"th": "Notes",
+			"km": "Notes",
+			"vi": "Notes"
+		},
+		"form_languages": ["en", "th", "km", "vi"],
+		"form_placeholder": "Add any notes to this document"
+	}],
+	"resource_fields": [{
+		"field_name": "url",
+		"label": "URL",
+		"preset": "resource_url_upload"
+	}, {
+		"field_name": "name",
+		"label": "Name",
+		"form_placeholder": "eg. January 2011 Gold Prices",
+		"preset": "odm_resource_name"
+	}, {
+		"field_name": "description",
+		"label": "Description",
+		"form_placeholder": "Some useful notes about the data",
+		"preset": "odm_resource_description"
+	}, {
+		"field_name": "format",
+		"label": "Format",
+		"preset": "resource_format_autocomplete"
+	}, {
+		"field_name": "odm_language",
+    "label": "Resource's languages",
+    "preset": "multiple_select",
+		"select_size": 4,
+		"choices": [{
+			"value": "my",
+			"label": "Burmese"
+		}, {
+			"value": "en",
+			"label": "English"
+		}, {
+			"value": "km",
+			"label": "Khmer"
+		}, {
+			"value": "lo",
+			"label": "Lao"
+		}, {
+			"value": "th",
+			"label": "Thai"
+		}, {
+			"value": "vi",
+			"label": "Vietnamese"
+		}, {
+			"value": "zh",
+			"label": "Chinese"
+		}, {
+			"value": "fr",
+			"label": "French"
+		}, {
+			"value": "de",
+			"label": "German"
+		}, {
+			"value": "jp",
+			"label": "Japanese"
+		}, {
+			"value": "ko",
+			"label": "Korean"
+		}, {
+			"value": "other",
+			"label": "Other"
+		}]
+	}]
+}

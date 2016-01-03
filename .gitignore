@@ -2,3 +2,4 @@
 odm_laws.sublime-workspace
 .remote-sync.json
 *.pyc
+ckanext/odm_laws/odn_laws_schema.json

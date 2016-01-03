@@ -68,12 +68,14 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def before_create(self, context, resource):
 
-    if context['package'].type == 'laws_record':
+    dataset_type = context['package'].type if 'package' in context else ''
+    if dataset_type == 'laws_record':
       log.info('before_create')
 
   def after_create(self, context, pkg_dict):
 
-    if context['package'].type == 'laws_record':
+    dataset_type = context['package'].type if 'package' in context else pkg_dict['type']
+    if dataset_type == 'laws_record':
       log.debug('after_create: %s', pkg_dict['name'])
 
       # Create default Issue
@@ -85,11 +87,13 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def after_update(self, context, pkg_dict_or_resource):
 
-    if context['package'].type == 'laws_record':
-      log.debug('after_update: %s', pkg_dict_or_resource)
+    dataset_type = context['package'].type if 'package' in context else pkg_dict['type']
+    if dataset_type == 'laws_record':
+      log.debug('after_update: %s', pkg_dict_or_resource['name'])
 
       if 'url_type' in pkg_dict_or_resource:
         # Do resource related logic here
+        print(pkg_dict_or_resource)
 
       #  Create relationship if target is set
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:

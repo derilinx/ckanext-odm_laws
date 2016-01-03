@@ -82,9 +82,12 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         if pkg_dict['type'] == 'laws_record':
           odm_laws_helper.create_default_issue_laws_record(pkg_dict)
 
+
+
   def after_update(self, context, pkg_dict):
     log.debug('after_update: %s', pkg_dict['name'])
-
+    # imagemagick here
+    log.debug('salla')
     #  Create relationship if target is set
     if 'odm_laws_relationship_target' in pkg_dict:
       # current dataset
@@ -97,7 +100,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       log.debug("Creating relationship %s %s",rel_type,rel_target)
       toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})
 
-
-  def after_update(self,context, resource):
+  def after_update(self, context, resource):
     log.debug('after_update (resource): %s', resource['name'])
-    # imagemagick here
+    log.debug('resource updated')

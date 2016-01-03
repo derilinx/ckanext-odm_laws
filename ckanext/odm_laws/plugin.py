@@ -91,7 +91,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     #  Create relationship if target is set
     if 'odm_laws_relationship_target' in pkg_dict:
       # current dataset
-      rel_subj=pkg_dict['name']
+      rel_subj=pkg_dict['name'] 
       # is child of/parent of
       rel_type=pkg_dict['odm_laws_relationship_type']
       # relationship target

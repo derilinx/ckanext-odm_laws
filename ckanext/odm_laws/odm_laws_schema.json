@@ -7,7 +7,6 @@
 		"field_name": "odm_document_type",
 		"label": "Document type",
 		"preset": "select",
-		"required": "true",
 		"choices": [{
 			"value": "anukretsub-decree",
 			"label": "Anukret/Sub-Decree"
@@ -67,8 +66,7 @@
 			"km": "Document reference #",
 			"vi": "Document reference #"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": ""
+		"form_languages": ["en", "th", "km", "vi"]
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
@@ -125,7 +123,8 @@
 		"form_languages": ["en", "th", "km", "vi"],
     "form_attrs": {
       "data-module": "slug-preview-target"
-    }
+    },
+    "form_placeholder": "Law's title"
 	}, {
 		"field_name": "name",
 		"label": "URL",
@@ -140,12 +139,12 @@
 			"km": "Alternative/short title",
 			"vi": "Alternative/short title"
 		},
-		"form_languages": ["en", "th", "km", "vi"]
+		"form_languages": ["en", "th", "km", "vi"],
+    "form_placeholder": "Law's short title"
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
 		"preset": "odm_taxonomy",
-    "required": "true",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
 		"field_name": "notes_translated",

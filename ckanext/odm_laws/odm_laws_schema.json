@@ -71,7 +71,6 @@
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
-		"required": "true",
 		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
 		"preset": "multiple_select",
 		"select_size": 4,
@@ -172,7 +171,6 @@
 		"label": "Geographic area (Spatial Range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "multiple_select",
-		"required": "true",
 		"select_size": 4,
 		"choices": [{
 			"value": "global",
@@ -233,7 +231,6 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"label": "Status",
-    "required": "true",
 		"preset": "select",
 		"choices": [{
 			"value": "unspecified",

@@ -4,6 +4,9 @@
    box-sizing: border-box;
    font-family: Helvetica;
 }
+.semre_of_relationships .cell{
+
+}
 
 .semre_of_relationships ul{margin:0;}
   .semre_of_relationships ul li{
@@ -19,9 +22,11 @@
     }
 .semre_of_relationships .separator{
   font-size: 36px;
+  color: rgb(224,224,224);
 }
 .clearfix{clear: both;}
 .cell{
   display:table-cell;
   vertical-align: middle;
+    padding: 10px;
 }

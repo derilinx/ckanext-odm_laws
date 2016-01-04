@@ -91,6 +91,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       if 'url_type' in pkg_dict_or_resource:
         # Do resource related logic here
 
+        print(pkg_dict_or_resource)
       #  Create relationship if target is set
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:
         # current dataset

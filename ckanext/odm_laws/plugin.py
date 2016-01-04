@@ -74,17 +74,42 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     if context['package'].type == 'laws_record':
       log.info('before_create')
 
-  def after_create(self, context, pkg_dict):
+  def after_create(self, context, pkg_dict_or_resource):
+    log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
-    if pkg_dict['type'] == 'laws_record':
-      log.debug('after_create: %s', pkg_dict['name'])
+    if 'url_type' in pkg_dict_or_resource:
+      ## Do resource related logic here
+      # create pdf preview
+      img_url=pkg_dict_or_resource['url']+'[0]'
+      pdf=Image(filename=img_url)
+      pdf.format='png'
+      pdf.resize(220,220)
+      # store in local temporary folder
+      temp_dir = os.path.abspath(tempfile.mkdtemp())
+      temp_img=temp_dir+'/'+pkg_dict_or_resource['revision_id']+'.png'
+      pdf.save(filename=temp_img)
+      # push to filestore
+      params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
+      ckan_auth='94c86d9d-7948-4540-b06d-4989d2c32b90'
+      ckan_url='http://192.168.33.10:8081'
+      # check if pdf thumbnail already exist
+      if context['resource'].name == "PDF Thumbnail":
+          resource_id=context['resource'].id
+          # add id to params for update
+          params['id']=resource_id
+          requests.post(ckan_url + '/api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+      else:
+        requests.post(ckan_url + '/api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
 
-      # Create default Issue
-      review_system = h.asbool(config.get("ckanext.issues.review_system", False))
-      if review_system:
-        if 'type' in pkg_dict:
-          if pkg_dict['type'] == 'laws_record':
-            odm_laws_helper.create_default_issue_laws_record(pkg_dict)
+
+
+    ## Do dataset related logic here
+    # Create default Issue
+    review_system = h.asbool(config.get("ckanext.issues.review_system", False))
+    if review_system:
+      if 'type' in pkg_dict_or_resource:
+        if pkg_dict_or_resource['type'] == 'laws_record':
+          odm_laws_helper.create_default_issue_laws_record(pkg_dict_or_resource)
 
   def after_update(self, context, pkg_dict_or_resource):
 
@@ -100,7 +125,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         pdf.resize(220,220)
         # store in local temporary folder
         temp_dir = os.path.abspath(tempfile.mkdtemp())
-        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
+        temp_img=temp_dir+'/'+pkg_dict_or_resource['revision_id']+'.png'
         pdf.save(filename=temp_img)
         # push to filestore
         params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}

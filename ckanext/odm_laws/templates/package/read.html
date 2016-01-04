@@ -6,6 +6,15 @@
 
   {% if dataset_type == 'laws_record' %}
 
+    {% block odm_laws_pdf_thumbnail %}
+      {% set resources = c.pkg_dict.resources %}
+      {% for resource in resources%}
+        {% if resource.name == 'PDF Thumbnail' %}
+          <img src='{{resource.url}}'>
+        {% endif %}
+      {% endfor %}
+    {% endblock%}
+
     {% block odm_laws_semre_of_database_relationships %}
      {% set pkg_dict = c.pkg_dict %}
 		 {% set dataset_id = pkg_dict.id %}
@@ -80,14 +89,6 @@
   	{% endblock %}
 
 
-    {% block odm_laws_pdf_thumbnail %}
-      {% set resources = c.pkg_dict.resources %}
-      {% for resource in resources%}
-        {% if resource.name == 'PDF Thumbnail' %}
-          <img src='{{resource.url}}'>
-        {% endif %}
-      {% endfor %}
-    {% endblock%}
 
   {% endif%}
 

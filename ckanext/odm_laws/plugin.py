@@ -101,16 +101,15 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         pdf.resize(220,220)
         # store in local temporary folder
         temp_dir = os.path.abspath(tempfile.mkdtemp())
-        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']
+        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
         pdf.save(filename=temp_img)
-        # push to resource
-        params = {'name':'Document Preview','package_id':pkg_dict_or_resource['package_id'],'url':temp_img}
-        toolkit.get_action('resource_create')(data_dict=params)
+        # push to filestore
+        params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','resource_type':'png'}
+        ckan_auth='94c86d9d-7948-4540-b06d-4989d2c32b90'
+        ckan_url='http://192.168.33.10:8081'
+        print(context)
+        requests.post(ckan_url + '/api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
 
-        # requests.post('http://0.0.0.0:8081/api/action/resource_create',
-        #               data={"package_id":pkg_dict_or_resource['package_id']},
-        #               headers={"X-CKAN-API-Key": "94c86d9d-7948-4540-b06d-4989d2c32b90"},
-        #               files=[('upload', file(temp_img))])
 
       #  Create relationship if target is set
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:

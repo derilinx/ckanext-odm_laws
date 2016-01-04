@@ -81,12 +81,13 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       ## Do resource related logic here
       # create pdf preview
       img_url=pkg_dict_or_resource['url']+'[0]'
+      # img_url.replace(" ", "")
       pdf=Image(filename=img_url)
       pdf.format='png'
       pdf.resize(220,220)
       # store in local temporary folder
       temp_dir = os.path.abspath(tempfile.mkdtemp())
-      temp_img=temp_dir+'/'+pkg_dict_or_resource['revision_id']+'.png'
+      temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
       pdf.save(filename=temp_img)
       # push to filestore
       params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
@@ -120,12 +121,13 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         ## Do resource related logic here
         # create pdf preview
         pdf_url=pkg_dict_or_resource['url']+"[0]"
+        # pdf_url.replace(" ", "")
         pdf=Image(filename=pdf_url)
         pdf.format='png'
         pdf.resize(220,220)
         # store in local temporary folder
         temp_dir = os.path.abspath(tempfile.mkdtemp())
-        temp_img=temp_dir+'/'+pkg_dict_or_resource['revision_id']+'.png'
+        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
         pdf.save(filename=temp_img)
         # push to filestore
         params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}

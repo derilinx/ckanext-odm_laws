@@ -76,7 +76,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def after_create(self, context, pkg_dict):
 
-    if context['package'].type == 'laws_record':
+    if pkg_dict['type'] == 'laws_record':
       log.debug('after_create: %s', pkg_dict['name'])
 
       # Create default Issue

@@ -79,6 +79,16 @@
 			{% endif%}
   	{% endblock %}
 
+
+    {% block odm_laws_pdf_thumbnail %}
+      {% set resources = c.pkg_dict.resources %}
+      {% for resource in resources%}
+        {% if resource.name == 'PDF Thumbnail' %}
+          <img src='{{resource.url}}'>
+        {% endif %}
+      {% endfor %}
+    {% endblock%}
+
   {% endif%}
 
 {% endblock %}

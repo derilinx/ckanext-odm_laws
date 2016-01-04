@@ -14,6 +14,9 @@ from pylons import config
 import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
+from wand.image import Image
+import requests
+import tempfile
 
 log = logging.getLogger(__name__)
 
@@ -91,7 +94,24 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       if 'url_type' in pkg_dict_or_resource:
         # Do resource related logic here
 
-        print(pkg_dict_or_resource)
+        # create pdf preview
+        pdf_url=pkg_dict_or_resource['url']+"[0]"
+        pdf=Image(filename=pdf_url)
+        pdf.format='png'
+        pdf.resize(220,220)
+        # store in local temporary folder
+        temp_dir = os.path.abspath(tempfile.mkdtemp())
+        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']
+        pdf.save(filename=temp_img)
+        # push to resource
+        params = {'name':'Document Preview','package_id':pkg_dict_or_resource['package_id'],'url':temp_img}
+        toolkit.get_action('resource_create')(data_dict=params)
+
+        # requests.post('http://0.0.0.0:8081/api/action/resource_create',
+        #               data={"package_id":pkg_dict_or_resource['package_id']},
+        #               headers={"X-CKAN-API-Key": "94c86d9d-7948-4540-b06d-4989d2c32b90"},
+        #               files=[('upload', file(temp_img))])
+
       #  Create relationship if target is set
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:
         # current dataset

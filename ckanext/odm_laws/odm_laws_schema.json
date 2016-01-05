@@ -144,6 +144,7 @@
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
+    "required": "true",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "eg. economy, mental health, government"
 	}, {
@@ -224,7 +225,7 @@
 		"field_name": "odm_access_and_use_constraint",
 		"preset": "fluent_markdown_single",
 		"label": {
-			"en": "Access and Use Constraints",
+			"en": "Access and use constraints",
 			"th": "การเข้าถึงและข้อจำกัด",
 			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
 			"vi": "Hạn chế truy cập và sử dụng"

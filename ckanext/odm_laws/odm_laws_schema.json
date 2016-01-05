@@ -1,3 +1,4 @@
+
 {
 	"scheming_version": 1,
 	"dataset_type": "laws_record",
@@ -66,11 +67,11 @@
 			"km": "Document reference #",
 			"vi": "Document reference #"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": ""
+		"form_languages": ["en", "th", "km", "vi"]
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
+		"required": "true",
 		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
 		"preset": "multiple_select",
 		"select_size": 4,
@@ -123,7 +124,8 @@
 		"form_languages": ["en", "th", "km", "vi"],
     "form_attrs": {
       "data-module": "slug-preview-target"
-    }
+    },
+    "form_placeholder": "Law's title"
 	}, {
 		"field_name": "name",
 		"label": "URL",
@@ -138,7 +140,8 @@
 			"km": "Alternative/short title",
 			"vi": "Alternative/short title"
 		},
-		"form_languages": ["en", "th", "km", "vi"]
+		"form_languages": ["en", "th", "km", "vi"],
+    "form_placeholder": "Law's short title"
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
@@ -171,6 +174,7 @@
 		"label": "Geographic area (Spatial Range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "multiple_select",
+		"required": "true",
 		"select_size": 4,
 		"choices": [{
 			"value": "global",
@@ -231,6 +235,7 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"label": "Status",
+    "required": "true",
 		"preset": "select",
 		"choices": [{
 			"value": "unspecified",

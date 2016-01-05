@@ -26,9 +26,10 @@
     		 {% set relations_as_subject = h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='subject') %}
     		 {% set relations_as_object = h.odm_laws_semre_of_database_relationships(dataset_id,viewpoint='object') %}
     		 {% if relations_as_subject or relations_as_object %}
-    		 		<h3>{{ _('Related laws')}}</h3>
+         <span class="relationship_caption">{{ _('Parents and Childs')}}</span>
     	      <div class="semre_of_relationships">
-    					<div class="cell">
+
+            	<div class="cell">
     	          <span class="parents">
     	            <ul>
     	              {% for entry in relations_as_subject %}
@@ -89,7 +90,6 @@
     	        </div>
     	      </div>
     	    	<div class="clearfix"></div>
-    	    	<hr>
     			{% endif%}
       	{% endblock %}
 

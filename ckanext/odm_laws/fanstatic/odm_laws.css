@@ -5,7 +5,7 @@
    font-family: Helvetica;
 }
 .semre_of_relationships .cell{
-
+ 	font-size: 12px;
 }
 
 .semre_of_relationships ul{margin:0;}
@@ -36,9 +36,47 @@ img.pdf_thumbnail{
 	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
 	width: 110px;
+	margin-left: 20px;
 }
 .law_record_resources{
 	float: right;
-	width: 520px;
+  width: 500px;
+  margin-top: 20px;
+}
+	.law_record_resources .resource_item_explore_links{
+		float: right;
+		margin-right:35px;
+	}
+		.law_record_resources .resource_item_explore_links a{
+			padding-right: 5px;
+			text-decoration: none!important;
+
+		}
+
+	.law_record_resources .description{
+		display: none;
+	}
+.resource_explore_icon{
+	width:20px;
+}
+	.resource_explore_icon-eye{
+		width: 24px;
+	}
+
+.law_record_resources .resource-item{
+	min-height: 30px;
+}
+
+.relationship_caption{
+	margin-left: 10px;
 	margin-top: 20px;
+	display: block;
+	margin-bottom: 2px;
+	font-style: italic;
+	font-size: 12px;
+}
+.semre_of_relationships{
+	border: 1px solid rgb(230,230,230);
+	border-radius: 8px;
+
 }

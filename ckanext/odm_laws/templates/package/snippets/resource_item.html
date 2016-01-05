@@ -18,49 +18,36 @@
   {% endblock %}
   {% block resource_item_explore %}
   {% if not url_is_edit %}
-  <div class="dropdown btn-group">
-    <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <i class="icon-share-alt"></i>
-      {{ _('Explore') }}
-      <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      {% block resource_item_explore_links %}
-      <li>
+
+      <div class="resource_item_explore_links">
+        {% block resource_item_explore_links %}
         <a href="{{ url }}">
           {% if res.has_views %}
-            <i class="icon-bar-chart"></i>
-            {{ _('Preview') }}
+            <img alt="{{ _('Preview') }}" class="resource_explore_icon resource_explore_icon-eye" src="/icons/eye.svg">
           {% else %}
-            <i class="icon-info-sign"></i>
-            {{ _('More information') }}
+          <img alt="{{ _('More information') }}" class="resource_explore_icon" src="/icons/info.svg">
           {% endif %}
         </a>
-      </li>
+
+      {% if can_edit %}
+        <a href="{{ h.url_for(controller='package', action='resource_edit', id=pkg.name, resource_id=res.id) }}">
+          <img alt="{{ _('Edit') }}"class="resource_explore_icon" src="/icons/pencil.svg">
+        </a>
+      {% endif %}
+
       {% if res.url and h.is_url(res.url) %}
-      <li>
         <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
           {% if res.has_views %}
-            <i class="icon-download"></i>
-            {{ _('Download') }}
+            <img alt="{{ _('Download') }}" class="resource_explore_icon" src="/icons/arrow-down.svg">
           {% else %}
-            <i class="icon-external-link"></i>
-            {{ _('Go to resource') }}
+            <img alt="{{ _('Go to resource') }}"class="resource_explore_icon" src="/icons/arrow-down.svg">
           {% endif %}
         </a>
-      </li>
       {% endif %}
-      {% if can_edit %}
-      <li>
-        <a href="{{ h.url_for(controller='package', action='resource_edit', id=pkg.name, resource_id=res.id) }}">
-          <i class="icon-edit"></i>
-          {{ _('Edit') }}
-        </a>
-      </li>
-      {% endif %}
+
       {% endblock %}
-    </ul>
-  </div>
+    </div class="resource_item_explore_links">
+
   {% endif %}
   {% endblock %}
 </li>

@@ -84,7 +84,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       # img_url.replace(" ", "")
       pdf=Image(filename=img_url)
       pdf.format='png'
-      pdf.resize(220,220)
+      # DEV 2do: make fit
+      pdf.resize(135,201)
       # store in local temporary folder
       temp_dir = os.path.abspath(tempfile.mkdtemp())
       temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
@@ -124,7 +125,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         # pdf_url.replace(" ", "")
         pdf=Image(filename=pdf_url)
         pdf.format='png'
-        pdf.resize(220,220)
+        # DEV 2do: make fit
+        pdf.resize(135,201)
         # store in local temporary folder
         temp_dir = os.path.abspath(tempfile.mkdtemp())
         temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'

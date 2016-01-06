@@ -20,8 +20,12 @@ import tempfile
 
 log = logging.getLogger(__name__)
 
-def _generate_pdf_thumbnail(context,pkg_dict_or_resource):
+def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   pdf_url=pkg_dict_or_resource['url']+"[0]"
+  filename, file_extension = os.path.splitext(pdf_url)
+  if file_extension != ".pdf" and file_extension != ".PDF":
+    return
+
   pdf=Image(filename=pdf_url)
   pdf.format='png'
   pdf.resize(135,201)
@@ -34,9 +38,9 @@ def _generate_pdf_thumbnail(context,pkg_dict_or_resource):
   ckan_auth = userobj.apikey
 
   if context['resource'].name == "PDF Thumbnail":
-      resource_id=context['resource'].id
-      params['id']=resource_id
-      requests.post(ckan_url + 'api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+    resource_id=context['resource'].id
+    params['id']=resource_id
+    requests.post(ckan_url + 'api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
   else:
     requests.post(ckan_url + 'api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
 
@@ -102,7 +106,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
     if 'url_type' in pkg_dict_or_resource:
-      _generate_pdf_thumbnail(context,pkg_dict_or_resource)
+      _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
 
     review_system = h.asbool(config.get("ckanext.issues.review_system", False))
     if review_system:
@@ -117,7 +121,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       log.debug('after_update: %s', pkg_dict_or_resource['name'])
 
       if 'url_type' in pkg_dict_or_resource:
-        _generate_pdf_thumbnail(context,pkg_dict_or_resource)
+        _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
 
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:
         rel_subj=pkg_dict_or_resource['name']

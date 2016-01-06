@@ -20,6 +20,29 @@ import tempfile
 
 log = logging.getLogger(__name__)
 
+def _generate_pdf_thumbnail(context,pkg_dict_or_resource):
+  pdf_url=pkg_dict_or_resource['url']+"[0]"
+  pdf=Image(filename=pdf_url)
+  pdf.format='png'
+  pdf.resize(135,201)
+  temp_dir = os.path.abspath(tempfile.mkdtemp())
+  temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
+  pdf.save(filename=temp_img)
+  params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
+  ckan_url = config.get("ckan.site_url", "")
+  userobj = context['auth_user_obj']
+  ckan_auth = userobj.apikey
+
+  if context['resource'].name == "PDF Thumbnail":
+      resource_id=context['resource'].id
+      params['id']=resource_id
+      requests.post(ckan_url + 'api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+  else:
+    requests.post(ckan_url + 'api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+
+  if os.path.exists(temp_img):
+    os.remove(temp_img)
+
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
@@ -79,35 +102,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
     if 'url_type' in pkg_dict_or_resource:
-      ## Do resource related logic here
-      # create pdf preview
-      img_url=pkg_dict_or_resource['url']+'[0]'
-      # img_url.replace(" ", "")
-      pdf=Image(filename=img_url)
-      pdf.format='png'
-      # DEV 2do: make fit
-      pdf.resize(135,201)
-      # store in local temporary folder
-      temp_dir = os.path.abspath(tempfile.mkdtemp())
-      temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
-      pdf.save(filename=temp_img)
-      # push to filestore
-      params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
-      ckan_auth='94c86d9d-7948-4540-b06d-4989d2c32b90'
-      ckan_url='http://192.168.33.10:8081'
-      # check if pdf thumbnail already exist
-      if context['resource'].name == "PDF Thumbnail":
-          resource_id=context['resource'].id
-          # add id to params for update
-          params['id']=resource_id
-          requests.post(ckan_url + '/api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
-      else:
-        requests.post(ckan_url + '/api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+      _generate_pdf_thumbnail(context,pkg_dict_or_resource)
 
-
-
-    ## Do dataset related logic here
-    # Create default Issue
     review_system = h.asbool(config.get("ckanext.issues.review_system", False))
     if review_system:
       if 'type' in pkg_dict_or_resource:
@@ -121,39 +117,11 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       log.debug('after_update: %s', pkg_dict_or_resource['name'])
 
       if 'url_type' in pkg_dict_or_resource:
-        ## Do resource related logic here
-        # create pdf preview
-        pdf_url=pkg_dict_or_resource['url']+"[0]"
-        # pdf_url.replace(" ", "")
-        pdf=Image(filename=pdf_url)
-        pdf.format='png'
-        # DEV 2do: make fit
-        pdf.resize(135,201)
-        # store in local temporary folder
-        temp_dir = os.path.abspath(tempfile.mkdtemp())
-        temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
-        pdf.save(filename=temp_img)
-        # push to filestore
-        params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
-        ckan_auth='94c86d9d-7948-4540-b06d-4989d2c32b90'
-        ckan_url='http://192.168.33.10:8081'
-        # check if pdf thumbnail already exist
-        if context['resource'].name == "PDF Thumbnail":
-            resource_id=context['resource'].id
-            # add id to params for update
-            params['id']=resource_id
-            requests.post(ckan_url + '/api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
-        else:
-          requests.post(ckan_url + '/api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+        _generate_pdf_thumbnail(context,pkg_dict_or_resource)
 
-
-      #  Create relationship if target is set
       if 'odm_laws_relationship_target' in pkg_dict_or_resource:
-        # current dataset
         rel_subj=pkg_dict_or_resource['name']
-        # is child of/parent of
         rel_type=pkg_dict_or_resource['odm_laws_relationship_type']
-        # relationship target
         rel_target=pkg_dict_or_resource['odm_laws_relationship_target']
 
         log.debug("Creating relationship %s %s",rel_type,rel_target)

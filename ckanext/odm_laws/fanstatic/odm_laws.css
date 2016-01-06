@@ -1,11 +1,11 @@
 .semre_of_relationships *{
   -moz-box-sizing: border-box;
-   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
-   font-family: Helvetica;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica;
 }
 .semre_of_relationships .cell{
- 	font-size: 12px;
+  font-size: 12px;
 }
 
 .semre_of_relationships ul{
@@ -16,6 +16,7 @@
   list-style: none;
   line-height: 20px;
 }
+
 .semre_of_relationships span{
   float: left;
 }
@@ -29,6 +30,7 @@ span.notes{
   font-size: 36px;
   color: rgb(224,224,224);
 }
+
 .clearfix{
   clear: both;
 }
@@ -36,7 +38,7 @@ span.notes{
 .cell{
   display:table-cell;
   vertical-align: middle;
-    padding: 10px;
+  padding: 10px;
 }
 
 .pdf_thumbnail{

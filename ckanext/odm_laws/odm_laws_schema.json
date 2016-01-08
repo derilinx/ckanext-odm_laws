@@ -67,7 +67,8 @@
 			"km": "Document reference #",
 			"vi": "Document reference #"
 		},
-		"form_languages": ["en", "th", "km", "vi"]
+		"form_languages": ["en", "th", "km", "vi"],
+    "form_placeholder": "Document, issue, or series number."
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
@@ -125,7 +126,7 @@
     "form_attrs": {
       "data-module": "slug-preview-target"
     },
-    "form_placeholder": "Law's title"
+    "form_placeholder": "Full title from the document"
 	}, {
 		"field_name": "name",
 		"label": "URL",
@@ -141,13 +142,13 @@
 			"vi": "Alternative/short title"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-    "form_placeholder": "Law's short title"
+    "form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
     "required": "true",
 		"preset": "odm_taxonomy",
-		"form_placeholder": "eg. economy, mental health, government"
+		"form_placeholder": "e.g. economy, mental health, government"
 	}, {
 		"field_name": "notes_translated",
 		"preset": "fluent_core_translated_markdown_single",
@@ -169,7 +170,7 @@
 			"vi": "Primary policy reference point"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "Details about the information content of the dataset."
+		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
 	}, {
 		"field_name": "odm_spatial_range",
 		"label": "Geographic area (Spatial Range)",
@@ -250,19 +251,23 @@
 		}, {
 			"value": "signed",
 			"label": "Signed"
-		}]
+		}],
+    "form_placeholder": "Hierarchical status of agreement, law, decree or other legal policy."
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
-    "preset": "odm_date"
+    "preset": "odm_date",
+    "form_placeholder": "Date the version of draft law was created."
 	}, {
 		"field_name": "odm_promulgation_date",
 		"label": "Adoption date/Promulgation date/Signing",
-    "preset": "odm_date"
+    "preset": "odm_date",
+    "form_placeholder": "Date the law was officially authorized."
 	}, {
 		"field_name": "odm_effective_date",
 		"label": "Effective date",
-    "preset": "odm_date"
+    "preset": "odm_date",
+    "form_placeholder": "Date the law is to take effect."
 	}, {
 		"field_name": "odm_application_date",
 		"label": "Application date",
@@ -282,7 +287,7 @@
 			"vi": "Short notes of change"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "Describe what changed"
+		"form_placeholder": "Describe what changed."
 	}, {
 		"field_name": "odm_laws_relationship_type",
 		"label": "Relationship to other legal docs",
@@ -309,7 +314,7 @@
 		"field_name": "odm_laws_source",
 		"label": "Links to source",
 		"form_snippet": "text.html",
-		"form_placeholder": "Official URLs where policy doc is made available"
+		"form_placeholder": "Officials URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
     "preset": "fluent_markdown_single",
@@ -320,7 +325,7 @@
 			"vi": "Liên hệ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the dataset. This could be the author of a report, the contact information for the relevant department of an organization that produced a report, or the data analyst, mapper or researcher that produced a dataset or report."
+		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
 		"field_name": "odm_laws_drafting_agency",
     "preset": "fluent_markdown_single",
@@ -401,7 +406,7 @@
 			"vi": "Notes"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-		"form_placeholder": "Add any notes to this document"
+		"form_placeholder": "Add any notes to this document."
 	}],
 	"resource_fields": [{
 		"field_name": "url",

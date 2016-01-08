@@ -173,7 +173,7 @@
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
 	}, {
 		"field_name": "odm_spatial_range",
-		"label": "Geographic area (Spatial Range)",
+		"label": "Geographic area (spatial range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "multiple_select",
 		"required": "true",

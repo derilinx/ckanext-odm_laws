@@ -72,7 +72,7 @@
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
-		"required": "true",
+		"required": "false",
 		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
 		"preset": "multiple_select",
 		"select_size": 4,
@@ -146,7 +146,7 @@
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
-    "required": "true",
+    "required": "false",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "e.g. economy, mental health, government"
 	}, {
@@ -176,7 +176,7 @@
 		"label": "Geographic area (spatial range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "multiple_select",
-		"required": "true",
+		"required": "false",
 		"select_size": 4,
 		"choices": [{
 			"value": "global",
@@ -222,7 +222,7 @@
 		"field_name": "odm_copyright",
 		"label": "Copyright",
 		"preset": "odm_copyright",
-		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
+		"help_text": "Select 'Yes', 'No', 'Unclear copyright' or 'To be determined' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
 	}, {
 		"field_name": "odm_access_and_use_constraints",
 		"preset": "fluent_markdown_single",
@@ -237,7 +237,7 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"label": "Status",
-    "required": "true",
+    "required": "false",
 		"preset": "select",
 		"choices": [{
 			"value": "unspecified",

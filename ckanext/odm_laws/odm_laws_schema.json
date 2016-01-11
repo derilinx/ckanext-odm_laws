@@ -5,6 +5,9 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
+      "field_name": "odm_multilingual",
+      "label": "ODM MULTILINGUAL (DEBUG)"
+    },{
 		"field_name": "odm_document_type",
 		"label": "Document type",
 		"preset": "select",

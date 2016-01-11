@@ -75,7 +75,6 @@
 	},{
 		"field_name": "odm_language",
 		"label": "Language",
-		"required": "false",
 		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
 		"preset": "multiple_select",
 		"select_size": 4,
@@ -149,7 +148,6 @@
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
-    "required": "false",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "e.g. economy, mental health, government"
 	}, {
@@ -179,7 +177,6 @@
 		"label": "Geographic area (spatial range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "multiple_select",
-		"required": "false",
 		"select_size": 4,
 		"choices": [{
 			"value": "global",
@@ -240,7 +237,6 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"label": "Status",
-    "required": "false",
 		"preset": "select",
 		"choices": [{
 			"value": "unspecified",

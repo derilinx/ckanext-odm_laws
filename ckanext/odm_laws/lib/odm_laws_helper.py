@@ -79,12 +79,12 @@ def get_dataset_notes(dataset_id, truncate):
       notes = dataset_dict['notes_translated'][lang]
       if truncate == True and notes:
         notes = notes[0:99]
-    
+
   return notes
 
 def lookup_relationship_target():
-  datasets = toolkit.get_action('package_list')(data_dict={'all_fields': True})
-  return datasets
+  result = toolkit.get_action('package_search')(data_dict={'fq': '+type:laws_record'})
+  return map(lambda x:x["name"], result['results'])
 
 def semre_of_database_relationships(dataset_id,viewpoint):
   ''' semantic representation of relationships '''

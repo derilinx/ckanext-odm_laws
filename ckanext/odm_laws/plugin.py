@@ -41,9 +41,9 @@ def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   if context['resource'].name == "PDF Thumbnail":
     resource_id=context['resource'].id
     params['id']=resource_id
-    requests.post(ckan_url + 'api/3/action/resource_update',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+    requests.post(ckan_url + 'api/3/action/resource_update',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
   else:
-    requests.post(ckan_url + 'api/3/action/resource_create',verify=True,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+    requests.post(ckan_url + 'api/3/action/resource_create',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
 
   if os.path.exists(temp_img):
     os.remove(temp_img)

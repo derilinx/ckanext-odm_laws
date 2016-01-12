@@ -23,7 +23,8 @@ log = logging.getLogger(__name__)
 def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   pdf_url=pkg_dict_or_resource['url']+"[0]"
   filename, file_extension = os.path.splitext(pdf_url)
-  if file_extension != ".pdf" and file_extension != ".PDF":
+
+  if ".pdf" not in file_extension.lower() or pkg_dict_or_resource['name'] == "PDF Thumbnail":
     return
 
   pdf=Image(filename=pdf_url)
@@ -100,25 +101,27 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     dataset_type = context['package'].type if 'package' in context else ''
     if dataset_type == 'laws_record':
-      log.info('before_create')
+      log.info('after_update: %s', resource['name'])
 
   def after_create(self, context, pkg_dict_or_resource):
-    log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
-    if 'url_type' in pkg_dict_or_resource:
-      _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
+    dataset_type = context['package'].type if 'package' in context else pkg_dict_or_resource['type']
+    if dataset_type == 'laws_record':
+      log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
-    review_system = h.asbool(config.get("ckanext.issues.review_system", False))
-    if review_system:
-      if 'type' in pkg_dict_or_resource:
-        if pkg_dict_or_resource['type'] == 'laws_record':
+      review_system = h.asbool(config.get("ckanext.issues.review_system", False))
+      if review_system:
+        if 'type' in pkg_dict_or_resource:
           odm_laws_helper.create_default_issue_laws_record(pkg_dict_or_resource)
 
-  def after_update(self, context, pkg_dict_or_resource):
+        if 'url_type' in pkg_dict_or_resource:
+          _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
 
-    dataset_type = context['package'].type if 'package' in context else pkg_dict['type']
+  def after_update(self, context, pkg_dict_or_resource):
+    log.debug('after_update: %s', pkg_dict_or_resource['name'])
+
+    dataset_type = context['package'].type if 'package' in context else pkg_dict_or_resource['type']
     if dataset_type == 'laws_record':
-      log.debug('after_update: %s', pkg_dict_or_resource['name'])
 
       if 'url_type' in pkg_dict_or_resource:
         _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)

@@ -21,32 +21,35 @@ import tempfile
 log = logging.getLogger(__name__)
 
 def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
-  pdf_url=pkg_dict_or_resource['url']+"[0]"
+  pdf_url=pkg_dict_or_resource['url']
   filename, file_extension = os.path.splitext(pdf_url)
 
-  if ".pdf" not in file_extension.lower() or pkg_dict_or_resource['name'] == "PDF Thumbnail":
+  if ".pdf" != file_extension.lower() or pkg_dict_or_resource['name'] == "PDF Thumbnail":
     return
 
-  pdf=Image(filename=pdf_url)
-  pdf.format='png'
-  pdf.resize(135,201)
-  temp_dir = os.path.abspath(tempfile.mkdtemp())
-  temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
-  pdf.save(filename=temp_img)
-  params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
-  ckan_url = config.get("ckan.site_url", "")
-  userobj = context['auth_user_obj']
-  ckan_auth = userobj.apikey
+  enabled_pdf_preview = config.get("ckan.odm_nav_concept.generate_pdf_preview")
+  if enabled_pdf_preview == True:
 
-  if context['resource'].name == "PDF Thumbnail":
-    resource_id=context['resource'].id
-    params['id']=resource_id
-    requests.post(ckan_url + 'api/3/action/resource_update',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
-  else:
-    requests.post(ckan_url + 'api/3/action/resource_create',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+    pdf=Image(filename=pdf_url+"[0]")
+    pdf.format='png'
+    pdf.resize(135,201)
+    temp_dir = os.path.abspath(tempfile.mkdtemp())
+    temp_img=temp_dir+'/'+pkg_dict_or_resource['id']+'.png'
+    pdf.save(filename=temp_img)
+    params = {'package_id':pkg_dict_or_resource['package_id'],'upload':temp_img, 'url':'N/A','format':'PNG','mimetype_inner':'image/png','name':'PDF Thumbnail'}
+    ckan_url = config.get("ckan.site_url", "")
+    userobj = context['auth_user_obj']
+    ckan_auth = userobj.apikey
 
-  if os.path.exists(temp_img):
-    os.remove(temp_img)
+    if context['resource'].name == "PDF Thumbnail":
+      resource_id=context['resource'].id
+      params['id']=resource_id
+      requests.post(ckan_url + 'api/3/action/resource_update',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+    else:
+      requests.post(ckan_url + 'api/3/action/resource_create',verify=False,data=params,headers={"X-CKAN-API-Key": ckan_auth},files=[('upload', file(params["upload"]))])
+
+    if os.path.exists(temp_img):
+      os.remove(temp_img)
 
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''

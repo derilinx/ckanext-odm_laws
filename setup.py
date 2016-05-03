@@ -25,5 +25,8 @@ setup(
     entry_points='''
         [ckan.plugins]
         odm_laws=ckanext.odm_laws.plugin:OdmLawsPlugin
+
+        [ckan.rdf.profiles]
+        odm_dcat_laws=ckanext.odm_laws.odm_laws_profiles:ODMDCATBasicProfileLaws
     ''',
 )

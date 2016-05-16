@@ -1,0 +1,251 @@
+#
+# Translators:
+# ODM Cambodia <cambodia@opendevmekong.net>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: ODM ckanext-odm_laws\n"
+"POT-Creation-Date: 2016-05-16 12:34+0200\n"
+"PO-Revision-Date: 2016-05-16 12:36+0200\n"
+"Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
+"Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-"
+"ckanext-odm_laws/language/km/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: km\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../ckanext\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: odm_laws/lib/odm_laws_helper.py:27
+msgid ""
+"Thank you for uploading the library item. You should have received a "
+"confirmation email from OD Mekong Datahub. This library item is still "
+"unpublished. Your item can only be published after you review this form and "
+"after our administrators approve your entry."
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:28
+msgid ""
+"It is important that you have entered the correct information in your "
+"library record form. We also ask that all contributors complete as many "
+"fields as possible."
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:29
+msgid ""
+"Please take this opportunity to review your library record. If you would "
+"like to make any changes please select your library record and then click "
+"on the Manage button on the top right corner."
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:30
+msgid ""
+"Please CHECK YOUR SPELLING against the original item to ensure the item is "
+"recorded correctly."
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:31
+msgid "Please review your library record form again for the mandatory fields:"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:32
+msgid ""
+"Title (Please use Associated Press style title where the first letter is "
+"capitalized and the rest of the title is not, i.e. 'Study of Cambodian "
+"forests and lakes from 1992 to 1994')"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:33
+msgid "Language"
+msgstr "ភាសា"
+
+#: odm_laws/lib/odm_laws_helper.py:34
+msgid "Edition / Version"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:35
+msgid "Geographical area"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:36
+msgid "Date uploaded"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:37
+msgid ""
+"Please review again the following information, vital to other users who may "
+"search for your record:"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:38
+msgid ""
+"Summary (Make sure this is a concise description of the record in your own "
+"words, please do not just 'copy' and 'paste' an abstract by the original "
+"author)"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:39
+msgid "Topics"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:40
+msgid ""
+"License (Make sure you indicated the correct license. Additional "
+"information on creative commons is found here http://opendefinition.org/"
+"licenses/. If there is no license, please indicate 'license unspecified')"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:41
+msgid "Copyright"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:42
+msgid "Access and Use Constraints"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:43
+msgid "Author"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:44
+msgid "Co-author"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:45
+msgid "Corporate Author"
+msgstr "អ្នកនិពន្ធរួមគ្នា"
+
+#: odm_laws/lib/odm_laws_helper.py:46
+msgid "Publisher"
+msgstr "អ្នកបោះពុម្ពផ្សាយ"
+
+#: odm_laws/lib/odm_laws_helper.py:47
+msgid ""
+"Lastly, please check again for the following information on the library "
+"record you entered. If the information is available, please include it in "
+"the appropriate field. This will greatly improve the searchability of your "
+"library record item or provide information that a user will find useful:"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:48
+msgid "ISSN or ISBN numbers"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:49
+msgid "Publication Place"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:50
+msgid "Publication Date"
+msgstr "កាលបរិច្ឆេទការបោះពុម្ពផ្សាយ"
+
+#: odm_laws/lib/odm_laws_helper.py:51
+msgid "Pagination"
+msgstr "ការបង់លេខ"
+
+#: odm_laws/lib/odm_laws_helper.py:52
+msgid ""
+"Our administrators need to review the library record as well. They will "
+"close fixed issues or open new issues if there are any other "
+"inconsistencies. Once all issues have been closed, the item will be "
+"published."
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:53
+msgid "Thank you for sharing,"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:54
+msgid "Open Development Team"
+msgstr ""
+
+#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
+msgid "Laws"
+msgstr ""
+
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
+#: odm_laws/templates/package/snippets/stages.html:7
+#: odm_laws/templates/package/snippets/stages.html:9
+msgid "Create Law"
+msgstr ""
+
+#: odm_laws/templates/package/base_form_page.html:7
+msgid "What are Laws?"
+msgstr ""
+
+#: odm_laws/templates/package/edit_base.html:5
+msgid "View Law"
+msgstr ""
+
+#: odm_laws/templates/package/new_package_form.html:8
+msgid "Update Law"
+msgstr ""
+
+#: odm_laws/templates/package/read.html:11
+msgid "Parents and Childs"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:6
+msgid "Manage"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:15
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
+msgid "Law"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:16
+msgid "Activity Stream"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:17
+msgid "Related"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:30
+msgid "Document preview"
+msgstr ""
+
+#: odm_laws/templates/package/search.html:23
+msgid "Add Law"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/package_form.html:5
+msgid "Are you sure you want to delete this dataset?"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/package_form.html:6
+msgid "Delete"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/search_form.html:4
+msgid "Search Laws..."
+msgstr ""
+
+#: odm_laws/templates/package/snippets/stages.html:14
+#: odm_laws/templates/package/snippets/stages.html:18
+#: odm_laws/templates/package/snippets/stages.html:20
+msgid "Add data"
+msgstr ""
+
+#: odm_laws/templates/scheming/form_snippets/odm_laws_previous_legal_document.html:6
+#: odm_laws/templates/scheming/form_snippets/odm_laws_relationship_target.html:6
+msgid "Select an associated document"
+msgstr ""
+
+#: odm_laws/templates/snippets/search_form.html:6
+msgid "Search laws..."
+msgstr ""
+
+#: odm_laws/templates/snippets/search_form.html:12
+msgid "Submit"
+msgstr ""

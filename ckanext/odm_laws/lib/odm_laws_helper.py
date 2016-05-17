@@ -24,7 +24,7 @@ def create_default_issue_laws_record(pkg_info):
   try:
 
     extra_vars = {
-      't0': toolkit._("Thank you for uploading this item. Instructions about vetting system available on https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"),
+      't0': toolkit._("Thank you for uploading this item. Instructions about vetting system available on https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records")
     }
 
     issue_message = render('messages/default_issue_laws_record.txt',extra_vars=extra_vars,loader_class=NewTextTemplate)

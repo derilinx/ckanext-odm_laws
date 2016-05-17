@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-05-17 14:26+0200\n"
-"PO-Revision-Date: 2016-05-17 12:27+0000\n"
+"POT-Creation-Date: 2016-05-17 15:48+0200\n"
+"PO-Revision-Date: 2016-05-17 13:49+0000\n"
 "Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
 "Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,346 @@ msgstr ""
 "X-Poedit-Basepath: ../../../ckanext\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+#: odm_laws/i18n/metadata_fields.php:3
+msgid "Document type"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:4
+msgid "Anukret/Sub-Decree"
+msgstr "អនុ​ក្រឹត្យ "
+
+#: odm_laws/i18n/metadata_fields.php:5
+msgid "Chbab/Law/Kram"
+msgstr "ច្បាប់​/ក្រម​"
+
+#: odm_laws/i18n/metadata_fields.php:6
+msgid "Constitution of Cambodia"
+msgstr "រដ្ឋ​ធម្មនុញ្ញនៃព្រះរាជាណាចក្រកម្ពុជា"
+
+#: odm_laws/i18n/metadata_fields.php:7
+msgid "International Treaties/Agreements"
+msgstr "សិន្ធិ​សញ្ញា/កិច្ចព្រមព្រៀង​អន្តរ​ជាតិ"
+
+#: odm_laws/i18n/metadata_fields.php:8
+msgid "Kech Sonya/Contract/Agreement"
+msgstr "កិច្ចសន្យា/កិច្ចព្រមព្រៀង"
+
+#: odm_laws/i18n/metadata_fields.php:9
+msgid "Kolkar Nenom/Guidelines"
+msgstr "គោលការណ៍ណែនាំ"
+
+#: odm_laws/i18n/metadata_fields.php:10
+msgid "Kolnyobay/Policy"
+msgstr "គោលនយោបាយ"
+
+#: odm_laws/i18n/metadata_fields.php:11
+msgid "Likhet/Letter"
+msgstr "លិខិត"
+
+#: odm_laws/i18n/metadata_fields.php:12
+msgid "Prakas/Joint-Prakas/Proclamation"
+msgstr "ប្រកាស/ប្រកាសរួម/សេចក្តីប្រកាស"
+
+#: odm_laws/i18n/metadata_fields.php:13
+msgid "Preah Reach Kram/Royal Kram"
+msgstr "ព្រះរាជក្រម"
+
+#: odm_laws/i18n/metadata_fields.php:14
+msgid "Sarachor/Circular"
+msgstr "សារាចរ"
+
+#: odm_laws/i18n/metadata_fields.php:15
+msgid "Sechkdei Chhun  Damneoung/Notice/Announcement"
+msgstr "សេចក្តីជូនដំណឹង/សេចក្តីប្រកាស"
+
+#: odm_laws/i18n/metadata_fields.php:16
+msgid "Sechkdei Nenum/Instruction"
+msgstr "សេចក្តីណែនាំ"
+
+#: odm_laws/i18n/metadata_fields.php:17
+msgid "Sechkdei Preang Chbab/Draft Laws & Regulations"
+msgstr "សេចក្តីព្រាងច្បាប់​ និងបទប្បញ្ញត្តិ"
+
+#: odm_laws/i18n/metadata_fields.php:18
+msgid "Sechkdei Samrech/Decision"
+msgstr "សេចក្តី​សំរេច"
+
+#: odm_laws/i18n/metadata_fields.php:19
+msgid "Others"
+msgstr "ផ្សេងទៀត"
+
+#: odm_laws/i18n/metadata_fields.php:20
+msgid "Document reference #"
+msgstr "ឯកសារយោងលេខ #"
+
+#: odm_laws/i18n/metadata_fields.php:21
+msgid "Language"
+msgstr "ភាសា"
+
+#: odm_laws/i18n/metadata_fields.php:22
+msgid "Burmese"
+msgstr "ភាសា​ភូមា"
+
+#: odm_laws/i18n/metadata_fields.php:23
+msgid "English"
+msgstr "ភាសាអង់គ្លេស"
+
+#: odm_laws/i18n/metadata_fields.php:24
+msgid "Khmer"
+msgstr "ភាសាខ្មែរ"
+
+#: odm_laws/i18n/metadata_fields.php:25
+msgid "Lao"
+msgstr "ភាសា​ឡាវ"
+
+#: odm_laws/i18n/metadata_fields.php:26
+msgid "Thai"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:27
+msgid "Vietnamese"
+msgstr "ភាសាវៀតណាម"
+
+#: odm_laws/i18n/metadata_fields.php:28
+msgid "Chinese"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:29
+msgid "French"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:30
+msgid "German"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:31
+msgid "Japanese"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:32
+msgid "Korean"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:33
+msgid "Other"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:34
+msgid "Formal full title"
+msgstr "ចំណងជើងជាផ្លូវការពេញលេញ"
+
+#: odm_laws/i18n/metadata_fields.php:35
+msgid "URL"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:36
+msgid "Alternative/short title"
+msgstr "ចំណងជើងផ្សេងទៀត/ខ្លី"
+
+#: odm_laws/i18n/metadata_fields.php:37
+msgid "Topics"
+msgstr "ប្រធានបទ"
+
+#: odm_laws/i18n/metadata_fields.php:38
+msgid "Short summary"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:39
+msgid "Primary policy reference point"
+msgstr " ចំណុចយោងគោលនយោបាយបឋម"
+
+#: odm_laws/i18n/metadata_fields.php:40
+msgid "Geographic area (spatial range)"
+msgstr "តំបន់ភូមិសាស្រ្ត (ការលាតសន្ធឹងក្នុងលំហ)"
+
+#: odm_laws/i18n/metadata_fields.php:41
+msgid "Global"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "ASEAN"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Greater Mekong Subregion (GMS)"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:44
+msgid "Lower Mekong Basin"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:45
+msgid "Lower Mekong countries"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Cambodia"
+msgstr "ប្រទេស​កម្ពុជា"
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "Vietnam"
+msgstr "ប្រទេសវៀតណាម"
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Laos"
+msgstr "ប្រទេសឡាវ"
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Thailand"
+msgstr "ប្រទេសថៃ"
+
+#: odm_laws/i18n/metadata_fields.php:50
+msgid "Myanmar"
+msgstr "ប្រទេសមីយ៉ាន់ម៉ា"
+
+#: odm_laws/i18n/metadata_fields.php:51
+msgid "Organization"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:52
+msgid "License"
+msgstr "អាជ្ញាប័ណ្ណ"
+
+#: odm_laws/i18n/metadata_fields.php:53
+msgid "Copyright"
+msgstr "សិទ្ធិ​អ្នក​និពន្ធ"
+
+#: odm_laws/i18n/metadata_fields.php:54
+msgid "Access and use constraints"
+msgstr "លក្ខខណ្ឌនៃការប្រើប្រាស់"
+
+#: odm_laws/i18n/metadata_fields.php:55
+msgid "Status"
+msgstr "ស្ថានភាព"
+
+#: odm_laws/i18n/metadata_fields.php:56
+msgid "Unspecified"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:57
+msgid "Draft"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:58
+msgid "Adopted"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:59
+msgid "Signed"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:60
+msgid "Version date (of draft)"
+msgstr "កាលបរិច្ឆេទកំណែ (នៃសេចក្តីព្រាង)"
+
+#: odm_laws/i18n/metadata_fields.php:61
+msgid "Adoption date/Promulgation date/Signing"
+msgstr "កាលបរិច្ឆេទអនុម័ត/ប្រកាសឱ្យប្រើ/ចុះហត្ថលេខា"
+
+#: odm_laws/i18n/metadata_fields.php:62
+msgid "Effective date"
+msgstr "កាលបរិច្ឆេទចូលជាធរមាន"
+
+#: odm_laws/i18n/metadata_fields.php:63
+msgid "Application date"
+msgstr "កាលបរិច្ឆេទនៃការស្នើសុំ"
+
+#: odm_laws/i18n/metadata_fields.php:64
+msgid "Previous legal document"
+msgstr "ឯកសារច្បាប់ពីមុន"
+
+#: odm_laws/i18n/metadata_fields.php:65
+msgid "Short notes of change"
+msgstr "កំណត់ត្រាខ្លីអំពីការផ្លាស់ប្តូរ"
+
+#: odm_laws/i18n/metadata_fields.php:66
+msgid "Relationship to other legal docs"
+msgstr "ទំនាក់ទំនងនឹងឯកសារច្បាប់ផ្សេងទៀត"
+
+#: odm_laws/i18n/metadata_fields.php:67
+msgid "Child of"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:68
+msgid "Parent of"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:69
+msgid "Associated Document"
+msgstr "ឯកសារពាក់ព័ន្ធ"
+
+#: odm_laws/i18n/metadata_fields.php:70
+msgid "Publication reference"
+msgstr "ឯកសារយោង"
+
+#: odm_laws/i18n/metadata_fields.php:71
+msgid "Links to source"
+msgstr "តំណភ្ជាប់ទៅនឹងប្រភព"
+
+#: odm_laws/i18n/metadata_fields.php:72
+msgid "Contact"
+msgstr "ទំនាក់ទំនង"
+
+#: odm_laws/i18n/metadata_fields.php:73
+msgid "Drafting agency"
+msgstr "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង"
+
+#: odm_laws/i18n/metadata_fields.php:74
+msgid "Technical assistance for drafting"
+msgstr "ជំនួយបច្ចេកទេសសម្រាប់ការធ្វើសេចក្តីព្រាង"
+
+#: odm_laws/i18n/metadata_fields.php:75
+msgid "Yes"
+msgstr "មាន"
+
+#: odm_laws/i18n/metadata_fields.php:76
+msgid "No"
+msgstr "មិនមាន"
+
+#: odm_laws/i18n/metadata_fields.php:77
+msgid "Unknown"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:78
+msgid "Agency providing technical assistance"
+msgstr "ទីភ្នាក់ងារផ្តល់ជំនួយបច្ចេកទេស"
+
+#: odm_laws/i18n/metadata_fields.php:79
+msgid "Technical assistance funding agency"
+msgstr "ទីភ្នាក់ងារឧបត្ថម្ភជំនួយបច្ចេកទេស"
+
+#: odm_laws/i18n/metadata_fields.php:80
+msgid "Issuing agency/parties"
+msgstr "ទីភ្នាក់ងារ/ភាគីចេញផ្សាយ"
+
+#: odm_laws/i18n/metadata_fields.php:81
+msgid "Implementing agencies"
+msgstr "ទីភ្នាក់ងារអនុវត្ត"
+
+#: odm_laws/i18n/metadata_fields.php:82
+msgid "Notes"
+msgstr "កំណត់ត្រា"
+
+#: odm_laws/i18n/metadata_fields.php:83
+msgid "Legacy reference document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:84
+msgid "Maintainer"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:85
+msgid "Maintainer email"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:86
+msgid "Name"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:87
+msgid "Format"
+msgstr "ទ្រង់ទ្រាយ"
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""

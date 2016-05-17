@@ -64,8 +64,9 @@
 		"label": {
 			"en": "Document reference #",
 			"th": "Document reference #",
-			"km": "Document reference #",
-			"vi": "Document reference #"
+			"km": "ឯកសារយោងលេខ #",
+			"vi": "Tham chiếu tài liệu #",
+			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
     "form_placeholder": "Document, issue, or series number."
@@ -119,8 +120,9 @@
 		"label": {
 			"en": "Formal full title",
 			"th": "Formal full title",
-			"km": "Formal full title",
-			"vi": "Formal full title"
+			"km": "ចំណងជើងជាផ្លូវការពេញលេញ",
+			"vi": "Tiêu đề đầy đủ chính thức",
+			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
     "form_attrs": {
@@ -138,8 +140,9 @@
 		"label": {
 			"en": "Alternative/short title",
 			"th": "Alternative/short title",
-			"km": "Alternative/short title",
-			"vi": "Alternative/short title"
+			"km": "ចំណងជើងផ្សេងទៀត/ខ្លី",
+			"vi": "Tiêu đề thay thế/ Tên rút gọn",
+			"my": "ခေါင်းစဉ်ကွဲ/ခေါင်းစဉ်တို"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
     "form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
@@ -156,7 +159,8 @@
 			"en": "Short summary",
 			"th": "รายละเอียด",
 			"km": "ការពិពណ៌នា",
-			"vi": "Mô tả"
+			"vi": "Mô tả",
+			"my": "Short summary"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "Describe general purpose and scope"
@@ -166,8 +170,9 @@
 		"label": {
 			"en": "Primary policy reference point",
 			"th": "Primary policy reference point",
-			"km": "Primary policy reference point",
-			"vi": "Primary policy reference point"
+			"km": " ចំណុចយោងគោលនយោបាយបឋម",
+			"vi": "Các điều luật tham chiếu",
+			"my": "မူရင်းမူဝါဒများ ရည်ညွှန်းချက်"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
@@ -230,7 +235,8 @@
 			"en": "Access and use constraints",
 			"th": "การเข้าถึงและข้อจำกัด",
 			"km": "កំហិតនៃការចូល និងប្រើប្រាស់",
-			"vi": "Hạn chế truy cập và sử dụng"
+			"vi": "Hạn chế truy cập và sử dụng",
+			"my": "ရယူခြင်းနှင့် အကန့်အသတ်များအသုံးပြုခြင်း"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
@@ -283,8 +289,9 @@
 		"label": {
 			"en": "Short notes of change",
 			"th": "Short notes of change",
-			"km": "Short notes of change",
-			"vi": "Short notes of change"
+			"km": "កំណត់ត្រាខ្លីអំពីការផ្លាស់ប្តូរ",
+			"vi": "Ghi chú nhanh về chỉnh sửa",
+			"my": "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "Describe what changed."
@@ -322,7 +329,8 @@
 			"en": "Contact",
 			"th": "ข้อมูลติดต่อ",
 			"km": "ទំនាក់ទំនង",
-			"vi": "Liên hệ"
+			"vi": "Liên hệ",
+			"my": "ဆက်သွယ်ရန်"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
@@ -332,8 +340,9 @@
 		"label": {
 			"en": "Drafting agency",
 			"th": "Drafting agency",
-			"km": "Drafting agency",
-			"vi": "Drafting agency"
+			"km": "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង",
+			"vi": "Cơ quan soạn thảo",
+			"my": "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -358,8 +367,9 @@
 		"label": {
 			"en": "Agency providing technical assistance",
 			"th": "Agency providing technical assistance",
-			"km": "Agency providing technical assistance",
-			"vi": "Agency providing technical assistance"
+			"km": "ទីភ្នាក់ងារផ្តល់ជំនួយបច្ចេកទេស",
+			"vi": "Cơ quan hỗ trợ kỹ thuật",
+			"my": "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -369,8 +379,9 @@
 		"label": {
 			"en": "Technical assistance funding agency",
 			"th": "Technical assistance funding agency",
-			"km": "Technical assistance funding agency",
-			"vi": "Technical assistance funding agency"
+			"km": "ទីភ្នាក់ងារឧបត្ថម្ភជំនួយបច្ចេកទេស",
+			"vi": "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật",
+			"my": "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -380,8 +391,9 @@
 		"label": {
 			"en": "Issuing agency/parties",
 			"th": "Issuing agency/parties",
-			"km": "Issuing agency/parties",
-			"vi": "Issuing agency/parties"
+			"km": "ទីភ្នាក់ងារ/ភាគីចេញផ្សាយ",
+			"vi": "Cơ quan/Đơn vị ban hành",
+			"my": "ထုတ်ပေးသောအေဂျင်စီ/အဖွဲ့အစည်းများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -391,8 +403,9 @@
 		"label": {
 			"en": "Implementing agencies",
 			"th": "Implementing agencies",
-			"km": "Implementing agencies",
-			"vi": "Implementing agencies"
+			"km": "ទីភ្នាក់ងារអនុវត្ត",
+			"vi": "Các cơ quan thực thi",
+			"my": "အကောင်အထည်ဖော်မည့် အေဂျင်စီများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": ""
@@ -402,8 +415,9 @@
 		"label": {
 			"en": "Notes",
 			"th": "Notes",
-			"km": "Notes",
-			"vi": "Notes"
+			"km": "កំណត់ត្រា",
+			"vi": "Ghi chú",
+			"my": "မှတ်စုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
 		"form_placeholder": "Add any notes to this document."

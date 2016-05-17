@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-05-17 14:26+0200\n"
-"PO-Revision-Date: 2016-05-17 12:29+0000\n"
+"POT-Creation-Date: 2016-05-17 15:48+0200\n"
+"PO-Revision-Date: 2016-05-17 13:49+0000\n"
 "Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,346 @@ msgstr ""
 "X-Poedit-Basepath: ../../../ckanext\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+#: odm_laws/i18n/metadata_fields.php:3
+msgid "Document type"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:4
+msgid "Anukret/Sub-Decree"
+msgstr "Anukret/Thông tư"
+
+#: odm_laws/i18n/metadata_fields.php:5
+msgid "Chbab/Law/Kram"
+msgstr "Chbab/Luật/Kram"
+
+#: odm_laws/i18n/metadata_fields.php:6
+msgid "Constitution of Cambodia"
+msgstr "Hiến pháp Campuchia"
+
+#: odm_laws/i18n/metadata_fields.php:7
+msgid "International Treaties/Agreements"
+msgstr "Các hiệp ước/hiệp định quốc tế"
+
+#: odm_laws/i18n/metadata_fields.php:8
+msgid "Kech Sonya/Contract/Agreement"
+msgstr "Hợp đồng/Thỏa thuận"
+
+#: odm_laws/i18n/metadata_fields.php:9
+msgid "Kolkar Nenom/Guidelines"
+msgstr "Hướng dẫn"
+
+#: odm_laws/i18n/metadata_fields.php:10
+msgid "Kolnyobay/Policy"
+msgstr "Chính sách"
+
+#: odm_laws/i18n/metadata_fields.php:11
+msgid "Likhet/Letter"
+msgstr "Thư"
+
+#: odm_laws/i18n/metadata_fields.php:12
+msgid "Prakas/Joint-Prakas/Proclamation"
+msgstr "Tuyên bố"
+
+#: odm_laws/i18n/metadata_fields.php:13
+msgid "Preah Reach Kram/Royal Kram"
+msgstr "Luật Hoàng Gia "
+
+#: odm_laws/i18n/metadata_fields.php:14
+msgid "Sarachor/Circular"
+msgstr "Thông tư"
+
+#: odm_laws/i18n/metadata_fields.php:15
+msgid "Sechkdei Chhun  Damneoung/Notice/Announcement"
+msgstr "Thông báo"
+
+#: odm_laws/i18n/metadata_fields.php:16
+msgid "Sechkdei Nenum/Instruction"
+msgstr "Chỉ dẫn"
+
+#: odm_laws/i18n/metadata_fields.php:17
+msgid "Sechkdei Preang Chbab/Draft Laws & Regulations"
+msgstr "Dự thảo Luật và văn bản luật"
+
+#: odm_laws/i18n/metadata_fields.php:18
+msgid "Sechkdei Samrech/Decision"
+msgstr "Quyết định"
+
+#: odm_laws/i18n/metadata_fields.php:19
+msgid "Others"
+msgstr "Khác"
+
+#: odm_laws/i18n/metadata_fields.php:20
+msgid "Document reference #"
+msgstr "Tham chiếu tài liệu #"
+
+#: odm_laws/i18n/metadata_fields.php:21
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: odm_laws/i18n/metadata_fields.php:22
+msgid "Burmese"
+msgstr "Tiếng Mi-an-ma"
+
+#: odm_laws/i18n/metadata_fields.php:23
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: odm_laws/i18n/metadata_fields.php:24
+msgid "Khmer"
+msgstr "Tiếng Khơ -me"
+
+#: odm_laws/i18n/metadata_fields.php:25
+msgid "Lao"
+msgstr "Tiếng Lào"
+
+#: odm_laws/i18n/metadata_fields.php:26
+msgid "Thai"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:27
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: odm_laws/i18n/metadata_fields.php:28
+msgid "Chinese"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:29
+msgid "French"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:30
+msgid "German"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:31
+msgid "Japanese"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:32
+msgid "Korean"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:33
+msgid "Other"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:34
+msgid "Formal full title"
+msgstr "Tiêu đề đầy đủ chính thức"
+
+#: odm_laws/i18n/metadata_fields.php:35
+msgid "URL"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:36
+msgid "Alternative/short title"
+msgstr "Tiêu đề thay thế/ Tên rút gọn"
+
+#: odm_laws/i18n/metadata_fields.php:37
+msgid "Topics"
+msgstr "Chủ đề"
+
+#: odm_laws/i18n/metadata_fields.php:38
+msgid "Short summary"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:39
+msgid "Primary policy reference point"
+msgstr "Các điều luật tham chiếu"
+
+#: odm_laws/i18n/metadata_fields.php:40
+msgid "Geographic area (spatial range)"
+msgstr "Vùng địa lý (phạm vi không gian)"
+
+#: odm_laws/i18n/metadata_fields.php:41
+msgid "Global"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "ASEAN"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Greater Mekong Subregion (GMS)"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:44
+msgid "Lower Mekong Basin"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:45
+msgid "Lower Mekong countries"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Cambodia"
+msgstr "Cam-pu-chia"
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "Vietnam"
+msgstr "Việt Nam"
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Laos"
+msgstr "Lào"
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Thailand"
+msgstr "Thái Lan"
+
+#: odm_laws/i18n/metadata_fields.php:50
+msgid "Myanmar"
+msgstr "Mi-an-ma"
+
+#: odm_laws/i18n/metadata_fields.php:51
+msgid "Organization"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:52
+msgid "License"
+msgstr "Giấy phép"
+
+#: odm_laws/i18n/metadata_fields.php:53
+msgid "Copyright"
+msgstr "Bản quyền"
+
+#: odm_laws/i18n/metadata_fields.php:54
+msgid "Access and use constraints"
+msgstr "Khó khăn tiếp cận và khai thác dữ liệu"
+
+#: odm_laws/i18n/metadata_fields.php:55
+msgid "Status"
+msgstr "Trạng thái"
+
+#: odm_laws/i18n/metadata_fields.php:56
+msgid "Unspecified"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:57
+msgid "Draft"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:58
+msgid "Adopted"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:59
+msgid "Signed"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:60
+msgid "Version date (of draft)"
+msgstr "Ngày ban hành dự thảo"
+
+#: odm_laws/i18n/metadata_fields.php:61
+msgid "Adoption date/Promulgation date/Signing"
+msgstr "Ngày phê duyệt/Ngày ban hành/Ngày ký"
+
+#: odm_laws/i18n/metadata_fields.php:62
+msgid "Effective date"
+msgstr "Ngày có hiệu lực"
+
+#: odm_laws/i18n/metadata_fields.php:63
+msgid "Application date"
+msgstr "Ngày áp dụng"
+
+#: odm_laws/i18n/metadata_fields.php:64
+msgid "Previous legal document"
+msgstr "Văn bản pháp luật được thay thế"
+
+#: odm_laws/i18n/metadata_fields.php:65
+msgid "Short notes of change"
+msgstr "Ghi chú nhanh về chỉnh sửa"
+
+#: odm_laws/i18n/metadata_fields.php:66
+msgid "Relationship to other legal docs"
+msgstr "Mối liên hệ với các văn bản pháp luật khác"
+
+#: odm_laws/i18n/metadata_fields.php:67
+msgid "Child of"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:68
+msgid "Parent of"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:69
+msgid "Associated Document"
+msgstr "Tài liệu liên quan"
+
+#: odm_laws/i18n/metadata_fields.php:70
+msgid "Publication reference"
+msgstr "Tài liệu tham chiếu"
+
+#: odm_laws/i18n/metadata_fields.php:71
+msgid "Links to source"
+msgstr "Đường dẫn tới nguồn"
+
+#: odm_laws/i18n/metadata_fields.php:72
+msgid "Contact"
+msgstr "Liên hệ"
+
+#: odm_laws/i18n/metadata_fields.php:73
+msgid "Drafting agency"
+msgstr "Cơ quan soạn thảo"
+
+#: odm_laws/i18n/metadata_fields.php:74
+msgid "Technical assistance for drafting"
+msgstr "Hỗ trợ kỹ thuật cho nhóm soạn thảo luật"
+
+#: odm_laws/i18n/metadata_fields.php:75
+msgid "Yes"
+msgstr "Có"
+
+#: odm_laws/i18n/metadata_fields.php:76
+msgid "No"
+msgstr "Không"
+
+#: odm_laws/i18n/metadata_fields.php:77
+msgid "Unknown"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:78
+msgid "Agency providing technical assistance"
+msgstr "Cơ quan hỗ trợ kỹ thuật"
+
+#: odm_laws/i18n/metadata_fields.php:79
+msgid "Technical assistance funding agency"
+msgstr "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật"
+
+#: odm_laws/i18n/metadata_fields.php:80
+msgid "Issuing agency/parties"
+msgstr "Cơ quan/Đơn vị ban hành"
+
+#: odm_laws/i18n/metadata_fields.php:81
+msgid "Implementing agencies"
+msgstr "Các cơ quan thực thi"
+
+#: odm_laws/i18n/metadata_fields.php:82
+msgid "Notes"
+msgstr "Ghi chú"
+
+#: odm_laws/i18n/metadata_fields.php:83
+msgid "Legacy reference document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:84
+msgid "Maintainer"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:85
+msgid "Maintainer email"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:86
+msgid "Name"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:87
+msgid "Format"
+msgstr "Định dạng"
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""

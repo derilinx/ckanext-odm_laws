@@ -1,10 +1,11 @@
-#
+# 
 # Translators:
+# Theint Naing Yoon <yoon@phandeeyar.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2016-05-16 12:34+0200\n"
-"PO-Revision-Date: 2016-05-16 12:36+0200\n"
+"PO-Revision-Date: 2016-05-17 11:49+0000\n"
 "Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
 "Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/my/)\n"
 "MIME-Version: 1.0\n"
@@ -14,23 +15,35 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: odm_laws/lib/odm_laws_helper.py:27
-msgid "Thank you for uploading the library item. You should have received a confirmation email from OD Mekong Datahub. This library item is still unpublished. Your item can only be published after you review this form and after our administrators approve your entry."
-msgstr "စာကြည့်တိုက်စာရင်းတွင်းသို ့တင်ပေးခြင်းအတွက်ကျေးဇူးတင်ပါသည်။ OD Mekong Datahub ထံမှ အတည်ပြုသည့် email လက်ခံရရှိပါမည်။ စာကြည့်တိုက်တွင်တင်ထားသည်မှာ ထုတ်ဝေခြင်းမပြုလုပ်ရသေးပါ။ သင်တင်ထားသည်ကို ထုတ်ဝေရန် ဤဖြည့်စွက်ရန်ပုံစံကို စစ်ဆေးကြည့်ရှုပါ၊ ထို ့နောက် ကျွနု်ပ်တို ့၏ ကြီးကြပ်သူများမှ သင်၏ ဖြည့်စွက်ချက်ကို အတည်ပြုပေးပါလိမ့်မည်။ "
+msgid ""
+"Thank you for uploading the library item. You should have received a "
+"confirmation email from OD Mekong Datahub. This library item is still "
+"unpublished. Your item can only be published after you review this form and "
+"after our administrators approve your entry."
+msgstr "စာကြည့်တိုက်စာရင်းတွင်းသို့တင်ပေးခြင်းအတွက်ကျေးဇူးတင်ပါသည်။ OD Mekong Datahub ထံမှ အတည်ပြုသည့် email လက်ခံရရှိပါမည်။ စာကြည့်တိုက်တွင်တင်ထားသည်မှာ ထုတ်ဝေခြင်းမပြုလုပ်ရသေးပါ။ သင်တင်ထားသည်ကို ထုတ်ဝေရန် ဤဖြည့်စွက်ရန်ပုံစံကို စစ်ဆေးကြည့်ရှုပါ၊ ထို့နောက် ကျွန်ုပ်တို့ ၏ ကြီးကြပ်သူများမှ သင်၏ ဖြည့်စွက်ချက်ကို အတည်ပြုပေးပါလိမ့်မည်။ "
 
 #: odm_laws/lib/odm_laws_helper.py:28
-msgid "It is important that you have entered the correct information in your library record form. We also ask that all contributors complete as many fields as possible."
-msgstr "စာကြည့်တိုက်မှတ်တမ်းဖြည့်စွက်ရာတွင် သတင်းအချက်အလက်များမှန်ကန်စွာ ဖြည့်စွက်ရန်အရေးကြီးပါသည်။ ပါ၀င်အားဖြည့်သူများကိုလည်း တတ်နိုင်သမျှ ပြည့်စုံစွာ ဖြည့်စွက်ရန်တောင်းဆိုပါသည်။ "
+msgid ""
+"It is important that you have entered the correct information in your "
+"library record form. We also ask that all contributors complete as many "
+"fields as possible."
+msgstr "စာကြည့်တိုက်မှတ်တမ်းဖြည့်စွက်ရာတွင် သတင်းအချက်အလက်များမှန်ကန်စွာ ဖြည့်စွက်ရန်အရေးကြီးပါသည်။ ပါဝင်အားဖြည့်သူများကိုလည်း တတ်နိုင်သမျှ ပြည့်စုံစွာ ဖြည့်စွက်ရန်တောင်းဆိုပါသည်။ "
 
 #: odm_laws/lib/odm_laws_helper.py:29
-msgid "Please take this opportunity to review your library record. If you would like to make any changes please select your library record and then click on the Manage button on the top right corner."
-msgstr "ဤအခွင့်အရေးကို သင့်စာကြည့်တိုက်မှတ်တမ်းများ ပြန်လည်စစ်ဆေးရန်အတွက်အသုံးပြုပါ။ ပြောင်းလဲမှုများပြုလုပ်လိုပါက ပြုလုပ်လိုသည့် သင်၏ စာကြည့်တိုက်မှတ်တမ်းကိုရွေးပါ ထို ့နောက် ညာဘက်အပေါ်ထောင့်ရှိ စီမံမည် ခလုတ်ကိုနှိပ်ပါ။ "
+msgid ""
+"Please take this opportunity to review your library record. If you would "
+"like to make any changes please select your library record and then click on"
+" the Manage button on the top right corner."
+msgstr "ဤအခွင့်အရေးကို သင့်စာကြည့်တိုက်မှတ်တမ်းများ ပြန်လည်စစ်ဆေးရန်အတွက်အသုံးပြုပါ။ ပြောင်းလဲမှုများပြုလုပ်လိုပါက ပြုလုပ်လိုသည့် သင်၏ စာကြည့်တိုက်မှတ်တမ်းကိုရွေးပါ ထို့နောက် ညာဘက်အပေါ်ထောင့်ရှိ စီမံမည် ခလုတ်ကိုနှိပ်ပါ။ "
 
 #: odm_laws/lib/odm_laws_helper.py:30
-msgid "Please CHECK YOUR SPELLING against the original item to ensure the item is recorded correctly."
+msgid ""
+"Please CHECK YOUR SPELLING against the original item to ensure the item is "
+"recorded correctly."
 msgstr "သင်ထည့်သွင်းသည့်အရာကို မှန်ကန်စွာ မှတ်တမ်းယူနိုင်ရန်အတွက် ကျေးဇူးပြု၍ မူရင်းစာလုံးများနှင့်တိုက်ဆိုင်၍ စာလုံးပေါင်းများစစ်ဆေးပါ။"
 
 #: odm_laws/lib/odm_laws_helper.py:31
@@ -38,8 +51,11 @@ msgid "Please review your library record form again for the mandatory fields:"
 msgstr "မဖြစ်မနေထည့်သွင်းရမည့် ကွက်လပ်များအတွက် သင့်စာကြည့်တိုက်မှတ်တမ်းကို ကျေးဇူးပြု၍ နောက်တစ်ကြိမ်ပြန်လည်စစ်ဆေးပါ။ "
 
 #: odm_laws/lib/odm_laws_helper.py:32
-msgid "Title (Please use Associated Press style title where the first letter is capitalized and the rest of the title is not, i.e. 'Study of Cambodian forests and lakes from 1992 to 1994')"
-msgstr "ခေါင်းစဉ် (သတင်းခေါင်းစဉ်များကဲ့သို ့အစကို စာလုံးအကြီးဖြင့်ရေးပါ) ဥပမာ၊ 'ကမ္ဘောဒီးယားနိုင်ငံရှိ သစ်တော နှင့် ရေကန် များကို ၁၉၉၂ မှ ၁၉၉၄ အထိလေ့လာချက်။'"
+msgid ""
+"Title (Please use Associated Press style title where the first letter is "
+"capitalized and the rest of the title is not, i.e. 'Study of Cambodian "
+"forests and lakes from 1992 to 1994')"
+msgstr "ခေါင်းစဉ် (သတင်းခေါင်းစဉ်များကဲ့သို့ အစကို စာလုံးအကြီးဖြင့်ရေးပါ) ဥပမာ၊ 'ကမ္ဘောဒီးယားနိုင်ငံရှိ သစ်တော နှင့် ရေကန် များကို ၁၉၉၂ မှ ၁၉၉၄ အထိလေ့လာချက်။'"
 
 #: odm_laws/lib/odm_laws_helper.py:33
 msgid "Language"
@@ -58,11 +74,16 @@ msgid "Date uploaded"
 msgstr "တင်သည့်ရက်စွဲ"
 
 #: odm_laws/lib/odm_laws_helper.py:37
-msgid "Please review again the following information, vital to other users who may search for your record:"
+msgid ""
+"Please review again the following information, vital to other users who may "
+"search for your record:"
 msgstr "အောက်ပါသတင်းအချက်အလက်များကိုပြန်လည်စစ်ဆေးပါ။ သင့်၏ မှတ်တမ်းကို ရှာဖွေသူများအတွက် အလွန်အရေးပါသည်။ "
 
 #: odm_laws/lib/odm_laws_helper.py:38
-msgid "Summary (Make sure this is a concise description of the record in your own words, please do not just 'copy' and 'paste' an abstract by the original author)"
+msgid ""
+"Summary (Make sure this is a concise description of the record in your own "
+"words, please do not just 'copy' and 'paste' an abstract by the original "
+"author)"
 msgstr "အနှစ်ချုပ် (သင်၏ကိုယ်ပိုင်စကားလုံးဖြင့် မှတ်တမ်းကို တိုတိုနှင့် လိုရင်းဖော်ပြပါ၊ ကျေးဇူးပြု၍ မူရင်းရေးသားသူ၏ စကားလုံးကို ကူးယူခြင်းမပြုပါနှင့်။)"
 
 #: odm_laws/lib/odm_laws_helper.py:39
@@ -70,7 +91,10 @@ msgid "Topics"
 msgstr "ခေါင်းစဉ်များ"
 
 #: odm_laws/lib/odm_laws_helper.py:40
-msgid "License (Make sure you indicated the correct license. Additional information on creative commons is found here http://opendefinition.org/licenses/. If there is no license, please indicate 'license unspecified')"
+msgid ""
+"License (Make sure you indicated the correct license. Additional information"
+" on creative commons is found here http://opendefinition.org/licenses/. If "
+"there is no license, please indicate 'license unspecified')"
 msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:41
@@ -87,23 +111,27 @@ msgstr "ရေးသားသူ"
 
 #: odm_laws/lib/odm_laws_helper.py:44
 msgid "Co-author"
-msgstr "အမျိုးအစားခွဲခြားသတ်မှတ်ခြင်းနံပါတ်ကို ODC Cambodia က၄င်းရှိရမည့် စာအုပ်စဉ်နေရာကိုသိနိုင်ရန်အတွက် သတ်မှတ်ပေးသည်။"
+msgstr "ပူးပေါင်းရေးသားသူ"
 
 #: odm_laws/lib/odm_laws_helper.py:45
 msgid "Corporate Author"
-msgstr "ပူပေါင်းရေးသားသူ/အဖွဲ ့အစည်း"
+msgstr "ပူပေါင်းရေးသားသူ/အဖွဲ့အစည်း"
 
 #: odm_laws/lib/odm_laws_helper.py:46
 msgid "Publisher"
 msgstr "ထုတ်ဝေသူ"
 
 #: odm_laws/lib/odm_laws_helper.py:47
-msgid "Lastly, please check again for the following information on the library record you entered. If the information is available, please include it in the appropriate field. This will greatly improve the searchability of your library record item or provide information that a user will find useful:"
-msgstr "နောက်ဆုံးအနေဖြင့် သင်ဖြည့်သွင်းသော အောက်ပါအချက်အလက်များမှန်ကန်မှုရှိမရှိ စစ်ဆေးပါ။ သင့်လျော်သင့်နေရာတွင် လိုအပ်သည့်သတင်းအချက်အလက်များကိုဖြည့်သွင်းပါ။ ဤနည်းဖြင့် သင့်စာကြည့်တိုက်မှတ်တမ်းကိုရှာဖွေတွေ ့ရှိနိုင်မှုကို လွန်စွာတိုးမြှင့်ပေးနိုင်မည် သို ့မဟုတ် ပေးထားသောသတင်းအချက်အလက်များသည် အသုံးပြုသူအတွက်အလွန်အသုံးဝင်နိုင်သည်။ "
+msgid ""
+"Lastly, please check again for the following information on the library "
+"record you entered. If the information is available, please include it in "
+"the appropriate field. This will greatly improve the searchability of your "
+"library record item or provide information that a user will find useful:"
+msgstr "နောက်ဆုံးအနေဖြင့် သင်ဖြည့်သွင်းသော အောက်ပါအချက်အလက်များမှန်ကန်မှုရှိမရှိ စစ်ဆေးပါ။ သင့်လျော်သင့်နေရာတွင် လိုအပ်သည့်သတင်းအချက်အလက်များကိုဖြည့်သွင်းပါ။ ဤနည်းဖြင့် သင့်စာကြည့်တိုက်မှတ်တမ်းကိုရှာဖွေတွေ့ရှိနိုင်မှုကို လွန်စွာတိုးမြှင့်ပေးနိုင်မည် သို့မဟုတ် ပေးထားသောသတင်းအချက်အလက်များသည် အသုံးပြုသူအတွက်အလွန်အသုံးဝင်နိုင်သည်။ "
 
 #: odm_laws/lib/odm_laws_helper.py:48
 msgid "ISSN or ISBN numbers"
-msgstr "ISSN သို ့မဟုတ် ISBN ကဏန်းများ"
+msgstr "ISSN သို့မဟုတ် ISBN ကဏန်းများ"
 
 #: odm_laws/lib/odm_laws_helper.py:49
 msgid "Publication Place"
@@ -118,8 +146,12 @@ msgid "Pagination"
 msgstr "စာမျက်နှာခွဲ"
 
 #: odm_laws/lib/odm_laws_helper.py:52
-msgid "Our administrators need to review the library record as well. They will close fixed issues or open new issues if there are any other inconsistencies. Once all issues have been closed, the item will be published."
-msgstr "ကျွနု်ပ်တို ့၏ ကြီးကြပ်သူများသည်လည်း စာကြည့်တိုက်မှတ်တမ်းကို ပြန်လည်စစ်ဆေးရန်လိုအပ်သည်။ သူတို ့သည် ပြုပြင်ပြီးသောအကြောင်းအရာကို ပိတ်လိုက်မည်ဖြစ်ပြီး အကယ်၍အခြား တစ်သမတ်တည်းမဖြစ်မှုများရှိပါက အကြောင်းအရာအသစ်များထပ်မံပြုလုပ်မည်ဖြစ်သည်။ အကြောင်းအရာအားလုံးပိတ်ပြီးပါက ထိုအရာကိုထုတ်ဝေမည်ဖြစ်သည်။ "
+msgid ""
+"Our administrators need to review the library record as well. They will "
+"close fixed issues or open new issues if there are any other "
+"inconsistencies. Once all issues have been closed, the item will be "
+"published."
+msgstr "ကျွန်ုပ်တို့၏ ကြီးကြပ်သူများသည်လည်း စာကြည့်တိုက်မှတ်တမ်းကို ပြန်လည်စစ်ဆေးရန်လိုအပ်သည်။ သူတို့သည် ပြုပြင်ပြီးသောအကြောင်းအရာကို ပိတ်လိုက်မည်ဖြစ်ပြီး အကယ်၍အခြား တစ်သမတ်တည်းမဖြစ်မှုများရှိပါက အကြောင်းအရာအသစ်များထပ်မံပြုလုပ်မည်ဖြစ်သည်။ အကြောင်းအရာအားလုံးပိတ်ပြီးပါက ထိုအရာကိုထုတ်ဝေမည်ဖြစ်သည်။ "
 
 #: odm_laws/lib/odm_laws_helper.py:53
 msgid "Thank you for sharing,"
@@ -129,11 +161,19 @@ msgstr "မျှဝေပေးတာအတွက် သင့်ကိုက�
 msgid "Open Development Team"
 msgstr "Open Development Team"
 
-#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5 odm_laws/templates/package/base.html:15 odm_laws/templates/package/base.html:18 odm_laws/templates/package/search.html:5 odm_laws/templates/package/search.html:13
+#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
 msgid "Laws"
 msgstr ""
 
-#: odm_laws/templates/package/base.html:19 odm_laws/templates/package/new.html:5 odm_laws/templates/package/snippets/new_package_breadcrumb.html:5 odm_laws/templates/package/snippets/stages.html:7 odm_laws/templates/package/snippets/stages.html:9
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
+#: odm_laws/templates/package/snippets/stages.html:7
+#: odm_laws/templates/package/snippets/stages.html:9
 msgid "Create Law"
 msgstr ""
 
@@ -157,7 +197,8 @@ msgstr ""
 msgid "Manage"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:15 odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
+#: odm_laws/templates/package/read_base.html:15
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
 msgstr ""
 
@@ -189,11 +230,14 @@ msgstr ""
 msgid "Search Laws..."
 msgstr ""
 
-#: odm_laws/templates/package/snippets/stages.html:14 odm_laws/templates/package/snippets/stages.html:18 odm_laws/templates/package/snippets/stages.html:20
+#: odm_laws/templates/package/snippets/stages.html:14
+#: odm_laws/templates/package/snippets/stages.html:18
+#: odm_laws/templates/package/snippets/stages.html:20
 msgid "Add data"
 msgstr ""
 
-#: odm_laws/templates/scheming/form_snippets/odm_laws_previous_legal_document.html:6 odm_laws/templates/scheming/form_snippets/odm_laws_relationship_target.html:6
+#: odm_laws/templates/scheming/form_snippets/odm_laws_previous_legal_document.html:6
+#: odm_laws/templates/scheming/form_snippets/odm_laws_relationship_target.html:6
 msgid "Select an associated document"
 msgstr ""
 

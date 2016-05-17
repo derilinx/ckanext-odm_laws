@@ -1,14 +1,16 @@
-#
+# 
 # Translators:
+# ChandaraKhun <chandara@opendevcam.net>, 2016
 # ODM Cambodia <cambodia@opendevmekong.net>, 2015
+# Pinkie, 2016
+# svutha <svutha.ewmi@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2016-05-16 12:34+0200\n"
-"PO-Revision-Date: 2016-05-16 12:36+0200\n"
+"PO-Revision-Date: 2016-05-17 11:50+0000\n"
 "Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
-"Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-"
-"ckanext-odm_laws/language/km/)\n"
+"Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/km/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,8 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""
@@ -25,38 +27,38 @@ msgid ""
 "confirmation email from OD Mekong Datahub. This library item is still "
 "unpublished. Your item can only be published after you review this form and "
 "after our administrators approve your entry."
-msgstr ""
+msgstr "សូមអរគុណសម្រាប់ការដាក់បញ្ចូលឯកសារទៅក្នុងមូលដ្ឋានទិន្នន័យ។ អ្នកគួរតែបានទទួលអ៊ីម៉ែលបញ្ជាក់ពីក្រុមការងារ មូលដ្ឋានទិន្នន័យ អូឌី មេគង្គ។ ឯកសារនេះពំុទាន់បានផ្សព្វផ្សាយជាសាធារណរៈនៅឡើយ។ ឯកសាររបស់អ្នកអាចនឹងត្រូវបានបានចេញផ្សាយបន្ទាប់ពីឆ្លងកាត់ការត្រួតពិនិត្យទម្រង់បែបបទនេះ និងបន្ទាប់ពីក្រុមការងារយើងខ្ញុំ បានអនុម័តលើកំណត់ត្រាបណ្ណាល័យរបស់អ្នក។"
 
 #: odm_laws/lib/odm_laws_helper.py:28
 msgid ""
 "It is important that you have entered the correct information in your "
 "library record form. We also ask that all contributors complete as many "
 "fields as possible."
-msgstr ""
+msgstr "ការបញ្ចូលព័ត៌មាននៅក្នុងទម្រង់បែបបទកំណត់ត្រាបណ្ណាល័យឱ្យបានត្រឹមត្រូវពិតជាមានសារៈសំខាន់។ យើងខ្ញុំស្នើរសុំឱ្យអ្នកចូលរួមចំណែកទាំងអស់គ្នាបំពេញចន្លោះផ្ទុកព័ត៌មានឱ្យបានពេញលេញ។"
 
 #: odm_laws/lib/odm_laws_helper.py:29
 msgid ""
 "Please take this opportunity to review your library record. If you would "
-"like to make any changes please select your library record and then click "
-"on the Manage button on the top right corner."
-msgstr ""
+"like to make any changes please select your library record and then click on"
+" the Manage button on the top right corner."
+msgstr "សូមយកឱកាសនេះដើម្បីពិនិត្យមើលកំណត់ត្រាបណ្ណាល័យរបស់អ្នកឡើងវិញ។ ប្រសិនបើអ្នកចង់ធ្វើកំណែណាមួយ សូមជ្រើសកំណត់ត្រាទិន្នន័យរបស់អ្នក ហើយបន្ទាប់មកចុចលើប៊ូតុង \"គ្រប់គ្រង\" នៅលើជ្រុងខាងស្ដាំផ្នែកខាងលើ។"
 
 #: odm_laws/lib/odm_laws_helper.py:30
 msgid ""
 "Please CHECK YOUR SPELLING against the original item to ensure the item is "
 "recorded correctly."
-msgstr ""
+msgstr "សូមពិនិត្យអក្ខរាវិរុទ្ធរបស់អ្នកជាមួយនឹងឯកសារដើមដើម ដើម្បីធានាថាអ្នកបានធ្វើកំណត់ត្រាយ៉ាងត្រឹមត្រូវ។"
 
 #: odm_laws/lib/odm_laws_helper.py:31
 msgid "Please review your library record form again for the mandatory fields:"
-msgstr ""
+msgstr "សូមពិនិត្យចន្លោះផ្ទុកព័ត៌មានសំខាន់ៗនៃទំរង់បែបបទកំណត់ត្រាបណ្ណាល័យរបស់អ្នកម្តងទៀត៖"
 
 #: odm_laws/lib/odm_laws_helper.py:32
 msgid ""
 "Title (Please use Associated Press style title where the first letter is "
 "capitalized and the rest of the title is not, i.e. 'Study of Cambodian "
 "forests and lakes from 1992 to 1994')"
-msgstr ""
+msgstr "ចំណងជើង"
 
 #: odm_laws/lib/odm_laws_helper.py:33
 msgid "Language"
@@ -68,39 +70,39 @@ msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:35
 msgid "Geographical area"
-msgstr ""
+msgstr "តំបន់ភូមិសាស្រ្ត"
 
 #: odm_laws/lib/odm_laws_helper.py:36
 msgid "Date uploaded"
-msgstr ""
+msgstr "កាលបរិច្ឆេទនៃការដាក់បញ្ចូលទៅក្នុងមូលដ្ឋានទិន្នន័យ"
 
 #: odm_laws/lib/odm_laws_helper.py:37
 msgid ""
 "Please review again the following information, vital to other users who may "
 "search for your record:"
-msgstr ""
+msgstr "សូមពិនិត្យព័ត៌មានខាងក្រោមម្តងទៀតដូច។ ព័ត៌មានទាំងនេះមានសារៈសំខាន់សម្រាប់អ្នកប្រើប្រាស់ផ្សេងទៀតក្នុងការស្វែងរកកំណត់ត្រារបស់អ្នក៖"
 
 #: odm_laws/lib/odm_laws_helper.py:38
 msgid ""
 "Summary (Make sure this is a concise description of the record in your own "
 "words, please do not just 'copy' and 'paste' an abstract by the original "
 "author)"
-msgstr ""
+msgstr "សេចក្ដីសង្ខេប (សូមសង្ខេបឱ្យខ្លី ដោយប្រើប្រាស់ពាក្យផ្ទាល់ខ្លួនរបស់អ្នក គួរជៀសវាងការចម្លងសេចក្តីសង្ខេបពីអ្នកនិពន្ធដើម។)"
 
 #: odm_laws/lib/odm_laws_helper.py:39
 msgid "Topics"
-msgstr ""
+msgstr "ប្រធានបទ"
 
 #: odm_laws/lib/odm_laws_helper.py:40
 msgid ""
-"License (Make sure you indicated the correct license. Additional "
-"information on creative commons is found here http://opendefinition.org/"
-"licenses/. If there is no license, please indicate 'license unspecified')"
+"License (Make sure you indicated the correct license. Additional information"
+" on creative commons is found here http://opendefinition.org/licenses/. If "
+"there is no license, please indicate 'license unspecified')"
 msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:41
 msgid "Copyright"
-msgstr ""
+msgstr "សិទ្ធិ​អ្នក​និពន្ធ"
 
 #: odm_laws/lib/odm_laws_helper.py:42
 msgid "Access and Use Constraints"
@@ -108,15 +110,15 @@ msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:43
 msgid "Author"
-msgstr ""
+msgstr "អ្នក​និពន្ធ"
 
 #: odm_laws/lib/odm_laws_helper.py:44
 msgid "Co-author"
-msgstr ""
+msgstr "សហអ្នកនិពន្ធ"
 
 #: odm_laws/lib/odm_laws_helper.py:45
 msgid "Corporate Author"
-msgstr "អ្នកនិពន្ធរួមគ្នា"
+msgstr "អ្នកនិពន្ធជាស្ថាប័ន"
 
 #: odm_laws/lib/odm_laws_helper.py:46
 msgid "Publisher"
@@ -128,11 +130,11 @@ msgid ""
 "record you entered. If the information is available, please include it in "
 "the appropriate field. This will greatly improve the searchability of your "
 "library record item or provide information that a user will find useful:"
-msgstr ""
+msgstr "ជាចុងក្រោយ សូមពិនិត្យព័ត៌មានអំពីកំណត់ត្រាបណ្ណាល័យខាងក្រោមម្តងទៀត។ ប្រសិនបើព័ត៌មាននេះអាចរកបាន សូមបញ្ចូលវាក្នុងចន្លោះផ្ទុកព័ត៌មានឱ្យត្រឹមត្រូវ។ ព័ត៌មានទាំងនេះជួយសម្រួលឱ្យអ្នកប្រើប្រាស់ផ្សេងទៀតអាចស្វែងរកកំណត់ត្រារបស់អ្នកបានយ៉ាងឆាប់រហ័ស៖"
 
 #: odm_laws/lib/odm_laws_helper.py:48
 msgid "ISSN or ISBN numbers"
-msgstr ""
+msgstr "លេខ ISSN ឬ ISBN"
 
 #: odm_laws/lib/odm_laws_helper.py:49
 msgid "Publication Place"
@@ -140,7 +142,7 @@ msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:50
 msgid "Publication Date"
-msgstr "កាលបរិច្ឆេទការបោះពុម្ពផ្សាយ"
+msgstr "កាលបរិច្ឆេទបោះពុម្ព"
 
 #: odm_laws/lib/odm_laws_helper.py:51
 msgid "Pagination"
@@ -152,15 +154,15 @@ msgid ""
 "close fixed issues or open new issues if there are any other "
 "inconsistencies. Once all issues have been closed, the item will be "
 "published."
-msgstr ""
+msgstr "ក្រុមការងារយើងខ្ញុំត្រូវពិនិត្យឡើងវិញនូវកំណត់ត្រាបណ្ណាល័យនេះ។ យើងខ្ញុំនឹងបិទបញ្ហាដែលបានដោះស្រាយហើយ ឬបើកបញ្ហាជាថ្មី ប្រសិនបើមានភាពមិនទៀងទាត់ណាមួយផ្សេងទៀត។ ពេលដែលបញ្ហាទាំងអស់ត្រូវបានដោះស្រាយ យើងខ្ញុំនឹងបោះពុម្ភផ្សាយកំណត់ត្រាបណ្ណាល័យនេះ។"
 
 #: odm_laws/lib/odm_laws_helper.py:53
 msgid "Thank you for sharing,"
-msgstr ""
+msgstr "សូមអរគុណសម្រាប់ការចែករំលែក"
 
 #: odm_laws/lib/odm_laws_helper.py:54
 msgid "Open Development Team"
-msgstr ""
+msgstr "ក្រុមការងារនៃ​​បណ្តាញ​ទិន្នន័យអំពីការអភិវឌ្ឍ"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15

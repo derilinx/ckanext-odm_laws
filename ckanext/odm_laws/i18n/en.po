@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-05-16 12:34+0200\n"
-"PO-Revision-Date: 2016-05-16 12:34+0200\n"
+"POT-Creation-Date: 2016-05-17 14:26+0200\n"
+"PO-Revision-Date: 2016-05-17 14:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -17,148 +17,13 @@ msgstr ""
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""
-"Thank you for uploading the library item. You should have received a "
-"confirmation email from OD Mekong Datahub. This library item is still "
-"unpublished. Your item can only be published after you review this form and "
-"after our administrators approve your entry."
+"Thank you for uploading this item. Instructions about vetting system "
+"available on https://wiki.opendevelopmentmekong.net/partners:"
+"content_review#instructions_for_default_issue_on_law_records"
 msgstr ""
 
-#: odm_laws/lib/odm_laws_helper.py:28
-msgid ""
-"It is important that you have entered the correct information in your "
-"library record form. We also ask that all contributors complete as many "
-"fields as possible."
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:29
-msgid ""
-"Please take this opportunity to review your library record. If you would "
-"like to make any changes please select your library record and then click on "
-"the Manage button on the top right corner."
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:30
-msgid ""
-"Please CHECK YOUR SPELLING against the original item to ensure the item is "
-"recorded correctly."
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:31
-msgid "Please review your library record form again for the mandatory fields:"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:32
-msgid ""
-"Title (Please use Associated Press style title where the first letter is "
-"capitalized and the rest of the title is not, i.e. 'Study of Cambodian "
-"forests and lakes from 1992 to 1994')"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:33
-msgid "Language"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:34
-msgid "Edition / Version"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:35
-msgid "Geographical area"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:36
-msgid "Date uploaded"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:37
-msgid ""
-"Please review again the following information, vital to other users who may "
-"search for your record:"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:38
-msgid ""
-"Summary (Make sure this is a concise description of the record in your own "
-"words, please do not just 'copy' and 'paste' an abstract by the original "
-"author)"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:39
-msgid "Topics"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:40
-msgid ""
-"License (Make sure you indicated the correct license. Additional information "
-"on creative commons is found here http://opendefinition.org/licenses/. If "
-"there is no license, please indicate 'license unspecified')"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:41
-msgid "Copyright"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:42
-msgid "Access and Use Constraints"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:43
-msgid "Author"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:44
-msgid "Co-author"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:45
-msgid "Corporate Author"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:46
-msgid "Publisher"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:47
-msgid ""
-"Lastly, please check again for the following information on the library "
-"record you entered. If the information is available, please include it in "
-"the appropriate field. This will greatly improve the searchability of your "
-"library record item or provide information that a user will find useful:"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:48
-msgid "ISSN or ISBN numbers"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:49
-msgid "Publication Place"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:50
-msgid "Publication Date"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:51
-msgid "Pagination"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:52
-msgid ""
-"Our administrators need to review the library record as well. They will "
-"close fixed issues or open new issues if there are any other "
-"inconsistencies. Once all issues have been closed, the item will be "
-"published."
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:53
-msgid "Thank you for sharing,"
-msgstr ""
-
-#: odm_laws/lib/odm_laws_helper.py:54
-msgid "Open Development Team"
-msgstr ""
-
-#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
+#: odm_laws/templates/header.html:5
+#: odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15
 #: odm_laws/templates/package/base.html:18
 #: odm_laws/templates/package/search.html:5

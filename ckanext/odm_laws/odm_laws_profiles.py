@@ -8,6 +8,10 @@ from geomet import wkt, InvalidGeoJSONException
 from ckan.plugins import toolkit
 from ckanext.dcat.utils import resource_uri, publisher_uri_from_dataset_dict
 from ckanext.dcat.profiles import RDFProfile
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
+import odm_rdf_helper
 import logging
 
 log = logging.getLogger(__name__)
@@ -37,28 +41,28 @@ SKOS = Namespace('https://www.w3.org/2009/08/skos-reference/skos.html#')
 SORON = Namespace('http://www.bib.uc3m.es/~fcalzada/soron/soron_content/soron#')
 
 namespaces = {
-    'agls': AGLS,
-    'bibo': BIBO,
-    'bibframe': BIBFRAME,
-    'dbpedia': DBPEDIA,
-    'gc': GC,
-    'dct': DCT,
-    'dcat': DCAT,
-    'foaf': FOAF,
-    'mrel': MREL,
-    'schema': SCHEMA,
-    'cro': CRO,
-    'doap': DOAP,
-    'ebucore': EBUCORE,
-    'dqm': DQM,
-    'dq': DQ,
-    'omn': OMN,
-    'opus': OPUS,
-    'pproc': PPROC,
-    'md': MD,
-    'gn': GN,
-    'skos': SKOS,
-    'soron': SORON
+  'agls': AGLS,
+  'bibo': BIBO,
+  'bibframe': BIBFRAME,
+  'dbpedia': DBPEDIA,
+  'gc': GC,
+  'dct': DCT,
+  'dcat': DCAT,
+  'foaf': FOAF,
+  'mrel': MREL,
+  'schema': SCHEMA,
+  'cro': CRO,
+  'doap': DOAP,
+  'ebucore': EBUCORE,
+  'dqm': DQM,
+  'dq': DQ,
+  'omn': OMN,
+  'opus': OPUS,
+  'pproc': PPROC,
+  'md': MD,
+  'gn': GN,
+  'skos': SKOS,
+  'soron': SORON
 }
 
 
@@ -79,6 +83,9 @@ class ODMDCATBasicProfileLaws(RDFProfile):
 
   def graph_from_dataset(self, dataset_dict, dataset_ref):
 
+    if dataset_dict['type'] != "laws_record":
+      return
+
     log.debug("ODMDCATBasicProfileLaws graph_from_dataset")
 
     g = self.g
@@ -86,28 +93,31 @@ class ODMDCATBasicProfileLaws(RDFProfile):
     for prefix, namespace in namespaces.iteritems():
       g.bind(prefix, namespace)
 
-    g.add((dataset_ref, DCT.identifier, Literal(dataset_dict.get('id', None))))
+    g.add((dataset_ref, DCT.identifier, Literal(dataset_dict.get('id'))))
     g.add((dataset_ref, DCT.type, Literal(dataset_dict.get('type', 'dataset'))))
-    g.add((dataset_ref, DCAT.landingPage, Literal(dataset_dict.get('url', None))))
+    g.add((dataset_ref, DCAT.landingPage, Literal(dataset_dict.get('url'))))
 
     # Basic fields
-    items = [
-        ('document_type', AGLS.documentType, None),
-        ('odm_document_number', DBPEDIA.documentNumber, None),
-        ('title_translated', DCT.title, None),
-        ('odm_short_title', GC.shortTitle, None),
-        ('notes_translated', DCT.description, None),
-        ('license', DCT.license, None),
-        ('copyright', CRO.copyright, None),
-        ('owner_org', FOAF.organization, None),
-        ('contact', EBUCORE.contact, None),
-        ('odm_laws_previous_changes_notes', SKOS.changeNote, None),
-        ('odm_laws_official_publication_reference', SORON.citedBy, None),
-        ('odm_laws_notes', SKOS.note, None),
-        ('odm_reference_document', PPROC.documentReference, None)
+    raw_triples = [
+      (dataset_ref, AGLS.documentType, dataset_dict.get('document_type')),
+      (dataset_ref, DBPEDIA.documentNumber, dataset_dict.get('odm_document_number')),
+      (dataset_ref, DCT.title, dataset_dict.get('title_translated')),
+      (dataset_ref, GC.shortTitle, dataset_dict.get('odm_short_title')),
+      (dataset_ref, DCT.description, dataset_dict.get('notes_translated')),
+      (dataset_ref, DCT.license, dataset_dict.get('license')),
+      (dataset_ref, CRO.copyright, dataset_dict.get('copyright')),
+      (dataset_ref, FOAF.organization, dataset_dict.get('owner_org')),
+      (dataset_ref, EBUCORE.contact, dataset_dict.get('contact')),
+      (dataset_ref, SKOS.changeNote, dataset_dict.get('odm_laws_previous_changes_notes')),
+      (dataset_ref, SORON.citedBy, dataset_dict.get('odm_laws_official_publication_reference')),
+      (dataset_ref, SKOS.note, dataset_dict.get('odm_laws_notes')),
+      (dataset_ref, PPROC.documentReference, dataset_dict.get('odm_reference_document'))
     ]
-    self._add_triples_from_dict(dataset_dict, dataset_ref, items)
 
+    for raw_triple in raw_triples:
+      triples = odm_rdf_helper.split_multilingual_object_into_triples(raw_triple)
+      for triple in triples:
+        g.add(triple)
 
     #  Lists
     items = [
@@ -165,32 +175,5 @@ class ODMDCATBasicProfileLaws(RDFProfile):
 
   def graph_from_catalog(self, catalog_dict, catalog_ref):
 
-    log.debug("ODMDCATBasicProfileLaws graph_from_catalog")
-
-    g = self.g
-
-    for prefix, namespace in namespaces.iteritems():
-      g.bind(prefix, namespace)
-
-    g.add((catalog_ref, RDF.type, DCAT.Catalog))
-
-    # Basic fields
-    items = [
-        ('title', DCT.title, config.get('ckan.site_title')),
-        ('description', DCT.description, config.get('ckan.site_description')),
-        ('homepage', FOAF.homepage, config.get('ckan.site_url')),
-        ('language', DCT.language, config.get('ckan.locale_default', 'en')),
-    ]
-    for item in items:
-      key, predicate, fallback = item
-      if catalog_dict:
-        value = catalog_dict.get(key, fallback)
-      else:
-        value = fallback
-      if value:
-        g.add((catalog_ref, predicate, Literal(value)))
-
-    # Dates
-    modified = self._last_catalog_modification()
-    if modified:
-      self._add_date_triple(catalog_ref, DCT.modified, modified)
+    # Code maintained on ckanext-odm_dataset
+    pass

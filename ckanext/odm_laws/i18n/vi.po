@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2016-05-17 15:48+0200\n"
-"PO-Revision-Date: 2016-05-17 14:20+0000\n"
-"Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
+"PO-Revision-Date: 2016-05-20 02:07+0000\n"
+"Last-Translator: Linh Do <linh@nature.org.vn>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,11 +27,11 @@ msgstr "Loại tài liệu"
 
 #: odm_laws/i18n/metadata_fields.php:4
 msgid "Anukret/Sub-Decree"
-msgstr "Anukret/Thông tư"
+msgstr "Thông tư"
 
 #: odm_laws/i18n/metadata_fields.php:5
 msgid "Chbab/Law/Kram"
-msgstr "Chbab/Luật/Kram"
+msgstr "Luật"
 
 #: odm_laws/i18n/metadata_fields.php:6
 msgid "Constitution of Cambodia"
@@ -99,7 +99,7 @@ msgstr "Ngôn ngữ"
 
 #: odm_laws/i18n/metadata_fields.php:22
 msgid "Burmese"
-msgstr "Tiếng Mi-an-ma"
+msgstr "Tiếng Myanmar"
 
 #: odm_laws/i18n/metadata_fields.php:23
 msgid "English"
@@ -107,7 +107,7 @@ msgstr "Tiếng Anh"
 
 #: odm_laws/i18n/metadata_fields.php:24
 msgid "Khmer"
-msgstr "Tiếng Khơ -me"
+msgstr "Tiếng Khmer"
 
 #: odm_laws/i18n/metadata_fields.php:25
 msgid "Lao"
@@ -115,7 +115,7 @@ msgstr "Tiếng Lào"
 
 #: odm_laws/i18n/metadata_fields.php:26
 msgid "Thai"
-msgstr ""
+msgstr "Tiếng Thái Lan"
 
 #: odm_laws/i18n/metadata_fields.php:27
 msgid "Vietnamese"
@@ -123,31 +123,31 @@ msgstr "Tiếng Việt"
 
 #: odm_laws/i18n/metadata_fields.php:28
 msgid "Chinese"
-msgstr ""
+msgstr "Tiếng Trung"
 
 #: odm_laws/i18n/metadata_fields.php:29
 msgid "French"
-msgstr ""
+msgstr "Tiếng Pháp"
 
 #: odm_laws/i18n/metadata_fields.php:30
 msgid "German"
-msgstr ""
+msgstr "Tiếng Đức"
 
 #: odm_laws/i18n/metadata_fields.php:31
 msgid "Japanese"
-msgstr ""
+msgstr "Tiếng Nhật"
 
 #: odm_laws/i18n/metadata_fields.php:32
 msgid "Korean"
-msgstr ""
+msgstr "Tiếng Hàn Quốc"
 
 #: odm_laws/i18n/metadata_fields.php:33
 msgid "Other"
-msgstr "Khác"
+msgstr "Ngôn ngữ khác"
 
 #: odm_laws/i18n/metadata_fields.php:34
 msgid "Formal full title"
-msgstr "Tiêu đề đầy đủ chính thức"
+msgstr "Tên đầy đủ"
 
 #: odm_laws/i18n/metadata_fields.php:35
 msgid "URL"
@@ -155,7 +155,7 @@ msgstr "URL"
 
 #: odm_laws/i18n/metadata_fields.php:36
 msgid "Alternative/short title"
-msgstr "Tiêu đề thay thế/ Tên rút gọn"
+msgstr "Tên thay thế/rút gọn"
 
 #: odm_laws/i18n/metadata_fields.php:37
 msgid "Topics"
@@ -163,7 +163,7 @@ msgstr "Chủ đề"
 
 #: odm_laws/i18n/metadata_fields.php:38
 msgid "Short summary"
-msgstr ""
+msgstr "Tóm tắt nội dung"
 
 #: odm_laws/i18n/metadata_fields.php:39
 msgid "Primary policy reference point"
@@ -175,23 +175,23 @@ msgstr "Vùng địa lý (phạm vi không gian)"
 
 #: odm_laws/i18n/metadata_fields.php:41
 msgid "Global"
-msgstr ""
+msgstr "Toàn cầu"
 
 #: odm_laws/i18n/metadata_fields.php:42
 msgid "ASEAN"
-msgstr ""
+msgstr "ASEAN"
 
 #: odm_laws/i18n/metadata_fields.php:43
 msgid "Greater Mekong Subregion (GMS)"
-msgstr ""
+msgstr "Tiểu vùng Mê Kông mở rộng (GMS)"
 
 #: odm_laws/i18n/metadata_fields.php:44
 msgid "Lower Mekong Basin"
-msgstr ""
+msgstr "Hạ lưu vực Mê  Kông"
 
 #: odm_laws/i18n/metadata_fields.php:45
 msgid "Lower Mekong countries"
-msgstr ""
+msgstr "Các nước hạ lưu Mê Kông"
 
 #: odm_laws/i18n/metadata_fields.php:46
 msgid "Cambodia"
@@ -215,7 +215,7 @@ msgstr "Mi-an-ma"
 
 #: odm_laws/i18n/metadata_fields.php:51
 msgid "Organization"
-msgstr ""
+msgstr "Tổ chức"
 
 #: odm_laws/i18n/metadata_fields.php:52
 msgid "License"
@@ -227,7 +227,7 @@ msgstr "Bản quyền"
 
 #: odm_laws/i18n/metadata_fields.php:54
 msgid "Access and use constraints"
-msgstr "Khó khăn tiếp cận và khai thác dữ liệu"
+msgstr "Lưu ý khi tiếp cận và sử dụng tài liệu"
 
 #: odm_laws/i18n/metadata_fields.php:55
 msgid "Status"
@@ -235,19 +235,19 @@ msgstr "Trạng thái"
 
 #: odm_laws/i18n/metadata_fields.php:56
 msgid "Unspecified"
-msgstr ""
+msgstr "Không xác định"
 
 #: odm_laws/i18n/metadata_fields.php:57
 msgid "Draft"
-msgstr ""
+msgstr "Dự thảo"
 
 #: odm_laws/i18n/metadata_fields.php:58
 msgid "Adopted"
-msgstr ""
+msgstr "Được chấp thuận"
 
 #: odm_laws/i18n/metadata_fields.php:59
 msgid "Signed"
-msgstr ""
+msgstr "Ký tên"
 
 #: odm_laws/i18n/metadata_fields.php:60
 msgid "Version date (of draft)"
@@ -279,11 +279,11 @@ msgstr "Mối liên hệ với các văn bản pháp luật khác"
 
 #: odm_laws/i18n/metadata_fields.php:67
 msgid "Child of"
-msgstr ""
+msgstr "Văn bản cấp trên"
 
 #: odm_laws/i18n/metadata_fields.php:68
 msgid "Parent of"
-msgstr ""
+msgstr "Văn bản cấp dưới"
 
 #: odm_laws/i18n/metadata_fields.php:69
 msgid "Associated Document"
@@ -295,7 +295,7 @@ msgstr "Tài liệu tham chiếu"
 
 #: odm_laws/i18n/metadata_fields.php:71
 msgid "Links to source"
-msgstr "Đường dẫn tới nguồn"
+msgstr "Link nguồn"
 
 #: odm_laws/i18n/metadata_fields.php:72
 msgid "Contact"
@@ -319,7 +319,7 @@ msgstr "Không"
 
 #: odm_laws/i18n/metadata_fields.php:77
 msgid "Unknown"
-msgstr ""
+msgstr "Không biết"
 
 #: odm_laws/i18n/metadata_fields.php:78
 msgid "Agency providing technical assistance"
@@ -331,11 +331,11 @@ msgstr "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật"
 
 #: odm_laws/i18n/metadata_fields.php:80
 msgid "Issuing agency/parties"
-msgstr "Cơ quan/Đơn vị ban hành"
+msgstr "Cơ quan ban hành"
 
 #: odm_laws/i18n/metadata_fields.php:81
 msgid "Implementing agencies"
-msgstr "Các cơ quan thực thi"
+msgstr "Cơ quan thực thi"
 
 #: odm_laws/i18n/metadata_fields.php:82
 msgid "Notes"
@@ -343,19 +343,19 @@ msgstr "Ghi chú"
 
 #: odm_laws/i18n/metadata_fields.php:83
 msgid "Legacy reference document"
-msgstr ""
+msgstr "Tài liệu tham chiếu "
 
 #: odm_laws/i18n/metadata_fields.php:84
 msgid "Maintainer"
-msgstr ""
+msgstr "Hệ thống bảo vệ"
 
 #: odm_laws/i18n/metadata_fields.php:85
 msgid "Maintainer email"
-msgstr ""
+msgstr "Email từ hệ thống"
 
 #: odm_laws/i18n/metadata_fields.php:86
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
 #: odm_laws/i18n/metadata_fields.php:87
 msgid "Format"
@@ -366,7 +366,7 @@ msgid ""
 "Thank you for uploading this item. Instructions about vetting system "
 "available on "
 "https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
-msgstr ""
+msgstr "Cảm ơn bạn đã chia sẻ dữ liệu. Bạn có thể tham khảo hướng dẫn về quy trình kiểm duyệt thông tin của hệ thống tại  https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15
@@ -374,7 +374,7 @@ msgstr ""
 #: odm_laws/templates/package/search.html:5
 #: odm_laws/templates/package/search.html:13
 msgid "Laws"
-msgstr ""
+msgstr "Luật"
 
 #: odm_laws/templates/package/base.html:19
 #: odm_laws/templates/package/new.html:5
@@ -382,76 +382,76 @@ msgstr ""
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
 msgid "Create Law"
-msgstr ""
+msgstr "Xây dựng luật"
 
 #: odm_laws/templates/package/base_form_page.html:7
 msgid "What are Laws?"
-msgstr ""
+msgstr "Định nghĩa Luật"
 
 #: odm_laws/templates/package/edit_base.html:5
 msgid "View Law"
-msgstr ""
+msgstr "Vào đọc"
 
 #: odm_laws/templates/package/new_package_form.html:8
 msgid "Update Law"
-msgstr ""
+msgstr "Cập nhật"
 
 #: odm_laws/templates/package/read.html:11
 msgid "Parents and Childs"
-msgstr ""
+msgstr "Cha mẹ và con cái"
 
 #: odm_laws/templates/package/read_base.html:6
 msgid "Manage"
-msgstr ""
+msgstr "Quản lý"
 
 #: odm_laws/templates/package/read_base.html:15
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
-msgstr ""
+msgstr "Luật"
 
 #: odm_laws/templates/package/read_base.html:16
 msgid "Activity Stream"
-msgstr ""
+msgstr "Chuỗi hoạt động"
 
 #: odm_laws/templates/package/read_base.html:17
 msgid "Related"
-msgstr ""
+msgstr "Liên quan"
 
 #: odm_laws/templates/package/read_base.html:30
 msgid "Document preview"
-msgstr ""
+msgstr "Xem trước tài liệu"
 
 #: odm_laws/templates/package/search.html:23
 msgid "Add Law"
-msgstr ""
+msgstr "Bổ sung"
 
 #: odm_laws/templates/package/snippets/package_form.html:5
 msgid "Are you sure you want to delete this dataset?"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn xóa dữ liệu?"
 
 #: odm_laws/templates/package/snippets/package_form.html:6
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: odm_laws/templates/package/snippets/search_form.html:4
 msgid "Search Laws..."
-msgstr ""
+msgstr "Tìm kiếm..."
 
 #: odm_laws/templates/package/snippets/stages.html:14
 #: odm_laws/templates/package/snippets/stages.html:18
 #: odm_laws/templates/package/snippets/stages.html:20
 msgid "Add data"
-msgstr ""
+msgstr "Bổ sung dữ liệu"
 
 #: odm_laws/templates/scheming/form_snippets/odm_laws_previous_legal_document.html:6
 #: odm_laws/templates/scheming/form_snippets/odm_laws_relationship_target.html:6
 msgid "Select an associated document"
-msgstr ""
+msgstr "Chọn tài liệu liên quan"
 
 #: odm_laws/templates/snippets/search_form.html:6
 msgid "Search laws..."
-msgstr ""
+msgstr "Tìm kiếm..."
 
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
-msgstr ""
+msgstr "Gửi"

@@ -59,7 +59,6 @@
 		}]
 	}, {
 		"field_name": "odm_document_number",
-		"label": "Document reference #",
 		"preset": "fluent_text_single",
 		"label": {
 			"en": "Document reference #",

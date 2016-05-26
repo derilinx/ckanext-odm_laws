@@ -136,7 +136,8 @@
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
-		"form_placeholder": "eg. my-dataset"
+		"form_placeholder": "eg. my-dataset",
+    "validators": "if_empty_same_as(title) odm_dataset_urlencode"
 	},{
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",

@@ -95,7 +95,7 @@ class ODMDCATBasicProfileLaws(RDFProfile):
 
     g.add((dataset_ref, DCT.identifier, Literal(dataset_dict.get('id'))))
     g.add((dataset_ref, DCT.type, Literal(dataset_dict.get('type', 'dataset'))))
-    g.add((dataset_ref, DCAT.landingPage, Literal(dataset_dict.get('url'))))
+    g.add((dataset_ref, RDF.type, DCAT.Dataset))
 
     # Basic fields
     raw_triples = [

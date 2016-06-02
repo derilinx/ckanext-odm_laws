@@ -110,7 +110,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     dataset_type = context['package'].type if 'package' in context else ''
     if dataset_type == 'laws_record':
-      log.info('after_update: %s', resource['name'])
+      log.info('after_update: %s', resource['id'])
 
   def after_create(self, context, pkg_dict_or_resource):
 

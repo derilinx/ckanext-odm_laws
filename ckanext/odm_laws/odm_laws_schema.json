@@ -124,20 +124,24 @@
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
 		"form_languages": ["en", "th", "km", "vi"],
-    "form_placeholder": "Full title from the document"
+    "form_placeholder": "Full title from the document",
+		"form_attrs": {
+      "data-module": "slug-preview-target"
+    }
 	}, {
 		"field_name": "title",
 		"label": "title",
 		"preset": "text_hidden",
     "form_attrs": {
       "data-module": "slug-preview-target"
-    }
+    },
+		"validators": "if_empty_same_as(name)"
 	},{
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset",
-    "validators": "if_empty_same_as(title) odm_dataset_urlencode"
+    "validators": "if_empty_same_as(title) odm_dataset_if_empty_new_id odm_dataset_urlencode"
 	},{
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",

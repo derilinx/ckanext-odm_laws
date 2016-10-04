@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # Linh Do <linh@nature.org.vn>, 2016
 # ODM Vietnam <vietnam@opendevmekong.net>, 2015
@@ -7,19 +7,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-05-17 15:48+0200\n"
-"PO-Revision-Date: 2016-05-20 02:07+0000\n"
+"POT-Creation-Date: 2016-10-04 19:08+0200\n"
+"PO-Revision-Date: 2016-10-04 19:08+0200\n"
 "Last-Translator: Linh Do <linh@nature.org.vn>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/vi/)\n"
+"Language-Team: Vietnamese (http://www.transifex.com/open-development-mekong/"
+"odm-ckanext-odm_laws/language/vi/)\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
@@ -364,94 +365,66 @@ msgstr "Định dạng"
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""
 "Thank you for uploading this item. Instructions about vetting system "
-"available on "
-"https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
-msgstr "Cảm ơn bạn đã chia sẻ dữ liệu. Bạn có thể tham khảo hướng dẫn về quy trình kiểm duyệt thông tin của hệ thống tại  https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
+"available on https://wiki.opendevelopmentmekong.net/partners:"
+"content_review#instructions_for_default_issue_on_law_records"
+msgstr ""
+"Cảm ơn bạn đã chia sẻ dữ liệu. Bạn có thể tham khảo hướng dẫn về quy trình "
+"kiểm duyệt thông tin của hệ thống tại  https://wiki.opendevelopmentmekong."
+"net/partners:content_review#instructions_for_default_issue_on_law_records"
 
-#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
-#: odm_laws/templates/package/base.html:15
-#: odm_laws/templates/package/base.html:18
-#: odm_laws/templates/package/search.html:5
-#: odm_laws/templates/package/search.html:13
-msgid "Laws"
-msgstr "Luật"
+#~ msgid "Laws"
+#~ msgstr "Luật"
 
-#: odm_laws/templates/package/base.html:19
-#: odm_laws/templates/package/new.html:5
-#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
-#: odm_laws/templates/package/snippets/stages.html:7
-#: odm_laws/templates/package/snippets/stages.html:9
-msgid "Create Law"
-msgstr "Xây dựng luật"
+#~ msgid "Create Law"
+#~ msgstr "Xây dựng luật"
 
-#: odm_laws/templates/package/base_form_page.html:7
-msgid "What are Laws?"
-msgstr "Định nghĩa Luật"
+#~ msgid "What are Laws?"
+#~ msgstr "Định nghĩa Luật"
 
-#: odm_laws/templates/package/edit_base.html:5
-msgid "View Law"
-msgstr "Vào đọc"
+#~ msgid "View Law"
+#~ msgstr "Vào đọc"
 
-#: odm_laws/templates/package/new_package_form.html:8
-msgid "Update Law"
-msgstr "Cập nhật"
+#~ msgid "Update Law"
+#~ msgstr "Cập nhật"
 
-#: odm_laws/templates/package/read.html:11
-msgid "Parents and Childs"
-msgstr "Cha mẹ và con cái"
+#~ msgid "Parents and Childs"
+#~ msgstr "Cha mẹ và con cái"
 
-#: odm_laws/templates/package/read_base.html:6
-msgid "Manage"
-msgstr "Quản lý"
+#~ msgid "Manage"
+#~ msgstr "Quản lý"
 
-#: odm_laws/templates/package/read_base.html:15
-#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
-msgid "Law"
-msgstr "Luật"
+#~ msgid "Law"
+#~ msgstr "Luật"
 
-#: odm_laws/templates/package/read_base.html:16
-msgid "Activity Stream"
-msgstr "Chuỗi hoạt động"
+#~ msgid "Activity Stream"
+#~ msgstr "Chuỗi hoạt động"
 
-#: odm_laws/templates/package/read_base.html:17
-msgid "Related"
-msgstr "Liên quan"
+#~ msgid "Related"
+#~ msgstr "Liên quan"
 
-#: odm_laws/templates/package/read_base.html:30
-msgid "Document preview"
-msgstr "Xem trước tài liệu"
+#~ msgid "Document preview"
+#~ msgstr "Xem trước tài liệu"
 
-#: odm_laws/templates/package/search.html:23
-msgid "Add Law"
-msgstr "Bổ sung"
+#~ msgid "Add Law"
+#~ msgstr "Bổ sung"
 
-#: odm_laws/templates/package/snippets/package_form.html:5
-msgid "Are you sure you want to delete this dataset?"
-msgstr "Bạn có chắc chắn muốn xóa dữ liệu?"
+#~ msgid "Are you sure you want to delete this dataset?"
+#~ msgstr "Bạn có chắc chắn muốn xóa dữ liệu?"
 
-#: odm_laws/templates/package/snippets/package_form.html:6
-msgid "Delete"
-msgstr "Xóa"
+#~ msgid "Delete"
+#~ msgstr "Xóa"
 
-#: odm_laws/templates/package/snippets/search_form.html:4
-msgid "Search Laws..."
-msgstr "Tìm kiếm..."
+#~ msgid "Search Laws..."
+#~ msgstr "Tìm kiếm..."
 
-#: odm_laws/templates/package/snippets/stages.html:14
-#: odm_laws/templates/package/snippets/stages.html:18
-#: odm_laws/templates/package/snippets/stages.html:20
-msgid "Add data"
-msgstr "Bổ sung dữ liệu"
+#~ msgid "Add data"
+#~ msgstr "Bổ sung dữ liệu"
 
-#: odm_laws/templates/scheming/form_snippets/odm_laws_previous_legal_document.html:6
-#: odm_laws/templates/scheming/form_snippets/odm_laws_relationship_target.html:6
-msgid "Select an associated document"
-msgstr "Chọn tài liệu liên quan"
+#~ msgid "Select an associated document"
+#~ msgstr "Chọn tài liệu liên quan"
 
-#: odm_laws/templates/snippets/search_form.html:6
-msgid "Search laws..."
-msgstr "Tìm kiếm..."
+#~ msgid "Search laws..."
+#~ msgstr "Tìm kiếm..."
 
-#: odm_laws/templates/snippets/search_form.html:12
-msgid "Submit"
-msgstr "Gửi"
+#~ msgid "Submit"
+#~ msgstr "Gửi"

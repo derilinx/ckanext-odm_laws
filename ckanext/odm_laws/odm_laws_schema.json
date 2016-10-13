@@ -67,7 +67,7 @@
 			"vi": "Tham chiếu tài liệu #",
 			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
     "form_placeholder": "Document, issue, or series number."
 	},{
 		"field_name": "odm_language",
@@ -123,7 +123,7 @@
 			"vi": "Tiêu đề đầy đủ chính thức",
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
     "form_placeholder": "Full title from the document",
 		"form_attrs": {
       "data-module": "slug-preview-target"
@@ -152,7 +152,7 @@
 			"vi": "Tiêu đề thay thế/ Tên rút gọn",
 			"my": "ခေါင်းစဉ်ကွဲ/ခေါင်းစဉ်တို"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
     "form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
 	}, {
 		"field_name": "taxonomy",
@@ -170,7 +170,7 @@
 			"vi": "Mô tả",
 			"my": "Short summary"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Describe general purpose and scope"
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
@@ -182,7 +182,7 @@
 			"vi": "Các điều luật tham chiếu",
 			"my": "မူရင်းမူဝါဒများ ရည်ညွှန်းချက်"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
 	}, {
 		"field_name": "odm_spatial_range",
@@ -246,7 +246,7 @@
 			"vi": "Hạn chế truy cập và sử dụng",
 			"my": "ရယူခြင်းနှင့် အကန့်အသတ်များအသုံးပြုခြင်း"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "odm_laws_status",
@@ -301,7 +301,7 @@
 			"vi": "Ghi chú nhanh về chỉnh sửa",
 			"my": "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Describe what changed."
 	}, {
 		"field_name": "odm_laws_relationship_type",
@@ -340,7 +340,7 @@
 			"vi": "Liên hệ",
 			"my": "ဆက်သွယ်ရန်"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
 		"field_name": "odm_laws_drafting_agency",
@@ -352,7 +352,7 @@
 			"vi": "Cơ quan soạn thảo",
 			"my": "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_draft_assistance",
@@ -379,7 +379,7 @@
 			"vi": "Cơ quan hỗ trợ kỹ thuật",
 			"my": "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_technical_assistance_funding_agency",
@@ -391,7 +391,7 @@
 			"vi": "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật",
 			"my": "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
@@ -403,7 +403,7 @@
 			"vi": "Cơ quan/Đơn vị ban hành",
 			"my": "ထုတ်ပေးသောအေဂျင်စီ/အဖွဲ့အစည်းများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_implementing_agencies",
@@ -415,7 +415,7 @@
 			"vi": "Các cơ quan thực thi",
 			"my": "အကောင်အထည်ဖော်မည့် အေဂျင်စီများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": ""
 	},{
 		"field_name": "odm_laws_notes",
@@ -427,7 +427,7 @@
 			"vi": "Ghi chú",
 			"my": "မှတ်စုများ"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Add any notes to this document."
 	}, {
 		"field_name": "odm_reference_document",
@@ -474,7 +474,7 @@
 			"vi": "Tên",
 			"my": "အမည်"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "eg. January 2011 Gold Prices"
 	}, {
 		"field_name": "description_translated",
@@ -486,7 +486,7 @@
 			"vi": "Mô tả",
 			"my": "ဖော်ပြချက်"
 		},
-		"form_languages": ["en", "th", "km", "vi"],
+		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Some useful notes about the data"
 	}, {
 		"field_name": "format",

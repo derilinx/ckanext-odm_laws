@@ -5,58 +5,9 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
-		"field_name": "odm_document_type",
 		"label": "Document type",
-		"preset": "select",
-		"choices": [{
-			"value": "anukretsub-decree",
-			"label": "Anukret/Sub-Decree"
-		}, {
-			"value": "chbablawkram",
-			"label": "Chbab/Law/Kram"
-		}, {
-			"value": "constitution-of-cambodia",
-			"label": "Constitution of Cambodia"
-		}, {
-			"value": "international-treatiesagreements",
-			"label": "International Treaties/Agreements"
-		}, {
-			"value": "kech-sonyacontractagreement",
-			"label": "Kech Sonya/Contract/Agreement"
-		}, {
-			"value": "kolkar-nenomguidelines",
-			"label": "Kolkar Nenom/Guidelines"
-		}, {
-			"value": "kolnyobaypolicy",
-			"label": "Kolnyobay/Policy"
-		}, {
-			"value": "likhetletter",
-			"label": "Likhet/Letter"
-		}, {
-			"value": "prakasjoint-prakasproclamation",
-			"label": "Prakas/Joint-Prakas/Proclamation"
-		}, {
-			"value": "preah-reach-kramroyal-kram",
-			"label": "Preah Reach Kram/Royal Kram"
-		}, {
-			"value": "sarachorcircular",
-			"label": "Sarachor/Circular"
-		}, {
-			"value": "sechkdei-chhun-damneoungnoticeannouncement",
-			"label": "Sechkdei Chhun  Damneoung/Notice/Announcement"
-		}, {
-			"value": "sechkdei-nenuminstruction",
-			"label": "Sechkdei Nenum/Instruction"
-		}, {
-			"value": "sechkdei-preang-chbabdraft-laws-amp-regulations",
-			"label": "Sechkdei Preang Chbab/Draft Laws & Regulations"
-		}, {
-			"value": "sechkdei-samrechdecision",
-			"label": "Sechkdei Samrech/Decision"
-		}, {
-			"value": "others",
-			"label": "Others"
-		}]
+		"field_name": "odm_document_type",
+		"preset": "odm_document_type"
 	}, {
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",

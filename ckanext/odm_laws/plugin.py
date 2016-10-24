@@ -103,7 +103,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_lookup_relationship_target': odm_laws_helper.lookup_relationship_target,
       'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
       'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
-      'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes
+      'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes,
+      'odm_laws_get_values_from_datatable' : odm_laws_helper.get_values_from_datatable
     }
 
   def before_create(self, context, resource):

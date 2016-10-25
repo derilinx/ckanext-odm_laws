@@ -100,7 +100,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return {
       'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
-      'odm_laws_lookup_relationship_target': odm_laws_helper.lookup_relationship_target,
       'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
       'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
       'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes,

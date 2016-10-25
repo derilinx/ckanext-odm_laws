@@ -5,11 +5,6 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
-		"label": "Document type",
-		"field_name": "odm_document_type",
-		"preset": "odm_document_type",
-		"placeholder": "Select document type"
-	}, {
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
 		"label": {
@@ -21,7 +16,17 @@
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
     "form_placeholder": "Document, issue, or series number."
-	},{
+	}, {
+		"field_name": "odm_laws_issuing_agency_parties",
+    "preset": "odm_laws_issuing_agency_parties",
+		"label": "Issuing agency/parties",
+		"form_placeholder": "Select Issuing agency/parties"
+	}, {
+		"field_name": "odm_laws_implementing_agencies",
+    "preset": "odm_laws_implementing_agencies",
+		"label": "Implementing agencies",
+		"form_placeholder": "Select implementing agencies"
+	}, {
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
@@ -88,13 +93,30 @@
       "data-module": "slug-preview-target"
     },
 		"validators": "if_empty_same_as(name)"
-	},{
+	}, {
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset",
     "validators": "if_empty_same_as(title) odm_dataset_if_empty_new_id odm_dataset_urlencode"
-	},{
+	}, {
+		"label": "Formal type of document",
+		"field_name": "odm_document_type",
+		"preset": "odm_document_type",
+		"placeholder": "Select document type"
+	}, {
+		"field_name": "odm_laws_objective",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Objective of the document",
+			"th": "Objective of the document",
+			"km": "Objective of the document",
+			"vi": "Objective of the document",
+			"my": "Objective of the document်"
+		},
+		"form_languages": ["en", "th", "km", "vi", "my"],
+		"form_placeholder": "The brief objective of this law as stated in the document."
+	}, {
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",
 		"label": {
@@ -126,7 +148,7 @@
 		"form_placeholder": "Describe general purpose and scope"
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
-		"preset": "fluent_markdown_single",
+		"preset": "odm_laws_relationship_target",
 		"label": {
 			"en": "Primary policy reference point",
 			"th": "Primary policy reference point",
@@ -136,6 +158,10 @@
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
+	}, {
+		"field_name": "owner_org",
+		"label": "Organization",
+		"preset": "dataset_organization"
 	}, {
 		"field_name": "odm_spatial_range",
 		"label": "Geographic area (spatial range)",
@@ -174,10 +200,6 @@
 			"value": "mm",
 			"label": "Myanmar"
 		}]
-	}, {
-		"field_name": "owner_org",
-		"label": "Organization",
-		"preset": "dataset_organization"
 	}, {
 		"field_name": "license_id",
 		"label": "License",
@@ -227,8 +249,8 @@
 	}, {
 		"field_name": "odm_laws_previous_legal_document",
 		"label": "Previous legal document",
-		"preset": "odm_laws_previous_legal_document",
-		"form_placeholder": ""
+		"preset": "odm_laws_relationship_target",
+		"form_placeholder": "Does this law replace, amend or supplement previous law?"
 	}, {
 		"field_name": "odm_laws_previous_changes_notes",
 		"preset": "fluent_markdown_single",
@@ -242,22 +264,20 @@
 		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Describe what changed."
 	}, {
-		"field_name": "odm_laws_relationship_type",
-		"label": "Relationship to other legal docs",
-		"preset": "select",
-		"choices": [{
-			"value": "child_of",
-			"label": "Child of"
-		}, {
-			"value": "parent_of",
-			"label": "Parent of"
-		}],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_relationship_target",
-		"label": "Associated Document",
+		"field_name": "odm_laws_parent_document",
+		"label": "Parent document",
 		"preset": "odm_laws_relationship_target",
-		"form_placeholder": ""
+		"form_placeholder": "The law that directly supersedes this law"
+	}, {
+		"field_name": "odm_laws_child_document",
+		"label": "Child Document",
+		"preset": "odm_laws_relationship_target",
+		"form_placeholder": "The law that directly precedes this law"
+	}, {
+		"field_name": "odm_laws_other_references",
+		"label": "Other reference or supporting documents",
+		"preset": "odm_library_relationship_target",
+		"form_placeholder": "Any other supporting documents or references that relate to this law; i.e. reports, policy briefs etc."
 	}, {
 		"field_name": "odm_laws_official_publication_reference",
 		"label": "Publication reference",
@@ -281,67 +301,6 @@
 		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
-		"field_name": "odm_laws_drafting_agency",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Drafting agency",
-			"th": "Drafting agency",
-			"km": "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង",
-			"vi": "Cơ quan soạn thảo",
-			"my": "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_draft_assistance",
-		"label": "Technical assistance for drafting",
-		"preset": "select",
-		"choices": [{
-			"value": "yes",
-			"label": "Yes"
-		}, {
-			"value": "no",
-			"label": "No"
-		}, {
-			"value": "unknown",
-			"label": "Unknown"
-		}],
-		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
-	}, {
-		"field_name": "odm_laws_agency_technical_assistance",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Agency providing technical assistance",
-			"th": "Agency providing technical assistance",
-			"km": "ទីភ្នាក់ងារផ្តល់ជំនួយបច្ចេកទេស",
-			"vi": "Cơ quan hỗ trợ kỹ thuật",
-			"my": "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_technical_assistance_funding_agency",
-    "preset": "fluent_text_single",
-		"label": {
-			"en": "Technical assistance funding agency",
-			"th": "Technical assistance funding agency",
-			"km": "ទីភ្នាក់ងារឧបត្ថម្ភជំនួយបច្ចេកទេស",
-			"vi": "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật",
-			"my": "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_issuing_agency_parties",
-    "preset": "odm_laws_issuing_agency_parties",
-		"label": "Issuing agency/parties",
-		"form_placeholder": "Select Issuing agency/parties"
-	}, {
-		"field_name": "odm_laws_implementing_agencies",
-    "preset": "odm_laws_implementing_agencies",
-		"label": "Implementing agencies",
-		"form_placeholder": "Select implementing agencies"
-	},{
 		"field_name": "odm_laws_notes",
 		"preset": "fluent_markdown_single",
 		"label": {

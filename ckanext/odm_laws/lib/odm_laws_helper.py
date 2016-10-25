@@ -55,10 +55,6 @@ def get_dataset_notes(dataset_id, truncate):
 
 	return notes
 
-def lookup_relationship_target():
-	result = toolkit.get_action('package_search')(data_dict={'fq': '+type:laws_record'})
-	return map(lambda x:x["name"], result['results'])
-
 def semre_of_database_relationships(dataset_id,viewpoint):
 	''' semantic representation of relationships '''
 

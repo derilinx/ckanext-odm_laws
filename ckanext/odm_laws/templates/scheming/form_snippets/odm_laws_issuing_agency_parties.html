@@ -1,0 +1,13 @@
+
+{% block package_metadata_fields_odm_laws_issuing_agency_parties %}
+	<div class="control-group">
+		<label class="control-label" for="field-odm_odm_laws_issuing_agency_parties">{{ h.scheming_language_text(field.label) }}</label>
+		<div class="controls control-full">
+			<select id="field-odm_laws_issuing_agency_parties" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
+				{% for issuing_agency in h.odm_laws_get_values_from_datatable('749dc5bd-748a-498c-8ab0-5169de8b3fbe','id','Issuing_Agency') %}
+					<option value="{{ issuing_agency['id'] }}">{{ issuing_agency['Issuing_Agency'] }}</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+
+{% block package_metadata_fields_odm_laws_status %}
+	<div class="control-group">
+		<label class="control-label" for="field-odm_odm_laws_status">{{ h.scheming_language_text(field.label) }}</label>
+		<div class="controls control-full">
+			<select id="field-odm_laws_status" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
+				{% for laws_status in h.odm_laws_get_values_from_datatable('481dbf3d-6c7d-4c80-8ed6-e4e85e982cd1','id','laws_status') %}
+					<option value="{{ laws_status['id'] }}">{{ laws_status['status_name'] }}</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+{% endblock %}

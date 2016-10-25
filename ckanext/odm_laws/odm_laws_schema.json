@@ -7,7 +7,8 @@
 	"dataset_fields": [{
 		"label": "Document type",
 		"field_name": "odm_document_type",
-		"preset": "odm_document_type"
+		"preset": "odm_document_type",
+		"placeholder": "Select document type"
 	}, {
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
@@ -201,23 +202,9 @@
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "odm_laws_status",
+    "preset": "odm_laws_status",
 		"label": "Status",
-    "required": "true",
-		"preset": "select",
-		"choices": [{
-			"value": "unspecified",
-			"label": "Unspecified"
-		},{
-			"value": "draft",
-			"label": "Draft"
-		}, {
-			"value": "adopted",
-			"label": "Adopted"
-		}, {
-			"value": "signed",
-			"label": "Signed"
-		}],
-    "form_placeholder": "Hierarchical status of agreement, law, decree or other legal policy."
+		"form_placeholder": "Select law status"
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
@@ -346,28 +333,14 @@
 		"form_placeholder": ""
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Issuing agency/parties",
-			"th": "Issuing agency/parties",
-			"km": "ទីភ្នាក់ងារ/ភាគីចេញផ្សាយ",
-			"vi": "Cơ quan/Đơn vị ban hành",
-			"my": "ထုတ်ပေးသောအေဂျင်စီ/အဖွဲ့အစည်းများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
+    "preset": "odm_laws_issuing_agency_parties",
+		"label": "Issuing agency/parties",
+		"form_placeholder": "Select Issuing agency/parties"
 	}, {
 		"field_name": "odm_laws_implementing_agencies",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Implementing agencies",
-			"th": "Implementing agencies",
-			"km": "ទីភ្នាក់ងារអនុវត្ត",
-			"vi": "Các cơ quan thực thi",
-			"my": "အကောင်အထည်ဖော်မည့် အေဂျင်စီများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
+    "preset": "odm_laws_implementing_agencies",
+		"label": "Implementing agencies",
+		"form_placeholder": "Select implementing agencies"
 	},{
 		"field_name": "odm_laws_notes",
 		"preset": "fluent_markdown_single",

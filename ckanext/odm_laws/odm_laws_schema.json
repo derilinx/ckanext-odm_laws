@@ -145,7 +145,7 @@
 			"my": "Short summary"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Describe general purpose and scope"
+		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
 		"preset": "odm_laws_relationship_target",
@@ -231,21 +231,17 @@
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
     "preset": "odm_date",
-    "form_placeholder": "Date the version of draft law was created."
+    "form_placeholder": "The version date of when the law was drafted."
 	}, {
 		"field_name": "odm_promulgation_date",
-		"label": "Adoption date/Promulgation date/Signing",
+		"label": "Adoption date/Enacted/Promulgation date/Signing date",
     "preset": "odm_date",
-    "form_placeholder": "Date the law was officially authorized."
+    "form_placeholder": "The date the law was officially authorised."
 	}, {
 		"field_name": "odm_effective_date",
-		"label": "Effective date",
+		"label": "Effective/Enforced Date",
     "preset": "odm_date",
     "form_placeholder": "Date the law is to take effect."
-	}, {
-		"field_name": "odm_application_date",
-		"label": "Application date",
-    "preset": "odm_date"
 	}, {
 		"field_name": "odm_laws_previous_legal_document",
 		"label": "Previous legal document",
@@ -262,7 +258,7 @@
 			"my": "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Describe what changed."
+		"form_placeholder": "A short statement describing what changed."
 	}, {
 		"field_name": "odm_laws_parent_document",
 		"label": "Parent document",
@@ -281,12 +277,12 @@
 	}, {
 		"field_name": "odm_laws_official_publication_reference",
 		"label": "Publication reference",
-		"form_snippet": "text.html",
+		"form_snippet": "markdown.html",
 		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
 	}, {
 		"field_name": "odm_laws_source",
 		"label": "Links to source",
-		"form_snippet": "text.html",
+		"form_snippet": "markdown.html",
 		"form_placeholder": "Officials URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
@@ -311,7 +307,7 @@
 			"my": "မှတ်စုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Add any notes to this document."
+		"form_placeholder": "Any additional notes regarding this document."
 	}, {
 		"field_name": "odm_reference_document",
 		"label": "Legacy reference document",

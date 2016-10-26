@@ -2,7 +2,7 @@
 	<div class="control-group">
 		<label class="control-label" for="field-odm_library_relationship_target">{{ h.scheming_language_text(field.label) }}</label>
 		<div class="controls control-full">
-			<select id="field-odm_library_relationship_target" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _("e.g. Library record...") }}">
+			<select multiple id="field-odm_library_relationship_target" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
 				<option disabled selected>--{{ _("Select an associated document") }} --</option>
 				{% for dataset in h.odm_nav_get_all_library_records() %}
 					<option value="{{ dataset }}">{{ dataset }}</option>

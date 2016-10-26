@@ -3,7 +3,7 @@
 	<div class="control-group">
 		<label class="control-label" for="field-odm_odm_document_type">{{ h.scheming_language_text(field.label) }}</label>
 		<div class="controls control-full">
-			<select id="field-odm_document_type" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _("e.g. Select document type") }}">
+			<select id="field-odm_document_type" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
 				{% for document_type in h.odm_laws_get_values_from_datatable('0a13d1a5-606c-42ab-985e-1a34c6ebd697','id','document_type') %}
 					<option value="{{ document_type['id'] }}">{{ document_type['document_type'] }}</option>
 				{% endfor %}

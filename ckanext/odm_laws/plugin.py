@@ -134,11 +134,3 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
       if 'url_type' in pkg_dict_or_resource:
         _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
-
-      if 'odm_laws_relationship_target' in pkg_dict_or_resource:
-        rel_subj=pkg_dict_or_resource['name']
-        rel_type=pkg_dict_or_resource['odm_laws_relationship_type']
-        rel_target=pkg_dict_or_resource['odm_laws_relationship_target']
-
-        log.debug("Creating relationship %s %s",rel_type,rel_target)
-        toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})

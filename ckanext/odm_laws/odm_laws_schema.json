@@ -148,7 +148,7 @@
 		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
-		"preset": "odm_laws_relationship_target",
+		"preset": "odm_related_laws_records",
 		"label": {
 			"en": "Primary policy reference point",
 			"th": "Primary policy reference point",
@@ -245,7 +245,7 @@
 	}, {
 		"field_name": "odm_laws_previous_legal_document",
 		"label": "Previous legal document",
-		"preset": "odm_laws_relationship_target",
+		"preset": "odm_related_laws_records",
 		"form_placeholder": "Does this law replace, amend or supplement previous law?"
 	}, {
 		"field_name": "odm_laws_previous_changes_notes",
@@ -262,17 +262,17 @@
 	}, {
 		"field_name": "odm_laws_parent_document",
 		"label": "Parent document",
-		"preset": "odm_laws_relationship_target",
+		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly supersedes this law"
 	}, {
 		"field_name": "odm_laws_child_document",
 		"label": "Child Document",
-		"preset": "odm_laws_relationship_target",
+		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly precedes this law"
 	}, {
 		"field_name": "odm_laws_other_references",
 		"label": "Other reference or supporting documents",
-		"preset": "odm_library_relationship_target",
+		"preset": "odm_related_library_records",
 		"form_placeholder": "Any other supporting documents or references that relate to this law; i.e. reports, policy briefs etc."
 	}, {
 		"field_name": "odm_laws_official_publication_reference",

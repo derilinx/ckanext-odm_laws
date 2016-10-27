@@ -36,46 +36,4 @@ def create_default_issue_laws_record(pkg_info):
 
 		log.error("Action 'issue_create' not found. Please make sure that ckanext-issues plugin is installed.")
 
-def get_dataset_name(dataset_id):
-
-	dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-	return dataset_dict['name']
-
-def get_dataset_notes(dataset_id, truncate):
-
-	notes = None
-	dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-
-	if 'notes_translated' in dataset_dict :
-		lang = pylons.request.environ['CKAN_LANG']
-		if lang in dataset_dict['notes_translated']:
-			notes = dataset_dict['notes_translated'][lang]
-			if truncate == True and notes:
-				notes = notes[0:99]
-
-	return notes
-
-def semre_of_database_relationships(dataset_id,viewpoint):
-	''' semantic representation of relationships '''
-
-	if not dataset_id:
-		return []
-
-	dataset_dict = toolkit.get_action('package_show')(data_dict={'id':dataset_id})
-	relationships = []
-
-	if viewpoint == 'object':
-		relationships = dataset_dict['relationships_as_object']
-	elif viewpoint == 'subject':
-		relationships = dataset_dict['relationships_as_subject']
-
-	return relationships
-
-def get_values_from_datatable(resource_id,field_id,field_value):
-  ''' pulls tabular data from datastore '''
-
-  result = toolkit.get_action('datastore_search')(data_dict={'resource_id': resource_id})
-
-  return result['records']
-
 session = {}

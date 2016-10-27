@@ -3,9 +3,13 @@
 	<div class="control-group">
 		<label class="control-label" for="field-odm_odm_laws_issuing_agency_parties">{{ h.scheming_language_text(field.label) }}</label>
 		<div class="controls control-full">
-			<select id="field-odm_laws_issuing_agency_parties" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
-				{% for issuing_agency in h.odm_laws_get_values_from_datatable(h.odm_laws_get_resource_id_for_field('odm_laws_issuing_agency_parties'),'id','Issuing_Agency') %}
-					<option value="{{ issuing_agency['id'] }}">{{ issuing_agency['Issuing_Agency'] }}</option>
+			<select id="field-odm_laws_issuing_agency_parties"
+				name="{{ h.scheming_language_text(field.field_name) }}"
+				data-module="autocomplete"
+				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}"
+				class="odm_spatial_range-specific">
+				{% for issuing_agency in h.odm_dataset_get_resource_from_datatable(h.odm_laws_get_resource_id_for_field('odm_laws_issuing_agency_parties')) %}
+					<option data-country_codes="{{ issuing_agency['country_codes'] }}" value="{{ issuing_agency['id'] }}">{{ issuing_agency['Issuing_Agency'] }}</option>
 				{% endfor %}
 			</select>
 		</div>

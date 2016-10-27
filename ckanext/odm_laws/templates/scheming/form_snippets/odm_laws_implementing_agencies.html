@@ -4,7 +4,7 @@
 		<label class="control-label" for="field-odm_odm_implementing_agencies">{{ h.scheming_language_text(field.label) }}</label>
 		<div class="controls control-full">
 			<select id="field-odm_implementing_agencies" name="{{ h.scheming_language_text(field.field_name) }}" data-module="autocomplete" placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
-				{% for implementing_agency in h.odm_laws_get_values_from_datatable('1a4610db-a5c1-4836-8676-1adc35b895e7','id','implementing_agency_name') %}
+				{% for implementing_agency in h.odm_laws_get_values_from_datatable(h.odm_laws_get_resource_id_for_field('odm_laws_implementing_agencies'),'id','implementing_agency_name') %}
 					<option value="{{ implementing_agency['id'] }}">{{ implementing_agency['implementing_agency_name'] }}</option>
 				{% endfor %}
 			</select>

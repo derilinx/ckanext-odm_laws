@@ -8,6 +8,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import odm_laws_helper
+import odm_laws_config
 from urlparse import urlparse
 import json
 from pylons import config
@@ -103,7 +104,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
       'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
       'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes,
-      'odm_laws_get_values_from_datatable' : odm_laws_helper.get_values_from_datatable
+      'odm_laws_get_values_from_datatable' : odm_laws_helper.get_values_from_datatable,
+      'odm_laws_get_resource_id_for_field' : odm_laws_config.get_resource_id_for_field
     }
 
   def before_create(self, context, resource):

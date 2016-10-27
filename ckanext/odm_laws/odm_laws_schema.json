@@ -15,22 +15,22 @@
 			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Document, issue, or series number."
+    "form_placeholder": "The legal reference document number as used by the internal governing agency."
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
     "preset": "odm_laws_issuing_agency_parties",
 		"label": "Issuing agency/parties",
-		"form_placeholder": "Select Issuing agency/parties"
+		"form_placeholder": "The jurisdictional agency responsible for drafting and issuing the (law) legal document."
 	}, {
 		"field_name": "odm_laws_implementing_agencies",
     "preset": "odm_laws_implementing_agencies",
 		"label": "Implementing agencies",
-		"form_placeholder": "Select implementing agencies"
+		"form_placeholder": "The jurisdictional agency responsible for the enforcing and implementing the (law) legal document."
 	}, {
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
-		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
+		"form_placeholder": "The language the document is available in.",
 		"preset": "odm_language",
 		"select_size": 4,
 		"choices": [{
@@ -81,7 +81,7 @@
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Full title from the document",
+    "form_placeholder": "Full title of document. Please do not repeat the document type or number in this field.",
 		"form_attrs": {
       "data-module": "slug-preview-target"
     }
@@ -103,7 +103,7 @@
 		"label": "Formal type of document",
 		"field_name": "odm_document_type",
 		"preset": "odm_document_type",
-		"placeholder": "Select document type"
+		"placeholder": "The type of document this is."
 	}, {
 		"field_name": "odm_laws_objective",
 		"preset": "fluent_markdown_single",
@@ -226,7 +226,7 @@
 		"field_name": "odm_laws_status",
     "preset": "odm_laws_status",
 		"label": "Status",
-		"form_placeholder": "Select law status"
+		"form_placeholder": "Current operational state of the legal document."
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
@@ -283,7 +283,7 @@
 		"field_name": "odm_laws_source",
 		"label": "Links to source",
 		"form_snippet": "markdown.html",
-		"form_placeholder": "Officials URLs where the document is made available."
+		"form_placeholder": "Official URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
     "preset": "fluent_markdown_single",

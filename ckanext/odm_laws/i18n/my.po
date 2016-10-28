@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-10-04 19:07+0200\n"
-"PO-Revision-Date: 2016-10-04 19:07+0200\n"
+"POT-Creation-Date: 2016-10-27 07:23+0200\n"
+"PO-Revision-Date: 2016-10-27 07:23+0200\n"
 "Last-Translator: Theint Naing Yoon <yoon@phandeeyar.org>\n"
 "Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/"
 "language/my/)\n"
@@ -24,338 +24,154 @@ msgid "Document type"
 msgstr "စာတမ်းအမျိုးအစား"
 
 #: odm_laws/i18n/metadata_fields.php:4
-msgid "Anukret/Sub-Decree"
-msgstr "တရားရုံးအမိန့်ခွဲ"
-
-#: odm_laws/i18n/metadata_fields.php:5
-msgid "Chbab/Law/Kram"
-msgstr "ဥပဒေ"
-
-#: odm_laws/i18n/metadata_fields.php:6
-msgid "Constitution of Cambodia"
-msgstr "ကမ္ဘောဒီးယားနိုင်ငံ၏ ဖွဲ့စည်းပုံ အခြေခံဥပဒေ"
-
-#: odm_laws/i18n/metadata_fields.php:7
-msgid "International Treaties/Agreements"
-msgstr "နိုင်ငံတကာသဘောတူညီချက်များ"
-
-#: odm_laws/i18n/metadata_fields.php:8
-msgid "Kech Sonya/Contract/Agreement"
-msgstr "သဘောတူညီချက်"
-
-#: odm_laws/i18n/metadata_fields.php:9
-msgid "Kolkar Nenom/Guidelines"
-msgstr "လမ်းကြောင်းပေးခြင်း"
-
-#: odm_laws/i18n/metadata_fields.php:10
-msgid "Kolnyobay/Policy"
-msgstr "မူဝါဒ"
-
-#: odm_laws/i18n/metadata_fields.php:11
-msgid "Likhet/Letter"
-msgstr "စာ"
-
-#: odm_laws/i18n/metadata_fields.php:12
-msgid "Prakas/Joint-Prakas/Proclamation"
-msgstr "ထုတ်ပြန်ချက်"
-
-#: odm_laws/i18n/metadata_fields.php:13
-msgid "Preah Reach Kram/Royal Kram"
-msgstr "Preah Reach Kram/Royal Kram"
-
-#: odm_laws/i18n/metadata_fields.php:14
-msgid "Sarachor/Circular"
-msgstr "Sarachor/Circular"
-
-#: odm_laws/i18n/metadata_fields.php:15
-msgid "Sechkdei Chhun  Damneoung/Notice/Announcement"
-msgstr "သတိပေးချက်/ကြေငြာချက်"
-
-#: odm_laws/i18n/metadata_fields.php:16
-msgid "Sechkdei Nenum/Instruction"
-msgstr "ညွှန်ကြားချက်"
-
-#: odm_laws/i18n/metadata_fields.php:17
-msgid "Sechkdei Preang Chbab/Draft Laws & Regulations"
-msgstr "ဥပဒေကြမ်း နှင့် လုပ်ထုံးလုပ်နည်းများ"
-
-#: odm_laws/i18n/metadata_fields.php:18
-msgid "Sechkdei Samrech/Decision"
-msgstr "ဆုံးဖြတ်ချက်"
-
-#: odm_laws/i18n/metadata_fields.php:19
-msgid "Others"
-msgstr "အခြား"
-
-#: odm_laws/i18n/metadata_fields.php:20
 msgid "Document reference #"
 msgstr "ရည်ညွှန်း စာတမ်းများ"
 
-#: odm_laws/i18n/metadata_fields.php:21
+#: odm_laws/i18n/metadata_fields.php:5
 msgid "Language"
 msgstr "ဘာသာစကား"
 
-#: odm_laws/i18n/metadata_fields.php:22
-msgid "Burmese"
-msgstr "ဗမာဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:23
-msgid "English"
-msgstr "အင်္ဂလိပ်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:24
-msgid "Khmer"
-msgstr "ခမာဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:25
-msgid "Lao"
-msgstr "လာအိုဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:26
-msgid "Thai"
-msgstr "ထိုင်းဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:27
-msgid "Vietnamese"
-msgstr "ဗီယက်နမ်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:28
-msgid "Chinese"
-msgstr "တရုတ်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:29
-msgid "French"
-msgstr "ပြင်သစ်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:30
-msgid "German"
-msgstr "ဂျာမန်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:31
-msgid "Japanese"
-msgstr "ဂျပန်ဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:32
-msgid "Korean"
-msgstr "ကိုရီးယားဘာသာစကား"
-
-#: odm_laws/i18n/metadata_fields.php:33
-msgid "Other"
-msgstr "အခြား"
-
-#: odm_laws/i18n/metadata_fields.php:34
+#: odm_laws/i18n/metadata_fields.php:6
 msgid "Formal full title"
 msgstr "ခေါင်းစဉ်အပြည့်အစုံ"
 
-#: odm_laws/i18n/metadata_fields.php:35
+#: odm_laws/i18n/metadata_fields.php:7
 msgid "URL"
 msgstr "URL"
 
-#: odm_laws/i18n/metadata_fields.php:36
+#: odm_laws/i18n/metadata_fields.php:8
 msgid "Alternative/short title"
 msgstr "ခေါင်းစဉ်ကွဲ/ခေါင်းစဉ်တို"
 
-#: odm_laws/i18n/metadata_fields.php:37
+#: odm_laws/i18n/metadata_fields.php:9
 msgid "Topics"
 msgstr "ခေါင်းစဉ်များ"
 
-#: odm_laws/i18n/metadata_fields.php:38
+#: odm_laws/i18n/metadata_fields.php:10
 msgid "Short summary"
 msgstr "အနှစ်ချုပ်"
 
-#: odm_laws/i18n/metadata_fields.php:39
+#: odm_laws/i18n/metadata_fields.php:11
 msgid "Primary policy reference point"
 msgstr "မူရင်းမူဝါဒများ ရည်ညွှန်းချက်"
 
-#: odm_laws/i18n/metadata_fields.php:40
+#: odm_laws/i18n/metadata_fields.php:12
 msgid "Geographic area (spatial range)"
 msgstr "ပထဝီဧရိယာ (spatial range)"
 
-#: odm_laws/i18n/metadata_fields.php:41
-msgid "Global"
-msgstr "ကမ္ဘာတစ်ဝှမ်း"
-
-#: odm_laws/i18n/metadata_fields.php:42
-msgid "ASEAN"
-msgstr "အာစီယံ"
-
-#: odm_laws/i18n/metadata_fields.php:43
-msgid "Greater Mekong Subregion (GMS)"
-msgstr "Greater Mekong Subregion (GMS)"
-
-#: odm_laws/i18n/metadata_fields.php:44
-msgid "Lower Mekong Basin"
-msgstr "Lower Mekong Basin"
-
-#: odm_laws/i18n/metadata_fields.php:45
-msgid "Lower Mekong countries"
-msgstr "မဲခေါင်အောက်ပိုင်းနိုင်ငံများ"
-
-#: odm_laws/i18n/metadata_fields.php:46
-msgid "Cambodia"
-msgstr "ကမ္ဘောဒီးယား"
-
-#: odm_laws/i18n/metadata_fields.php:47
-msgid "Vietnam"
-msgstr "ဗီယက်နမ်"
-
-#: odm_laws/i18n/metadata_fields.php:48
-msgid "Laos"
-msgstr "လာအို "
-
-#: odm_laws/i18n/metadata_fields.php:49
-msgid "Thailand"
-msgstr "ထိုင်း"
-
-#: odm_laws/i18n/metadata_fields.php:50
-msgid "Myanmar"
-msgstr "မြန်မာ"
-
-#: odm_laws/i18n/metadata_fields.php:51
+#: odm_laws/i18n/metadata_fields.php:13
 msgid "Organization"
 msgstr "အဖွဲ့အစည်း"
 
-#: odm_laws/i18n/metadata_fields.php:52
+#: odm_laws/i18n/metadata_fields.php:14
 msgid "License"
 msgstr "လိုင်စင်"
 
-#: odm_laws/i18n/metadata_fields.php:53
+#: odm_laws/i18n/metadata_fields.php:15
 msgid "Copyright"
 msgstr "မူပိုင်ခွင့်"
 
-#: odm_laws/i18n/metadata_fields.php:54
+#: odm_laws/i18n/metadata_fields.php:16
 msgid "Access and use constraints"
 msgstr "ရယူခြင်းနှင့် အကန့်အသတ်များအသုံးပြုခြင်း"
 
-#: odm_laws/i18n/metadata_fields.php:55
+#: odm_laws/i18n/metadata_fields.php:17
 msgid "Status"
 msgstr "အခြေအနေ"
 
-#: odm_laws/i18n/metadata_fields.php:56
-msgid "Unspecified"
-msgstr "တိကျစွာသတ်မှတ်ထားခြင်းမရှိသော"
-
-#: odm_laws/i18n/metadata_fields.php:57
-msgid "Draft"
-msgstr "အကြမ်း"
-
-#: odm_laws/i18n/metadata_fields.php:58
-msgid "Adopted"
-msgstr "မွေးစားခြင်း"
-
-#: odm_laws/i18n/metadata_fields.php:59
-msgid "Signed"
-msgstr "လက်မှတ်ရေးထိုးခြင်း"
-
-#: odm_laws/i18n/metadata_fields.php:60
+#: odm_laws/i18n/metadata_fields.php:18
 msgid "Version date (of draft)"
 msgstr "အကြမ်းထုတ်ဝေသည့်ရက်စွဲ"
 
-#: odm_laws/i18n/metadata_fields.php:61
+#: odm_laws/i18n/metadata_fields.php:19
 msgid "Adoption date/Promulgation date/Signing"
 msgstr "ခံယူရက်စွဲ"
 
-#: odm_laws/i18n/metadata_fields.php:62
+#: odm_laws/i18n/metadata_fields.php:20
 msgid "Effective date"
 msgstr "အသက်ဝင်သည့်ရက်စွဲ"
 
-#: odm_laws/i18n/metadata_fields.php:63
-msgid "Application date"
-msgstr "အသုံးပြုသည့်ရက်စွဲ"
+#: odm_laws/i18n/metadata_fields.php:21
+msgid "Objective of the document"
+msgstr ""
 
-#: odm_laws/i18n/metadata_fields.php:64
+#: odm_laws/i18n/metadata_fields.php:22
 msgid "Previous legal document"
 msgstr "ဥပဒေရေးရာ စာတမ်းဟောင်း"
 
-#: odm_laws/i18n/metadata_fields.php:65
+#: odm_laws/i18n/metadata_fields.php:23
 msgid "Short notes of change"
 msgstr "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 
-#: odm_laws/i18n/metadata_fields.php:66
-msgid "Relationship to other legal docs"
-msgstr "အခြား ဥပဒေရေးရာစာတမ်းများနှင့် ဆက်နွှယ်မှု"
+#: odm_laws/i18n/metadata_fields.php:24
+msgid "Parent document"
+msgstr ""
 
-#: odm_laws/i18n/metadata_fields.php:67
-msgid "Child of"
-msgstr "Child of"
+#: odm_laws/i18n/metadata_fields.php:25
+msgid "Child document"
+msgstr ""
 
-#: odm_laws/i18n/metadata_fields.php:68
-msgid "Parent of"
-msgstr "Parent of"
-
-#: odm_laws/i18n/metadata_fields.php:69
+#: odm_laws/i18n/metadata_fields.php:26
 msgid "Associated Document"
 msgstr "ဆက်နွှယ်မှုရှိသည့် စာတမ်းများ"
 
-#: odm_laws/i18n/metadata_fields.php:70
+#: odm_laws/i18n/metadata_fields.php:27
 msgid "Publication reference"
 msgstr "ထုတ်ဝေမှုအတွက်ညွှန်းဆိုချက်"
 
-#: odm_laws/i18n/metadata_fields.php:71
+#: odm_laws/i18n/metadata_fields.php:28
 msgid "Links to source"
 msgstr "အရင်းမြစ်နှင့်ချိတ်ဆက်ခြင်း"
 
-#: odm_laws/i18n/metadata_fields.php:72
+#: odm_laws/i18n/metadata_fields.php:29
 msgid "Contact"
 msgstr "ဆက်သွယ်ရန်"
 
-#: odm_laws/i18n/metadata_fields.php:73
+#: odm_laws/i18n/metadata_fields.php:30
 msgid "Drafting agency"
 msgstr "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
 
-#: odm_laws/i18n/metadata_fields.php:74
-msgid "Technical assistance for drafting"
-msgstr "အကြမ်းဆွဲခြင်းအတွက် နည်းပညာဆိုင်ရာ အထောက်အပံ့"
-
-#: odm_laws/i18n/metadata_fields.php:75
+#: odm_laws/i18n/metadata_fields.php:31
 msgid "Yes"
 msgstr "ရှိပါသည်"
 
-#: odm_laws/i18n/metadata_fields.php:76
+#: odm_laws/i18n/metadata_fields.php:32
 msgid "No"
 msgstr "မရှိသေးပါ"
 
-#: odm_laws/i18n/metadata_fields.php:77
+#: odm_laws/i18n/metadata_fields.php:33
 msgid "Unknown"
 msgstr "မသိရှိပါ"
 
-#: odm_laws/i18n/metadata_fields.php:78
-msgid "Agency providing technical assistance"
-msgstr "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
-
-#: odm_laws/i18n/metadata_fields.php:79
-msgid "Technical assistance funding agency"
-msgstr "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
-
-#: odm_laws/i18n/metadata_fields.php:80
+#: odm_laws/i18n/metadata_fields.php:34
 msgid "Issuing agency/parties"
 msgstr "ထုတ်ပေးသောအေဂျင်စီ/အဖွဲ့အစည်းများ"
 
-#: odm_laws/i18n/metadata_fields.php:81
+#: odm_laws/i18n/metadata_fields.php:35
 msgid "Implementing agencies"
 msgstr "အကောင်အထည်ဖော်မည့် အေဂျင်စီများ"
 
-#: odm_laws/i18n/metadata_fields.php:82
+#: odm_laws/i18n/metadata_fields.php:36
 msgid "Notes"
 msgstr "မှတ်စုများ"
 
-#: odm_laws/i18n/metadata_fields.php:83
+#: odm_laws/i18n/metadata_fields.php:37
 msgid "Legacy reference document"
 msgstr "ဆက်ခံရရှိကြောင်းညွှန်းဆိုသည့်စာတမ်း"
 
-#: odm_laws/i18n/metadata_fields.php:84
+#: odm_laws/i18n/metadata_fields.php:38
 msgid "Maintainer"
 msgstr "ထိန်းသိမ်းစောင့်ရှောက်သူ"
 
-#: odm_laws/i18n/metadata_fields.php:85
+#: odm_laws/i18n/metadata_fields.php:39
 msgid "Maintainer email"
 msgstr "ထိန်းသိမ်းစောင့်ရှောက်သူ၏ အီးမေးလ်"
 
-#: odm_laws/i18n/metadata_fields.php:86
+#: odm_laws/i18n/metadata_fields.php:40
 msgid "Name"
 msgstr "အမည်"
 
-#: odm_laws/i18n/metadata_fields.php:87
+#: odm_laws/i18n/metadata_fields.php:41
 msgid "Format"
 msgstr "ပုံစံ"
 
@@ -366,6 +182,153 @@ msgid ""
 msgstr ""
 "ဤအကြောင်းအရာကို တင်ပေးသည့်အတွက်ကျေးဇူးတင်ပါတယ်။ လေ့လာစီစစ်ခြင်းစနစ်အတွက် လမ်းညွှန်ကို https://wiki.opendevelopmentmekong."
 "net/partners:content_review#instructions_for_default_issue_on_law_records တွင်ကြည့်ရှုနိုင်သည်။"
+
+#~ msgid "Anukret/Sub-Decree"
+#~ msgstr "တရားရုံးအမိန့်ခွဲ"
+
+#~ msgid "Chbab/Law/Kram"
+#~ msgstr "ဥပဒေ"
+
+#~ msgid "Constitution of Cambodia"
+#~ msgstr "ကမ္ဘောဒီးယားနိုင်ငံ၏ ဖွဲ့စည်းပုံ အခြေခံဥပဒေ"
+
+#~ msgid "International Treaties/Agreements"
+#~ msgstr "နိုင်ငံတကာသဘောတူညီချက်များ"
+
+#~ msgid "Kech Sonya/Contract/Agreement"
+#~ msgstr "သဘောတူညီချက်"
+
+#~ msgid "Kolkar Nenom/Guidelines"
+#~ msgstr "လမ်းကြောင်းပေးခြင်း"
+
+#~ msgid "Kolnyobay/Policy"
+#~ msgstr "မူဝါဒ"
+
+#~ msgid "Likhet/Letter"
+#~ msgstr "စာ"
+
+#~ msgid "Prakas/Joint-Prakas/Proclamation"
+#~ msgstr "ထုတ်ပြန်ချက်"
+
+#~ msgid "Preah Reach Kram/Royal Kram"
+#~ msgstr "Preah Reach Kram/Royal Kram"
+
+#~ msgid "Sarachor/Circular"
+#~ msgstr "Sarachor/Circular"
+
+#~ msgid "Sechkdei Chhun  Damneoung/Notice/Announcement"
+#~ msgstr "သတိပေးချက်/ကြေငြာချက်"
+
+#~ msgid "Sechkdei Nenum/Instruction"
+#~ msgstr "ညွှန်ကြားချက်"
+
+#~ msgid "Sechkdei Preang Chbab/Draft Laws & Regulations"
+#~ msgstr "ဥပဒေကြမ်း နှင့် လုပ်ထုံးလုပ်နည်းများ"
+
+#~ msgid "Sechkdei Samrech/Decision"
+#~ msgstr "ဆုံးဖြတ်ချက်"
+
+#~ msgid "Others"
+#~ msgstr "အခြား"
+
+#~ msgid "Burmese"
+#~ msgstr "ဗမာဘာသာစကား"
+
+#~ msgid "English"
+#~ msgstr "အင်္ဂလိပ်ဘာသာစကား"
+
+#~ msgid "Khmer"
+#~ msgstr "ခမာဘာသာစကား"
+
+#~ msgid "Lao"
+#~ msgstr "လာအိုဘာသာစကား"
+
+#~ msgid "Thai"
+#~ msgstr "ထိုင်းဘာသာစကား"
+
+#~ msgid "Vietnamese"
+#~ msgstr "ဗီယက်နမ်ဘာသာစကား"
+
+#~ msgid "Chinese"
+#~ msgstr "တရုတ်ဘာသာစကား"
+
+#~ msgid "French"
+#~ msgstr "ပြင်သစ်ဘာသာစကား"
+
+#~ msgid "German"
+#~ msgstr "ဂျာမန်ဘာသာစကား"
+
+#~ msgid "Japanese"
+#~ msgstr "ဂျပန်ဘာသာစကား"
+
+#~ msgid "Korean"
+#~ msgstr "ကိုရီးယားဘာသာစကား"
+
+#~ msgid "Other"
+#~ msgstr "အခြား"
+
+#~ msgid "Global"
+#~ msgstr "ကမ္ဘာတစ်ဝှမ်း"
+
+#~ msgid "ASEAN"
+#~ msgstr "အာစီယံ"
+
+#~ msgid "Greater Mekong Subregion (GMS)"
+#~ msgstr "Greater Mekong Subregion (GMS)"
+
+#~ msgid "Lower Mekong Basin"
+#~ msgstr "Lower Mekong Basin"
+
+#~ msgid "Lower Mekong countries"
+#~ msgstr "မဲခေါင်အောက်ပိုင်းနိုင်ငံများ"
+
+#~ msgid "Cambodia"
+#~ msgstr "ကမ္ဘောဒီးယား"
+
+#~ msgid "Vietnam"
+#~ msgstr "ဗီယက်နမ်"
+
+#~ msgid "Laos"
+#~ msgstr "လာအို "
+
+#~ msgid "Thailand"
+#~ msgstr "ထိုင်း"
+
+#~ msgid "Myanmar"
+#~ msgstr "မြန်မာ"
+
+#~ msgid "Unspecified"
+#~ msgstr "တိကျစွာသတ်မှတ်ထားခြင်းမရှိသော"
+
+#~ msgid "Draft"
+#~ msgstr "အကြမ်း"
+
+#~ msgid "Adopted"
+#~ msgstr "မွေးစားခြင်း"
+
+#~ msgid "Signed"
+#~ msgstr "လက်မှတ်ရေးထိုးခြင်း"
+
+#~ msgid "Application date"
+#~ msgstr "အသုံးပြုသည့်ရက်စွဲ"
+
+#~ msgid "Relationship to other legal docs"
+#~ msgstr "အခြား ဥပဒေရေးရာစာတမ်းများနှင့် ဆက်နွှယ်မှု"
+
+#~ msgid "Child of"
+#~ msgstr "Child of"
+
+#~ msgid "Parent of"
+#~ msgstr "Parent of"
+
+#~ msgid "Technical assistance for drafting"
+#~ msgstr "အကြမ်းဆွဲခြင်းအတွက် နည်းပညာဆိုင်ရာ အထောက်အပံ့"
+
+#~ msgid "Agency providing technical assistance"
+#~ msgstr "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
+
+#~ msgid "Technical assistance funding agency"
+#~ msgstr "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
 
 #~ msgid "Laws"
 #~ msgstr "ဥပဒေများ"

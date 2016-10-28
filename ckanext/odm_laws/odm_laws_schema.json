@@ -7,6 +7,7 @@
 	"dataset_fields": [{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
+		"required": "true",
 		"label": {
 			"en": "Document reference #",
 			"th": "Document reference #",
@@ -18,6 +19,7 @@
     "form_placeholder": "The legal reference document number as used by the internal governing agency."
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
+		"required": "true",
     "preset": "odm_laws_issuing_agency_parties",
 		"label": "Issuing agency/parties",
 		"form_placeholder": "The jurisdictional agency responsible for drafting and issuing the (law) legal document."
@@ -73,6 +75,7 @@
 	}, {
 		"field_name": "title_translated",
 		"preset": "fluent_core_title_translated_single",
+		"required": "true",
 		"label": {
 			"en": "Formal full title",
 			"th": "Formal full title",
@@ -102,11 +105,13 @@
 	}, {
 		"label": "Formal type of document",
 		"field_name": "odm_document_type",
+		"required": "true",
 		"preset": "odm_document_type",
 		"placeholder": "The type of document this is."
 	}, {
 		"field_name": "odm_laws_objective",
 		"preset": "fluent_markdown_single",
+		"required": "true",
 		"label": {
 			"en": "Objective of the document",
 			"th": "Objective of the document",
@@ -148,6 +153,7 @@
 		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
+		"required": "true",
 		"preset": "odm_related_laws_records",
 		"label": {
 			"en": "Primary policy reference point",
@@ -209,6 +215,7 @@
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "odm_laws_status",
+		"required": "true",
     "preset": "odm_laws_status",
 		"label": "Status",
 		"form_placeholder": "Current operational state of the legal document."
@@ -219,11 +226,13 @@
     "form_placeholder": "The version date of when the law was drafted."
 	}, {
 		"field_name": "odm_promulgation_date",
+		"required": "true",
 		"label": "Adoption date/Enacted/Promulgation date/Signing date",
     "preset": "odm_date",
     "form_placeholder": "The date the law was officially authorised."
 	}, {
 		"field_name": "odm_effective_date",
+		"required": "true",
 		"label": "Effective/Enforced Date",
     "preset": "odm_date",
     "form_placeholder": "Date the law is to take effect."
@@ -246,21 +255,25 @@
 		"form_placeholder": "A short statement describing what changed."
 	}, {
 		"field_name": "odm_laws_parent_document",
+		"required": "true",
 		"label": "Parent document",
 		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly supersedes this law"
 	}, {
 		"field_name": "odm_laws_child_document",
+		"required": "true",
 		"label": "Child Document",
 		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly precedes this law"
 	}, {
 		"field_name": "odm_laws_other_references",
+		"required": "true",
 		"label": "Other reference or supporting documents",
 		"preset": "odm_related_library_records",
 		"form_placeholder": "Any other supporting documents or references that relate to this law; i.e. reports, policy briefs etc."
 	}, {
 		"field_name": "odm_laws_official_publication_reference",
+		"required": "true",
 		"label": "Publication reference",
 		"form_snippet": "markdown.html",
 		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"

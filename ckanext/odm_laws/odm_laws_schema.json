@@ -5,59 +5,29 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
-		"field_name": "odm_document_type",
-		"label": "Document type",
-		"preset": "select",
+		"field_name": "odm_spatial_range",
+		"label": "Geographic area (spatial range)",
+		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
+		"preset": "odm_spatial_range",
+		"required": "true",
+		"select_size": 4,
 		"choices": [{
-			"value": "anukretsub-decree",
-			"label": "Anukret/Sub-Decree"
+			"value": "kh",
+			"label": "Cambodia"
 		}, {
-			"value": "chbablawkram",
-			"label": "Chbab/Law/Kram"
+			"value": "vn",
+			"label": "Vietnam"
 		}, {
-			"value": "constitution-of-cambodia",
-			"label": "Constitution of Cambodia"
+			"value": "la",
+			"label": "Laos"
 		}, {
-			"value": "international-treatiesagreements",
-			"label": "International Treaties/Agreements"
+			"value": "th",
+			"label": "Thailand"
 		}, {
-			"value": "kech-sonyacontractagreement",
-			"label": "Kech Sonya/Contract/Agreement"
-		}, {
-			"value": "kolkar-nenomguidelines",
-			"label": "Kolkar Nenom/Guidelines"
-		}, {
-			"value": "kolnyobaypolicy",
-			"label": "Kolnyobay/Policy"
-		}, {
-			"value": "likhetletter",
-			"label": "Likhet/Letter"
-		}, {
-			"value": "prakasjoint-prakasproclamation",
-			"label": "Prakas/Joint-Prakas/Proclamation"
-		}, {
-			"value": "preah-reach-kramroyal-kram",
-			"label": "Preah Reach Kram/Royal Kram"
-		}, {
-			"value": "sarachorcircular",
-			"label": "Sarachor/Circular"
-		}, {
-			"value": "sechkdei-chhun-damneoungnoticeannouncement",
-			"label": "Sechkdei Chhun  Damneoung/Notice/Announcement"
-		}, {
-			"value": "sechkdei-nenuminstruction",
-			"label": "Sechkdei Nenum/Instruction"
-		}, {
-			"value": "sechkdei-preang-chbabdraft-laws-amp-regulations",
-			"label": "Sechkdei Preang Chbab/Draft Laws & Regulations"
-		}, {
-			"value": "sechkdei-samrechdecision",
-			"label": "Sechkdei Samrech/Decision"
-		}, {
-			"value": "others",
-			"label": "Others"
+			"value": "mm",
+			"label": "Myanmar"
 		}]
-	}, {
+	},{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
 		"label": {
@@ -68,12 +38,23 @@
 			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Document, issue, or series number."
-	},{
+    "form_placeholder": "The legal reference document number as used by the internal governing agency."
+	}, {
+		"field_name": "odm_laws_issuing_agency_parties",
+		"required": "true",
+    "preset": "odm_laws_issuing_agency_parties",
+		"label": "Issuing agency/parties",
+		"form_placeholder": "The jurisdictional agency responsible for drafting and issuing the (law) legal document."
+	}, {
+		"field_name": "odm_laws_implementing_agencies",
+    "preset": "odm_laws_implementing_agencies",
+		"label": "Implementing agencies",
+		"form_placeholder": "The jurisdictional agency responsible for the enforcing and implementing the (law) legal document."
+	}, {
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
-		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
+		"form_placeholder": "The language the document is available in.",
 		"preset": "odm_language",
 		"select_size": 4,
 		"choices": [{
@@ -124,7 +105,7 @@
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Full title from the document",
+    "form_placeholder": "Full title of document. Please do not repeat the document type or number in this field.",
 		"form_attrs": {
       "data-module": "slug-preview-target"
     }
@@ -136,13 +117,31 @@
       "data-module": "slug-preview-target"
     },
 		"validators": "if_empty_same_as(name)"
-	},{
+	}, {
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset",
     "validators": "if_empty_same_as(title) odm_dataset_if_empty_new_id odm_dataset_urlencode"
-	},{
+	}, {
+		"label": "Formal type of document",
+		"field_name": "odm_document_type",
+		"required": "true",
+		"preset": "odm_document_type",
+		"placeholder": "The type of document this is."
+	}, {
+		"field_name": "odm_laws_objective",
+		"preset": "fluent_markdown_single",
+		"label": {
+			"en": "Objective of the document",
+			"th": "Objective of the document",
+			"km": "Objective of the document",
+			"vi": "Objective of the document",
+			"my": "Objective of the document်"
+		},
+		"form_languages": ["en", "th", "km", "vi", "my"],
+		"form_placeholder": "The brief objective of this law as stated in the document."
+	}, {
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",
 		"label": {
@@ -171,10 +170,10 @@
 			"my": "Short summary"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Describe general purpose and scope"
+		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
-		"preset": "fluent_markdown_single",
+		"preset": "odm_related_laws_records",
 		"label": {
 			"en": "Primary policy reference point",
 			"th": "Primary policy reference point",
@@ -184,44 +183,6 @@
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
-	}, {
-		"field_name": "odm_spatial_range",
-		"label": "Geographic area (spatial range)",
-		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
-		"preset": "odm_spatial_range",
-		"required": "true",
-		"select_size": 4,
-		"choices": [{
-			"value": "global",
-			"label": "Global"
-		}, {
-			"value": "asean",
-			"label": "ASEAN"
-		}, {
-			"value": "gms",
-			"label": "Greater Mekong Subregion (GMS)"
-		}, {
-			"value": "lmb",
-			"label": "Lower Mekong Basin"
-		}, {
-			"value": "lmc",
-			"label": "Lower Mekong countries"
-		}, {
-			"value": "kh",
-			"label": "Cambodia"
-		}, {
-			"value": "vn",
-			"label": "Vietnam"
-		}, {
-			"value": "la",
-			"label": "Laos"
-		}, {
-			"value": "th",
-			"label": "Thailand"
-		}, {
-			"value": "mm",
-			"label": "Myanmar"
-		}]
 	}, {
 		"field_name": "owner_org",
 		"label": "Organization",
@@ -250,47 +211,32 @@
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "odm_laws_status",
+		"required": "true",
+    "preset": "odm_laws_status",
 		"label": "Status",
-    "required": "true",
-		"preset": "select",
-		"choices": [{
-			"value": "unspecified",
-			"label": "Unspecified"
-		},{
-			"value": "draft",
-			"label": "Draft"
-		}, {
-			"value": "adopted",
-			"label": "Adopted"
-		}, {
-			"value": "signed",
-			"label": "Signed"
-		}],
-    "form_placeholder": "Hierarchical status of agreement, law, decree or other legal policy."
+		"form_placeholder": "Current operational state of the legal document."
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
     "preset": "odm_date",
-    "form_placeholder": "Date the version of draft law was created."
+    "form_placeholder": "The version date of when the law was drafted."
 	}, {
 		"field_name": "odm_promulgation_date",
-		"label": "Adoption date/Promulgation date/Signing",
+		"required": "true",
+		"label": "Adoption date/Enacted/Promulgation date/Signing date",
     "preset": "odm_date",
-    "form_placeholder": "Date the law was officially authorized."
+    "form_placeholder": "The date the law was officially authorised."
 	}, {
 		"field_name": "odm_effective_date",
-		"label": "Effective date",
+		"required": "true",
+		"label": "Effective/Enforced Date",
     "preset": "odm_date",
     "form_placeholder": "Date the law is to take effect."
 	}, {
-		"field_name": "odm_application_date",
-		"label": "Application date",
-    "preset": "odm_date"
-	}, {
 		"field_name": "odm_laws_previous_legal_document",
 		"label": "Previous legal document",
-		"preset": "odm_laws_previous_legal_document",
-		"form_placeholder": ""
+		"preset": "odm_related_laws_records",
+		"form_placeholder": "Does this law replace, amend or supplement previous law?"
 	}, {
 		"field_name": "odm_laws_previous_changes_notes",
 		"preset": "fluent_markdown_single",
@@ -302,34 +248,33 @@
 			"my": "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Describe what changed."
+		"form_placeholder": "A short statement describing what changed."
 	}, {
-		"field_name": "odm_laws_relationship_type",
-		"label": "Relationship to other legal docs",
-		"preset": "select",
-		"choices": [{
-			"value": "child_of",
-			"label": "Child of"
-		}, {
-			"value": "parent_of",
-			"label": "Parent of"
-		}],
-		"form_placeholder": ""
+		"field_name": "odm_laws_parent_document",
+		"label": "Parent document",
+		"preset": "odm_related_laws_records",
+		"form_placeholder": "The law that directly supersedes this law"
 	}, {
-		"field_name": "odm_laws_relationship_target",
-		"label": "Associated Document",
-		"preset": "odm_laws_relationship_target",
-		"form_placeholder": ""
+		"field_name": "odm_laws_child_document",
+		"label": "Child Document",
+		"preset": "odm_related_laws_records",
+		"form_placeholder": "The law that directly precedes this law"
+	}, {
+		"field_name": "odm_laws_other_references",
+		"label": "Other reference or supporting documents",
+		"preset": "odm_related_library_records",
+		"form_placeholder": "Any other supporting documents or references that relate to this law; i.e. reports, policy briefs etc."
 	}, {
 		"field_name": "odm_laws_official_publication_reference",
+		"required": "true",
 		"label": "Publication reference",
-		"form_snippet": "text.html",
+		"form_snippet": "markdown.html",
 		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
 	}, {
 		"field_name": "odm_laws_source",
 		"label": "Links to source",
-		"form_snippet": "text.html",
-		"form_placeholder": "Officials URLs where the document is made available."
+		"form_snippet": "markdown.html",
+		"form_placeholder": "Official URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
     "preset": "fluent_markdown_single",
@@ -343,81 +288,6 @@
 		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
-		"field_name": "odm_laws_drafting_agency",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Drafting agency",
-			"th": "Drafting agency",
-			"km": "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង",
-			"vi": "Cơ quan soạn thảo",
-			"my": "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_draft_assistance",
-		"label": "Technical assistance for drafting",
-		"preset": "select",
-		"choices": [{
-			"value": "yes",
-			"label": "Yes"
-		}, {
-			"value": "no",
-			"label": "No"
-		}, {
-			"value": "unknown",
-			"label": "Unknown"
-		}],
-		"help_text": "Select 'yes', 'no' or 'unclear copyright' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
-	}, {
-		"field_name": "odm_laws_agency_technical_assistance",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Agency providing technical assistance",
-			"th": "Agency providing technical assistance",
-			"km": "ទីភ្នាក់ងារផ្តល់ជំនួយបច្ចេកទេស",
-			"vi": "Cơ quan hỗ trợ kỹ thuật",
-			"my": "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_technical_assistance_funding_agency",
-    "preset": "fluent_text_single",
-		"label": {
-			"en": "Technical assistance funding agency",
-			"th": "Technical assistance funding agency",
-			"km": "ទីភ្នាក់ងារឧបត្ថម្ភជំនួយបច្ចេកទេស",
-			"vi": "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật",
-			"my": "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_issuing_agency_parties",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Issuing agency/parties",
-			"th": "Issuing agency/parties",
-			"km": "ទីភ្នាក់ងារ/ភាគីចេញផ្សាយ",
-			"vi": "Cơ quan/Đơn vị ban hành",
-			"my": "ထုတ်ပေးသောအေဂျင်စီ/အဖွဲ့အစည်းများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	}, {
-		"field_name": "odm_laws_implementing_agencies",
-    "preset": "fluent_markdown_single",
-		"label": {
-			"en": "Implementing agencies",
-			"th": "Implementing agencies",
-			"km": "ទីភ្នាក់ងារអនុវត្ត",
-			"vi": "Các cơ quan thực thi",
-			"my": "အကောင်အထည်ဖော်မည့် အေဂျင်စီများ"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": ""
-	},{
 		"field_name": "odm_laws_notes",
 		"preset": "fluent_markdown_single",
 		"label": {
@@ -428,7 +298,7 @@
 			"my": "မှတ်စုများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "Add any notes to this document."
+		"form_placeholder": "Any additional notes regarding this document."
 	}, {
 		"field_name": "odm_reference_document",
 		"label": "Legacy reference document",

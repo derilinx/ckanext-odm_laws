@@ -8,6 +8,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import odm_laws_helper
+import odm_laws_config
 from urlparse import urlparse
 import json
 from pylons import config
@@ -100,10 +101,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return {
       'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
-      'odm_laws_lookup_relationship_target': odm_laws_helper.lookup_relationship_target,
-      'odm_laws_semre_of_database_relationships': odm_laws_helper.semre_of_database_relationships,
-      'odm_laws_get_dataset_name': odm_laws_helper.get_dataset_name,
-      'odm_laws_get_dataset_notes' : odm_laws_helper.get_dataset_notes
+      'odm_laws_get_resource_id_for_field' : odm_laws_config.get_resource_id_for_field
     }
 
   def before_create(self, context, resource):
@@ -134,11 +132,3 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
       if 'url_type' in pkg_dict_or_resource:
         _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource)
-
-      if 'odm_laws_relationship_target' in pkg_dict_or_resource:
-        rel_subj=pkg_dict_or_resource['name']
-        rel_type=pkg_dict_or_resource['odm_laws_relationship_type']
-        rel_target=pkg_dict_or_resource['odm_laws_relationship_target']
-
-        log.debug("Creating relationship %s %s",rel_type,rel_target)
-        toolkit.get_action('package_relationship_create')(data_dict={'subject': rel_subj,'object':rel_target,'type':rel_type})

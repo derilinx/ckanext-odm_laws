@@ -5,9 +5,31 @@
 	"about": "ODM Laws metadata schema",
 	"about_url": "http://github.com/open-data/ckanext-scheming",
 	"dataset_fields": [{
+		"field_name": "odm_spatial_range",
+		"label": "Geographic area (spatial range)",
+		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
+		"preset": "odm_spatial_range",
+		"required": "true",
+		"select_size": 4,
+		"choices": [{
+			"value": "kh",
+			"label": "Cambodia"
+		}, {
+			"value": "vn",
+			"label": "Vietnam"
+		}, {
+			"value": "la",
+			"label": "Laos"
+		}, {
+			"value": "th",
+			"label": "Thailand"
+		}, {
+			"value": "mm",
+			"label": "Myanmar"
+		}]
+	},{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
-		"required": "true",
 		"label": {
 			"en": "Document reference #",
 			"th": "Document reference #",
@@ -75,7 +97,6 @@
 	}, {
 		"field_name": "title_translated",
 		"preset": "fluent_core_title_translated_single",
-		"required": "true",
 		"label": {
 			"en": "Formal full title",
 			"th": "Formal full title",
@@ -111,7 +132,6 @@
 	}, {
 		"field_name": "odm_laws_objective",
 		"preset": "fluent_markdown_single",
-		"required": "true",
 		"label": {
 			"en": "Objective of the document",
 			"th": "Objective of the document",
@@ -153,7 +173,6 @@
 		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
-		"required": "true",
 		"preset": "odm_related_laws_records",
 		"label": {
 			"en": "Primary policy reference point",
@@ -168,29 +187,6 @@
 		"field_name": "owner_org",
 		"label": "Organization",
 		"preset": "dataset_organization"
-	}, {
-		"field_name": "odm_spatial_range",
-		"label": "Geographic area (spatial range)",
-		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
-		"preset": "odm_spatial_range",
-		"required": "true",
-		"select_size": 4,
-		"choices": [{
-			"value": "kh",
-			"label": "Cambodia"
-		}, {
-			"value": "vn",
-			"label": "Vietnam"
-		}, {
-			"value": "la",
-			"label": "Laos"
-		}, {
-			"value": "th",
-			"label": "Thailand"
-		}, {
-			"value": "mm",
-			"label": "Myanmar"
-		}]
 	}, {
 		"field_name": "license_id",
 		"label": "License",
@@ -255,19 +251,16 @@
 		"form_placeholder": "A short statement describing what changed."
 	}, {
 		"field_name": "odm_laws_parent_document",
-		"required": "true",
 		"label": "Parent document",
 		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly supersedes this law"
 	}, {
 		"field_name": "odm_laws_child_document",
-		"required": "true",
 		"label": "Child Document",
 		"preset": "odm_related_laws_records",
 		"form_placeholder": "The law that directly precedes this law"
 	}, {
 		"field_name": "odm_laws_other_references",
-		"required": "true",
 		"label": "Other reference or supporting documents",
 		"preset": "odm_related_library_records",
 		"form_placeholder": "Any other supporting documents or references that relate to this law; i.e. reports, policy briefs etc."

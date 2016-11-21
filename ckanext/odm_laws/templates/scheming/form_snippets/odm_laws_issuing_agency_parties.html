@@ -1,9 +1,9 @@
 
 {% block package_metadata_fields_odm_laws_issuing_agency_parties %}
 	<div class="control-group">
-		<label class="control-label" for="field-odm_odm_laws_issuing_agency_parties">{{ h.scheming_language_text(field.label) }}</label>
+		<label class="control-label" for="field-{{ field.field_name }}">{{ h.scheming_language_text(field.label) }}</label>
 		<div class="controls control-full">
-			<select multiple id="field-odm_laws_issuing_agency_parties"
+			<select multiple id="field-{{ field.field_name }}"
 				name="{{ h.scheming_language_text(field.field_name) }}"
 				data-module="autocomplete"
 				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}"

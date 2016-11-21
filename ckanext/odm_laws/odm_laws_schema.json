@@ -11,6 +11,11 @@
 		"preset": "odm_spatial_range",
 		"required": "true"
 	},{
+		"field_name": "odm_province",
+		"label": "Province(s)",
+		"form_placeholder": "The province(s) this dataset relates to",
+		"preset": "odm_province"
+	},{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
 		"label": {

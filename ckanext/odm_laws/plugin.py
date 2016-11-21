@@ -8,7 +8,6 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import odm_laws_helper
-import odm_laws_config
 from urlparse import urlparse
 import json
 from pylons import config
@@ -100,8 +99,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     '''Register the plugin's functions above as a template helper function.'''
 
     return {
-      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
-      'odm_laws_get_resource_id_for_field' : odm_laws_config.get_resource_id_for_field
+      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type
     }
 
   def before_create(self, context, resource):

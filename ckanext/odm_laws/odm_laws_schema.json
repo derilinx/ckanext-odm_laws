@@ -9,24 +9,7 @@
 		"label": "Geographic area (spatial range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "odm_spatial_range",
-		"required": "true",
-		"select_size": 4,
-		"choices": [{
-			"value": "kh",
-			"label": "Cambodia"
-		}, {
-			"value": "vn",
-			"label": "Vietnam"
-		}, {
-			"value": "la",
-			"label": "Laos"
-		}, {
-			"value": "th",
-			"label": "Thailand"
-		}, {
-			"value": "mm",
-			"label": "Myanmar"
-		}]
+		"required": "true"
 	},{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
@@ -54,46 +37,8 @@
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
-		"form_placeholder": "The language the document is available in.",
-		"preset": "odm_language",
-		"select_size": 4,
-		"choices": [{
-			"value": "my",
-			"label": "Burmese"
-		}, {
-			"value": "en",
-			"label": "English"
-		}, {
-			"value": "km",
-			"label": "Khmer"
-		}, {
-			"value": "lo",
-			"label": "Lao"
-		}, {
-			"value": "th",
-			"label": "Thai"
-		}, {
-			"value": "vi",
-			"label": "Vietnamese"
-		}, {
-			"value": "zh",
-			"label": "Chinese"
-		}, {
-			"value": "fr",
-			"label": "French"
-		}, {
-			"value": "de",
-			"label": "German"
-		}, {
-			"value": "jp",
-			"label": "Japanese"
-		}, {
-			"value": "ko",
-			"label": "Korean"
-		}, {
-			"value": "other",
-			"label": "Other"
-		}]
+		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
+		"preset": "odm_language"
 	}, {
 		"field_name": "title_translated",
 		"preset": "fluent_core_title_translated_single",
@@ -365,44 +310,7 @@
 	}, {
 		"field_name": "odm_language",
     "label": "Resource's languages",
-    "preset": "multiple_select",
-		"select_size": 4,
-		"choices": [{
-			"value": "my",
-			"label": "Burmese"
-		}, {
-			"value": "en",
-			"label": "English"
-		}, {
-			"value": "km",
-			"label": "Khmer"
-		}, {
-			"value": "lo",
-			"label": "Lao"
-		}, {
-			"value": "th",
-			"label": "Thai"
-		}, {
-			"value": "vi",
-			"label": "Vietnamese"
-		}, {
-			"value": "zh",
-			"label": "Chinese"
-		}, {
-			"value": "fr",
-			"label": "French"
-		}, {
-			"value": "de",
-			"label": "German"
-		}, {
-			"value": "jp",
-			"label": "Japanese"
-		}, {
-			"value": "ko",
-			"label": "Korean"
-		}, {
-			"value": "other",
-			"label": "Other"
-		}]
+		"form_placeholder": "Language(s) of the resource.",
+		"preset": "odm_language"
 	}]
 }

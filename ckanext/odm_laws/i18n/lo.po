@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-10-27 07:22+0200\n"
-"PO-Revision-Date: 2016-10-27 07:22+0200\n"
+"POT-Creation-Date: 2016-12-06 15:34+0100\n"
+"PO-Revision-Date: 2016-12-06 15:34+0100\n"
 "Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
 "Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-"
 "ckanext-odm_laws/language/lo/)\n"
@@ -179,4 +179,83 @@ msgid ""
 "Thank you for uploading this item. Instructions about vetting system "
 "available on https://wiki.opendevelopmentmekong.net/partners:"
 "content_review#instructions_for_default_issue_on_law_records"
+msgstr ""
+
+#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
+msgid "Laws"
+msgstr ""
+
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
+#: odm_laws/templates/package/snippets/stages.html:7
+#: odm_laws/templates/package/snippets/stages.html:9
+msgid "Create Law"
+msgstr ""
+
+#: odm_laws/templates/package/base_form_page.html:7
+msgid "What are Laws?"
+msgstr ""
+
+#: odm_laws/templates/package/edit_base.html:5
+msgid "View Law"
+msgstr ""
+
+#: odm_laws/templates/package/new_package_form.html:8
+msgid "Update Law"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:6
+msgid "Manage"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:15
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
+msgid "Law"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:16
+msgid "Activity Stream"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:17
+msgid "Related"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:30
+msgid "Document preview"
+msgstr ""
+
+#: odm_laws/templates/package/search.html:23
+msgid "Add Law"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/package_form.html:5
+msgid "Are you sure you want to delete this dataset?"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/package_form.html:6
+msgid "Delete"
+msgstr ""
+
+#: odm_laws/templates/package/snippets/search_form.html:4
+msgid "Search Laws..."
+msgstr ""
+
+#: odm_laws/templates/package/snippets/stages.html:14
+#: odm_laws/templates/package/snippets/stages.html:18
+#: odm_laws/templates/package/snippets/stages.html:20
+msgid "Add data"
+msgstr ""
+
+#: odm_laws/templates/snippets/search_form.html:6
+msgid "Search laws..."
+msgstr ""
+
+#: odm_laws/templates/snippets/search_form.html:12
+msgid "Submit"
 msgstr ""

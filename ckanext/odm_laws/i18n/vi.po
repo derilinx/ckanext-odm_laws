@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-10-27 07:23+0200\n"
-"PO-Revision-Date: 2016-10-27 07:23+0200\n"
+"POT-Creation-Date: 2016-12-06 15:34+0100\n"
+"PO-Revision-Date: 2016-12-06 15:34+0100\n"
 "Last-Translator: Linh Do <linh@nature.org.vn>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/open-development-mekong/"
 "odm-ckanext-odm_laws/language/vi/)\n"
@@ -188,6 +188,85 @@ msgstr ""
 "kiểm duyệt thông tin của hệ thống tại  https://wiki.opendevelopmentmekong."
 "net/partners:content_review#instructions_for_default_issue_on_law_records"
 
+#: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
+msgid "Laws"
+msgstr "Luật"
+
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
+#: odm_laws/templates/package/snippets/stages.html:7
+#: odm_laws/templates/package/snippets/stages.html:9
+msgid "Create Law"
+msgstr "Xây dựng luật"
+
+#: odm_laws/templates/package/base_form_page.html:7
+msgid "What are Laws?"
+msgstr "Định nghĩa Luật"
+
+#: odm_laws/templates/package/edit_base.html:5
+msgid "View Law"
+msgstr "Vào đọc"
+
+#: odm_laws/templates/package/new_package_form.html:8
+msgid "Update Law"
+msgstr "Cập nhật"
+
+#: odm_laws/templates/package/read_base.html:6
+msgid "Manage"
+msgstr "Quản lý"
+
+#: odm_laws/templates/package/read_base.html:15
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
+msgid "Law"
+msgstr "Luật"
+
+#: odm_laws/templates/package/read_base.html:16
+msgid "Activity Stream"
+msgstr "Chuỗi hoạt động"
+
+#: odm_laws/templates/package/read_base.html:17
+msgid "Related"
+msgstr "Liên quan"
+
+#: odm_laws/templates/package/read_base.html:30
+msgid "Document preview"
+msgstr "Xem trước tài liệu"
+
+#: odm_laws/templates/package/search.html:23
+msgid "Add Law"
+msgstr "Bổ sung"
+
+#: odm_laws/templates/package/snippets/package_form.html:5
+msgid "Are you sure you want to delete this dataset?"
+msgstr "Bạn có chắc chắn muốn xóa dữ liệu?"
+
+#: odm_laws/templates/package/snippets/package_form.html:6
+msgid "Delete"
+msgstr "Xóa"
+
+#: odm_laws/templates/package/snippets/search_form.html:4
+msgid "Search Laws..."
+msgstr "Tìm kiếm..."
+
+#: odm_laws/templates/package/snippets/stages.html:14
+#: odm_laws/templates/package/snippets/stages.html:18
+#: odm_laws/templates/package/snippets/stages.html:20
+msgid "Add data"
+msgstr "Bổ sung dữ liệu"
+
+#: odm_laws/templates/snippets/search_form.html:6
+msgid "Search laws..."
+msgstr "Tìm kiếm..."
+
+#: odm_laws/templates/snippets/search_form.html:12
+msgid "Submit"
+msgstr "Gửi"
+
 #~ msgid "Anukret/Sub-Decree"
 #~ msgstr "Thông tư"
 
@@ -335,59 +414,8 @@ msgstr ""
 #~ msgid "Technical assistance funding agency"
 #~ msgstr "Cơ quan tài trợ cho việc hỗ trợ kỹ thuật"
 
-#~ msgid "Laws"
-#~ msgstr "Luật"
-
-#~ msgid "Create Law"
-#~ msgstr "Xây dựng luật"
-
-#~ msgid "What are Laws?"
-#~ msgstr "Định nghĩa Luật"
-
-#~ msgid "View Law"
-#~ msgstr "Vào đọc"
-
-#~ msgid "Update Law"
-#~ msgstr "Cập nhật"
-
 #~ msgid "Parents and Childs"
 #~ msgstr "Cha mẹ và con cái"
 
-#~ msgid "Manage"
-#~ msgstr "Quản lý"
-
-#~ msgid "Law"
-#~ msgstr "Luật"
-
-#~ msgid "Activity Stream"
-#~ msgstr "Chuỗi hoạt động"
-
-#~ msgid "Related"
-#~ msgstr "Liên quan"
-
-#~ msgid "Document preview"
-#~ msgstr "Xem trước tài liệu"
-
-#~ msgid "Add Law"
-#~ msgstr "Bổ sung"
-
-#~ msgid "Are you sure you want to delete this dataset?"
-#~ msgstr "Bạn có chắc chắn muốn xóa dữ liệu?"
-
-#~ msgid "Delete"
-#~ msgstr "Xóa"
-
-#~ msgid "Search Laws..."
-#~ msgstr "Tìm kiếm..."
-
-#~ msgid "Add data"
-#~ msgstr "Bổ sung dữ liệu"
-
 #~ msgid "Select an associated document"
 #~ msgstr "Chọn tài liệu liên quan"
-
-#~ msgid "Search laws..."
-#~ msgstr "Tìm kiếm..."
-
-#~ msgid "Submit"
-#~ msgstr "Gửi"

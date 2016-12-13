@@ -80,18 +80,6 @@
 		"preset": "odm_document_type",
 		"placeholder": "The type of document this is."
 	}, {
-		"field_name": "odm_laws_objective",
-		"preset": "fluent_markdown_single",
-		"label": {
-			"en": "Objective of the document",
-			"th": "Objective of the document",
-			"km": "Objective of the document",
-			"vi": "Objective of the document",
-			"my": "Objective of the document်"
-		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
-		"form_placeholder": "The brief objective of this law as stated in the document."
-	}, {
 		"field_name": "odm_short_title",
 		"preset": "fluent_text_single",
 		"label": {

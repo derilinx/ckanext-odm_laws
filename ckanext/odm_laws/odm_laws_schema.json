@@ -26,16 +26,16 @@
 			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "The legal reference document number as used by the internal governing agency."
+		"form_placeholder": "The legal reference document number as used by the internal governing agency."
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
 		"required": "true",
-    "preset": "odm_laws_issuing_agency_parties",
+		"preset": "odm_laws_issuing_agency_parties",
 		"label": "Issuing agency/parties",
 		"form_placeholder": "The jurisdictional agency responsible for drafting and issuing the (law) legal document."
 	}, {
 		"field_name": "odm_laws_implementing_agencies",
-    "preset": "odm_laws_implementing_agencies",
+		"preset": "odm_laws_implementing_agencies",
 		"label": "Implementing agencies",
 		"form_placeholder": "The jurisdictional agency responsible for the enforcing and implementing the (law) legal document."
 	}, {
@@ -55,24 +55,24 @@
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Full title of document. Please do not repeat the document type or number in this field.",
+		"form_placeholder": "Full title of document. Please do not repeat the document type or number in this field.",
 		"form_attrs": {
-      "data-module": "slug-preview-target"
-    }
+			"data-module": "slug-preview-target"
+		}
 	}, {
 		"field_name": "title",
 		"label": "title",
 		"preset": "text_hidden",
-    "form_attrs": {
-      "data-module": "slug-preview-target"
-    },
+		"form_attrs": {
+			"data-module": "slug-preview-target"
+		},
 		"validators": "if_empty_same_as(name)"
 	}, {
 		"field_name": "name",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset",
-    "validators": "if_empty_same_as(title) odm_dataset_if_empty_new_id odm_dataset_urlencode"
+		"validators": "if_empty_same_as(title) odm_dataset_if_empty_new_id odm_dataset_urlencode odm_dataset_record_does_not_exist_yet"
 	}, {
 		"label": "Formal type of document",
 		"field_name": "odm_document_type",
@@ -90,11 +90,11 @@
 			"my": "ခေါင်းစဉ်ကွဲ/ခေါင်းစဉ်တို"
 		},
 		"form_languages": ["en", "th", "km", "vi", "my"],
-    "form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
+		"form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
 	}, {
 		"field_name": "taxonomy",
 		"label": "Topics",
-    "required": "true",
+		"required": "true",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "e.g. economy, mental health, government"
 	}, {
@@ -150,26 +150,26 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"required": "true",
-    "preset": "odm_laws_status",
+		"preset": "odm_laws_status",
 		"label": "Status",
 		"form_placeholder": "Current operational state of the legal document."
 	}, {
 		"field_name": "odm_laws_version_date",
 		"label": "Version date (of draft)",
-    "preset": "odm_date",
-    "form_placeholder": "The version date of when the law was drafted."
+		"preset": "odm_date",
+		"form_placeholder": "The version date of when the law was drafted."
 	}, {
 		"field_name": "odm_promulgation_date",
 		"required": "true",
 		"label": "Adoption date/Enacted/Promulgation date/Signing date",
-    "preset": "odm_date",
-    "form_placeholder": "The date the law was officially authorised."
+		"preset": "odm_date",
+		"form_placeholder": "The date the law was officially authorised."
 	}, {
 		"field_name": "odm_effective_date",
 		"required": "true",
 		"label": "Effective/Enforced Date",
-    "preset": "odm_date",
-    "form_placeholder": "Date the law is to take effect."
+		"preset": "odm_date",
+		"form_placeholder": "Date the law is to take effect."
 	}, {
 		"field_name": "odm_laws_previous_legal_document",
 		"label": "Previous legal document",
@@ -215,7 +215,7 @@
 		"form_placeholder": "Official URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
-    "preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Contact",
 			"th": "ข้อมูลติดต่อ",
@@ -244,19 +244,19 @@
 	}, {
 		"field_name": "maintainer",
 		"label": "Maintainer",
-    "preset": "auto_maintainer"
+		"preset": "auto_maintainer"
 	}, {
 		"field_name": "maintainer_email",
 		"label": "Maintainer email",
-    "preset": "auto_maintainer_email"
+		"preset": "auto_maintainer_email"
 	}, {
 		"field_name": "author",
 		"label": "Author",
-    "preset": "auto_author"
+		"preset": "auto_author"
 	}, {
 		"field_name": "author_email",
 		"label": "Author email",
-    "preset": "auto_author_email"
+		"preset": "auto_author_email"
 	}, {
 		"field_name": "odm_date_uploaded",
 		"label": "Date uploaded",
@@ -274,7 +274,7 @@
 		"preset": "resource_url_upload"
 	}, {
 		"field_name": "name_translated",
-		"preset": "fluent_core_res_name_translated_single",
+		"preset": "fluent_core_res_name_translated_single_mandatory",
 		"label": {
 			"en": "Name",
 			"th": "Name",
@@ -286,7 +286,7 @@
 		"form_placeholder": "eg. January 2011 Gold Prices"
 	}, {
 		"field_name": "description_translated",
-		"preset": "fluent_core_res_description_translated_markdown_single",
+		"preset": "fluent_core_res_description_translated_markdown_single_mandatory",
 		"label": {
 			"en": "Description",
 			"th": "Description",
@@ -302,8 +302,10 @@
 		"preset": "resource_format_autocomplete"
 	}, {
 		"field_name": "odm_language",
-    "label": "Resource's languages",
-		"form_placeholder": "Language(s) of the resource.",
-		"preset": "odm_language"
+		"preset": "odm_language",
+		"required": "true",
+		"label": "Resource's languages",
+		"form_placeholder": "Language(s) of the resource."
+
 	}]
 }

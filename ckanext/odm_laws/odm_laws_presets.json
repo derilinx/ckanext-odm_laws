@@ -15,7 +15,7 @@
         "form_snippet": "odm_laws_implementing_agencies.html",
         "display_snippet": "multiple_list.html",
         "validators": "scheming_required",
-			  "output_validators": "scheming_multiple_choice_output"
+			  "output_validators": "scheming_multiple_choice_output odm_dataset_sanitize_list"
       }
     }, {
       "preset_name": "odm_laws_issuing_agency_parties",
@@ -23,7 +23,7 @@
         "form_snippet": "odm_laws_issuing_agency_parties.html",
         "display_snippet": "multiple_list.html",
         "validators": "scheming_required",
-			  "output_validators": "scheming_multiple_choice_output"
+			  "output_validators": "scheming_multiple_choice_output odm_dataset_sanitize_list"
       }
     }, {
       "preset_name": "odm_laws_status",

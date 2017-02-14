@@ -39,11 +39,11 @@ def create_default_issue_laws_record(pkg_info):
 
 		log.error("Action 'issue_create' not found. Please make sure that ckanext-issues plugin is installed.")
 
-def check_required_fields(package):
+def validate_fields(package):
 	'''Checks that the package has all required fields'''
 
 	if DEBUG:
-		log.info('check_required_fields: %s', package)
+		log.info('validate_fields: %s', package)
 
 	missing = {"package" :[], "resources": [] }
 

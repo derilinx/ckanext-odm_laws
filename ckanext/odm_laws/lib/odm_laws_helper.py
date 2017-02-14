@@ -4,11 +4,14 @@
 import pylons
 import logging
 import json
+import os
 import logging
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from genshi.template.text import NewTextTemplate
 from ckan.lib.base import render
+
+DEBUG = True
 
 log = logging.getLogger(__name__)
 
@@ -42,7 +45,7 @@ def check_required_fields(package):
 	if DEBUG:
 		log.info('check_required_fields: %s', package)
 
-	valid = True
+	missing = {"package" :[], "resources": [] }
 
 	schema_path = os.path.abspath(os.path.join(__file__, '../../','odm_laws_schema.json'))
 	with open(schema_path) as f:
@@ -50,19 +53,27 @@ def check_required_fields(package):
 			schema_json = json.loads(f.read())
 
 			for field in schema_json['dataset_fields']:
-				if field["required"] == "true" and not package[field["field_name"]]:
-					valid = False
-					break
+				if "validate" in field and field["validate"] == "true":
+					if field["field_name"] not in package or not package[field["field_name"]]:
+						missing["package"].append(field["field_name"])
+					elif "multilingual" in field and field["multilingual"] == "true":
+						json_field = package[field["field_name"]];
+						if json_field and "en" not in json_field or json_field["en"] == "":
+							missing["package"].append(field["field_name"])
 
 			for resource_field in schema_json['resource_fields']:
 				for resource in package["resources"]:
-					if resource_field["required"] == "true" and not resource[resource_field["field_name"]]:
-						valid = False
-						break
+					if "validate" in resource_field and resource_field["validate"] == "true":
+					 	if resource_field["field_name"] not in resource or not resource[resource_field["field_name"]]:
+							missing["resources"].append(resource_field["field_name"])
+						elif "multilingual" in resource_field and resource_field["multilingual"] == "true":
+							json_resource_field = resource[resource_field["field_name"]];
+							if json_resource_field and "en" not in json_resource_field or json_resource_field["en"] == "":
+								missing["resources"].append(resource_field["field_name"])
 
 		except ValueError as e:
 			log.info('invalid json: %s' % e)
 
-	return valid
+	return missing
 
 session = {}

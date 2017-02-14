@@ -9,7 +9,8 @@
 		"label": "Geographic area (spatial range)",
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "odm_spatial_range",
-		"required": "true"
+		"required": "true",
+		"validate": "true"
 	},{
 		"field_name": "odm_province",
 		"label": "Province(s)",
@@ -18,6 +19,8 @@
 	},{
 		"field_name": "odm_document_number",
 		"preset": "fluent_text_single",
+		"validate": "true",
+		"multilingual": "true",
 		"label": {
 			"en": "Document reference #",
 			"th": "Document reference #",
@@ -30,6 +33,7 @@
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
 		"required": "true",
+		"validate": "true",
 		"preset": "odm_laws_issuing_agency_parties",
 		"label": "Issuing agency/parties",
 		"form_placeholder": "The jurisdictional agency responsible for drafting and issuing the (law) legal document."
@@ -42,10 +46,13 @@
 		"field_name": "odm_language",
 		"label": "Language",
 		"required": "true",
+		"validate": "true",
 		"form_placeholder": "Language(s) of the dataset, including resources within dataset.",
 		"preset": "odm_language"
 	}, {
 		"field_name": "title_translated",
+		"validate": "true",
+		"multilingual": "true",
 		"preset": "fluent_core_title_translated_single",
 		"label": {
 			"en": "Formal full title",
@@ -62,6 +69,7 @@
 	}, {
 		"field_name": "title",
 		"label": "title",
+		"required": "true",
 		"preset": "text_hidden",
 		"form_attrs": {
 			"data-module": "slug-preview-target"
@@ -69,6 +77,7 @@
 		"validators": "if_empty_same_as(name)"
 	}, {
 		"field_name": "name",
+		"required": "true",
 		"label": "URL",
 		"preset": "dataset_slug",
 		"form_placeholder": "eg. my-dataset",
@@ -77,10 +86,12 @@
 		"label": "Formal type of document",
 		"field_name": "odm_document_type",
 		"required": "true",
+		"validate": "true",
 		"preset": "odm_document_type",
 		"placeholder": "The type of document this is."
 	}, {
 		"field_name": "odm_short_title",
+		"multilingual": "true",
 		"preset": "fluent_text_single",
 		"label": {
 			"en": "Alternative/short title",
@@ -95,10 +106,12 @@
 		"field_name": "taxonomy",
 		"label": "Topics",
 		"required": "true",
+		"validate": "true",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "e.g. economy, mental health, government"
 	}, {
 		"field_name": "notes_translated",
+		"multilingual": "true",
 		"preset": "fluent_core_notes_translated_markdown_single",
 		"label": {
 			"en": "Short summary",
@@ -111,6 +124,7 @@
 		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
+		"multilingual": "true",
 		"preset": "odm_related_laws_records",
 		"label": {
 			"en": "Primary policy reference point",
@@ -123,20 +137,27 @@
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
 	}, {
 		"field_name": "owner_org",
+		"required": "true",
+		"validate": "true",
 		"label": "Organization",
 		"preset": "dataset_organization"
 	}, {
 		"field_name": "license_id",
+		"required": "true",
+		"validate": "true",
 		"label": "License",
 		"preset": "odm_license",
 		"help_text": "License definitions and additional information can be found at http://opendefinition.org/"
 	}, {
 		"field_name": "odm_copyright",
+		"required": "true",
+		"validate": "true",
 		"label": "Copyright",
 		"preset": "odm_copyright",
 		"help_text": "Select 'Yes', 'No', 'Unclear copyright' or 'To be determined' about the copyright of the dataset. If copyright of any type is present, describe further in Access and User Constraints."
 	}, {
 		"field_name": "odm_access_and_use_constraints",
+		"multilingual": "true",
 		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Access and use constraints",
@@ -150,6 +171,7 @@
 	}, {
 		"field_name": "odm_laws_status",
 		"required": "true",
+		"validate": "true",
 		"preset": "odm_laws_status",
 		"label": "Status",
 		"form_placeholder": "Current operational state of the legal document."
@@ -161,12 +183,14 @@
 	}, {
 		"field_name": "odm_promulgation_date",
 		"required": "true",
+		"validate": "true",
 		"label": "Adoption date/Enacted/Promulgation date/Signing date",
 		"preset": "odm_date",
 		"form_placeholder": "The date the law was officially authorised."
 	}, {
 		"field_name": "odm_effective_date",
 		"required": "true",
+		"validate": "true",
 		"label": "Effective/Enforced Date",
 		"preset": "odm_date",
 		"form_placeholder": "Date the law is to take effect."
@@ -177,6 +201,7 @@
 		"form_placeholder": "Does this law replace, amend or supplement previous law?"
 	}, {
 		"field_name": "odm_laws_previous_changes_notes",
+		"multilingual": "true",
 		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Short notes of change",
@@ -205,6 +230,7 @@
 	}, {
 		"field_name": "odm_laws_official_publication_reference",
 		"required": "true",
+		"validate": "true",
 		"label": "Publication reference",
 		"form_snippet": "markdown.html",
 		"form_placeholder": "The official gazette or other official promulgation of policy, referencing issue #, date and page"
@@ -215,6 +241,7 @@
 		"form_placeholder": "Official URLs where the document is made available."
 	}, {
 		"field_name": "odm_contact",
+		"multilingual": "true",
 		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Contact",
@@ -227,6 +254,7 @@
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
 		"field_name": "odm_laws_notes",
+		"multilingual": "true",
 		"preset": "fluent_markdown_single",
 		"label": {
 			"en": "Notes",
@@ -243,18 +271,26 @@
 		"form_placeholder": "e.g Tong_Min_Group_Engineering__21.06.2011.pdf"
 	}, {
 		"field_name": "maintainer",
+		"required": "true",
+		"validate": "true",
 		"label": "Maintainer",
 		"preset": "auto_maintainer"
 	}, {
 		"field_name": "maintainer_email",
+		"required": "true",
+		"validate": "true",
 		"label": "Maintainer email",
 		"preset": "auto_maintainer_email"
 	}, {
 		"field_name": "author",
+		"required": "true",
+		"validate": "true",
 		"label": "Author",
 		"preset": "auto_author"
 	}, {
 		"field_name": "author_email",
+		"required": "true",
+		"validate": "true",
 		"label": "Author email",
 		"preset": "auto_author_email"
 	}, {
@@ -274,6 +310,8 @@
 		"preset": "resource_url_upload"
 	}, {
 		"field_name": "name_translated",
+		"validate": "true",
+		"multilingual": "true",
 		"preset": "fluent_core_res_name_translated_single",
 		"label": {
 			"en": "Name",
@@ -286,6 +324,8 @@
 		"form_placeholder": "eg. January 2011 Gold Prices"
 	}, {
 		"field_name": "description_translated",
+		"validate": "true",
+		"multilingual": "true",
 		"preset": "fluent_core_res_description_translated_markdown_single",
 		"label": {
 			"en": "Description",
@@ -298,12 +338,13 @@
 		"form_placeholder": "Some useful notes about the data"
 	}, {
 		"field_name": "format",
+		"required": "false",
 		"label": "Format",
 		"preset": "resource_format_autocomplete"
 	}, {
 		"field_name": "odm_language",
 		"preset": "odm_language",
-		"required": "true",
+		"validate": "true",
 		"label": "Resource's languages",
 		"form_placeholder": "Language(s) of the resource."
 

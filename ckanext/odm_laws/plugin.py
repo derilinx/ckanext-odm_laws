@@ -99,7 +99,8 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     '''Register the plugin's functions above as a template helper function.'''
 
     return {
-      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type
+      'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
+      'odm_laws_validate_fields' : odm_laws_helper.validate_fields
     }
 
   def before_create(self, context, resource):

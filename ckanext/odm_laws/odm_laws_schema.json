@@ -303,7 +303,12 @@
 		"label": "Date modified",
 		"form_placeholder": "Date a new version or update of the dataset was uploaded.",
 		"preset": "odm_date_modified"
-	}],
+	}, {
+		"field_name": "odm_keywords",
+    "label": "Keywords",
+    "preset": "odm_keywords",
+    "help_text": "INTERNAL USE ONLY: Enter keywords for improving the discoverability of this record via search"
+  }],
 	"resource_fields": [{
 		"field_name": "url",
 		"label": "URL",

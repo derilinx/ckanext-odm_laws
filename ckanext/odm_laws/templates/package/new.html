@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% block subtitle %}
-	{% if dataset_type == 'laws_record' %}
+	{% if pkg.type == 'laws_record' %}
 		{{ _('Create Law') }}
 	{% else %}
 		{{ super() }}

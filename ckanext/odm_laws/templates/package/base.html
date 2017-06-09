@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% block subtitle %}
-	{% if dataset_type == 'laws_record' %}
+	{% if pkg.type == 'laws_record' %}
 		{{ _('Laws') }}
 	{% else %}
 		{{ super() }}
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block breadcrumb_content %}
-	{% if dataset_type == 'laws_record' %}
+	{% if pkg.type == 'laws_record' %}
 		{% if pkg %}
 			{% set dataset = pkg.title or pkg.name %}
 			<li>{% link_for _('Laws'), controller='package', type='laws_record', action='search' %}</li>

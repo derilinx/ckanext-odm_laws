@@ -4,7 +4,7 @@
   {% if form_style != 'edit' %}
     {{ super() }}
   {% else %}
-		{% if dataset_type == 'laws_record' %}
+		{% if pkg.type == 'laws_record' %}
 			{{ _('Update Law') }}
 		{% else %}
 			{{ super() }}

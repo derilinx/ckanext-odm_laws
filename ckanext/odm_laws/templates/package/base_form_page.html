@@ -2,7 +2,7 @@
 
 {% block secondary_content %}
   {% block info_module %}
-		{% if dataset_type == 'laws_record' %}
+		{% if pkg.type == 'laws_record' %}
 			<section class="module module-narrow module-shallow">
 				<h2 class="module-heading"><i class="icon-info-sign"></i> {{ _('What are Laws?') }}</h2>
 				<div class="module-content">
